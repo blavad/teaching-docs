@@ -3,6 +3,7 @@
 /* @theme custom */
 
 @import 'gaia';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';
 
 @font-face {
   src: url('./assets/fonts/Inter/Inter-Thin.ttf') format('truetype');
@@ -110,11 +111,68 @@
   /* background-blend-mode: luminosity; */
 }
 
+.coverBlockCenter {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 2rem;
+}
+
+.coverModuleName {
+  color: #d8d8d8;
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.coverCourseName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+.coverAuthor {
+  color: #d8d8d8;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+.coverFooterLeft {
+  position: absolute;
+  bottom: 2rem;
+  left: 4rem;
+}
+
+
+.coverFooterRight {
+  position: absolute;
+  bottom: 2rem;
+  right: 4rem;
+}
+
+.coverYear {
+  color: #d8d8d8;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+
+
 /* Add "Page" prefix and total page number */
 
 section {
   /* border: 1rem solid var(--color-highlight); */
+}
 
+p {
+  text-align: justify;
 }
 
 section::after {
@@ -141,14 +199,41 @@ h1 {
 }
 
 .block {
+  position:relative;
+  margin-top: 1rem;
   padding: 0.5rem 1rem 1rem 1rem;
   border-radius: 20px;
   border: 3px solid var(--color-block);
   background-color: var(--color-block2);
+  font-size:0.8rem;
+}
+
+.block-icon {
+  background-color: var(--white);
+  border-radius: 100px;
+  border: 0.1rem solid var(--black1);
+  width: 1.5rem;
+  height: 1.5rem;
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -12px;
+  left: -12px;
+  font-size: 0.8rem;
+  transform: translate(0%, 0%);
 }
 
 .block>h1 {
   font-size: 1rem;
+}
+
+.block>h2 {
+  font-size: 0.8rem;
+}
+
+.block>h3 {
+  font-size: 0.7rem;
 }
 
 .note {
@@ -159,14 +244,6 @@ h1 {
 .warning {
   border: 3px solid var(--color-warning);
   background-color: var(--color-warning2);
-}
-
-.warning>h1:before {
-  content: '⚠️ ';
-}
-
-.note>h1:before {
-  content: '💡 ';
 }
 
 .w33 {
@@ -185,7 +262,7 @@ h1 {
 
 .main>h1 {
   position: absolute;
-  top: 8rem;
+  top: 10rem;
   transform: translate(0, -50%);
   font-size: 4rem;
   color: var(--color-highlight);
@@ -193,7 +270,12 @@ h1 {
 
 .main>h2 {
   position: absolute;
-  top: 13rem;
+  top: 15rem;
   transform: translate(0, -50%);
   font-size: 2.5rem;
+}
+
+.mermaid {
+  background: transparent;
+  font-size: 2px;
 }

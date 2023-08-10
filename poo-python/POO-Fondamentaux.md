@@ -9,7 +9,7 @@ backgroundColor: "#eee"
 color: "#070219"
 backgroundSize: cover
 backgroundImage: url(./assets/img/bg1.png)
-_backgroundImage: url(./assets/img/POO-1-main.png)
+_backgroundImage: url(./assets/img/POO-cover-bg.png)
 footer: 'Programmation Orientée Objet 2023'
 _footer: ''
 
@@ -18,6 +18,15 @@ _footer: ''
 <!-- PARTIE 0 : Présentation du cours -->
 
 <!-- _paginate: skip -->
+
+<div class="coverBlockCenter">
+<div class="coverModuleName">Programmation Orientée Objet en Python</div>
+<div class="coverCourseName"><span class="important">#1 </span>Fondamentaux</div>
+<div class="coverAuthor">par <span class="important">David Albert</span></div>
+</div>
+
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<div class="coverYear coverFooterRight">2023</div>
 
 
 <!-- TABLE DES MATIERES -->
@@ -37,8 +46,7 @@ Description et utilisation du gestionnaire de paquet pip.
 A quoi ça sert ? Quelques outils utiles.
 
 <b><span class="important">04 </span>Le paradigme de la POO</b>
-Principales caractéristiques du paradigme orienté objet. Comparaison avec les autres paradigmes de programmation.
-
+Principales caractéristiques du paradigme orienté objet. Comparaison avec les autres paradigmes de programmation. 
 
 ---
 <!-- PARTIE 1 : INTERPRETEUR PYTHON -->
@@ -119,7 +127,7 @@ Il existe différentes [versions](https://www.python.org/downloads/) de l’inte
 - Afficher la version : `python -V`
 - Afficher la version : `python monProg.py`
 - Créer un environnement virtuel : `python -m venv .env`
-    
+
 <div class="block">
 
 On peut ensuite activer l'environnement `source .env/bin/activate`
@@ -432,9 +440,9 @@ Décrit les opérations d’un programme à l’aide de faits et les règles log
 Décrit une application et/ou des structures de données sans état interne. 
 <i class="important">Langages</i>: HTML, LaTex
 
-<hr/>
-
 <div class="block note">
+
+<i class="block-icon fas fa-lightbulb"></i> 
 
 # Notes
 La plupart des langages sont **multi-paradigmes**, c'est-à-dire qu'ils supportent simultanément plusieurs paradigmes: impératif, orienté objet, fonctionnel, etc.
@@ -455,3 +463,4 @@ C’est notamment le cas du **Python**.
 | Le développeur |  décrit de façon séquentielle comment un programme doit travailler   |               décrit des concepts et les relations entre ces concepts               | décrit le programme exclusivement à l’aide de fonctions |
 |   Mots clés    | assignation, condition, boucle, branchement, séquence d’instructions | classe, instance, constructeur, encapsulation, abstraction, héritage, polymorphisme | immuable, fonctions pures, fonctions d’ordres supérieur |
 |    Langages    |                      C, Python, PHP, Javascript                      |                                  Java, Python, C++                                  |                     OCaml, LISP, ML                     |
+
