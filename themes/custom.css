@@ -111,6 +111,10 @@
   /* background-blend-mode: luminosity; */
 }
 
+section.huge {
+  font-size: 33px;
+}
+
 .coverBlockCenter {
   position: absolute;
   top: 50%;
