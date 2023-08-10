@@ -100,8 +100,8 @@
   --color-note: rgb(var(--blue));
   --color-note2: rgba(var(--blue), 0.3);
 
-  --color-warning: rgb(var(--orange));
-  --color-warning2: rgba(var(--orange), 0.3);
+  --color-warning: rgb(var(--red));
+  --color-warning2: rgba(var(--red), 0.3);
 
   /* width: 1280px; */
   /* height: 960px; */

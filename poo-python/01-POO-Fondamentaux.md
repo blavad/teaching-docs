@@ -442,7 +442,7 @@ Décrit une application et/ou des structures de données sans état interne.
 
 <div class="block note">
 
-<i class="block-icon fas fa-lightbulb"></i> 
+<i class="block-icon fas fa-info"></i> 
 
 # Notes
 La plupart des langages sont **multi-paradigmes**, c'est-à-dire qu'ils supportent simultanément plusieurs paradigmes: impératif, orienté objet, fonctionnel, etc.
