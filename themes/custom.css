@@ -108,11 +108,44 @@
   font-size: 24px;
   padding: 2rem;
   font-family: 'Inter';
+  background-color: #eee;
+  
+  background-size: 110% 120%;
+  background-image: url(./assets/img/bg1.png);
   /* background-blend-mode: luminosity; */
+}
+
+section.cover {
+  background-image: url(./assets/img/POO-cover-bg.png);
+}
+
+section.bg2 {
+  background-image: url(./assets/img/bg4.png);
+}
+
+section.bg3 {
+  background-image: url(./assets/img/bg2.png);
 }
 
 section.huge {
   font-size: 33px;
+}
+
+
+section::after {
+  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+
+p {
+  text-align: justify;
+}
+
+ul {
+  margin:0;
+}
+
+pre {
+  margin-top:0.4rem;
 }
 
 .coverBlockCenter {
@@ -169,19 +202,6 @@ section.huge {
 
 
 
-/* Add "Page" prefix and total page number */
-
-section {
-  /* border: 1rem solid var(--color-highlight); */
-}
-
-p {
-  text-align: justify;
-}
-
-section::after {
-  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
-}
 
 .flex-horizontal {
   flex: 1;
@@ -191,7 +211,7 @@ section::after {
 
 .flex {
   flex: 1;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .important {

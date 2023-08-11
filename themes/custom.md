@@ -2,9 +2,6 @@
 marp: true
 paginate: true
 theme: custom
-backgroundColor: "#eee"
-color: "#070219"
-backgroundImage: url(../poo-python/assets/img/bg1.png)
 ---
 
 # Handbook: `custom` theme

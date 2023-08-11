@@ -5,11 +5,6 @@ paginate: true
 theme: custom
 title: Cours POO - IA School
 
-backgroundColor: "#eee"
-color: "#070219"
-backgroundSize: cover
-backgroundImage: url(./assets/img/bg1.png)
-_backgroundImage: url(./assets/img/POO-cover-bg.png)
 footer: 'Programmation Orientée Objet 2023'
 _footer: ''
 ---
@@ -17,6 +12,7 @@ _footer: ''
 <!-- PARTIE 0 : Présentation du cours -->
 
 <!-- _paginate: skip -->
+<!-- _class: cover -->
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Programmation Orientée Objet en Python</div>
@@ -174,7 +170,7 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 ---
 ## Princpe
 
-<!-- _backgroundImage: url(./assets/img/bg4.png) -->
+<!-- _class: bg2 -->
 
 <div class="flex-horizontal">
 <div class="flex">

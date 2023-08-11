@@ -5,11 +5,6 @@ paginate: true
 theme: custom
 title: Cours POO - IA School
 
-backgroundColor: "#eee"
-color: "#070219"
-backgroundSize: cover
-backgroundImage: url(./assets/img/bg1.png)
-_backgroundImage: url(./assets/img/POO-cover-bg.png)
 footer: ''
 _footer: ''
 ---
@@ -17,6 +12,7 @@ _footer: ''
 <!-- PARTIE 0 : Présentation du cours -->
 
 <!-- _paginate: skip -->
+<!-- _class: cover -->
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Programmation Orientée Objet en Python</div>
@@ -39,7 +35,7 @@ _footer: ''
 **David Albert** 
 contact : david@unboared.com
 
-**Spécialités**
+**Expertises**
 Apprentissage par renforcement
 Conception et développement logiciel
 Développement web
@@ -76,7 +72,7 @@ systèmes complexes
 **Comprendre python (1 séance)**
 
 **POO (3 séances)**
-◦ Classe, objet, Encapsulation,
+◦ Classe, objet, Encapsulation
 
 
 **UML (2 séances)**
@@ -115,9 +111,7 @@ Le dernier cours est un **projet** individuel. Il permettra de se préparer à l
 <!-- PARTIE 4 : Evaluation -->
 
 ## **04** Evaluation
-<!-- _class: huge -->
-<!-- _backgroundImage: url(./assets/img/bg4.png) -->
-
+<!-- _class: huge bg2 -->
 
 <div class="flex-horizontal" style="height:100%;">
 <div class="flex">
