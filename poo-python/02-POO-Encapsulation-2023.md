@@ -177,7 +177,7 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 Usage simple et visible 
 
-![width:500px](assets/img/POO-Encapsulation-visible.drawio.png)
+![width:500px](assets/img/Encapsulation-visible.png)
 
 </div>
 
@@ -185,7 +185,7 @@ Usage simple et visible
 
 Fonctionnement complexe et caché
 
-![width:500px](assets/img/POO-Encapsulation-hidden.drawio.png)
+![width:500px](assets/img/Encapsulation-hidden.png)
 
 </div>
 </div>
