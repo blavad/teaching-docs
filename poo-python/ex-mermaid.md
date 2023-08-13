@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: custom
+theme: dav-default
 ---
 
 <pre class="mermaid">

@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: custom
+theme: dav-default
 title: Cours POO - IA School
 
 footer: 'Programmation Orientée Objet 2023'
@@ -460,3 +460,12 @@ C’est notamment le cas du **Python**.
 |   Mots clés    | assignation, condition, boucle, branchement, séquence d’instructions | classe, instance, constructeur, encapsulation, abstraction, héritage, polymorphisme | immuable, fonctions pures, fonctions d’ordres supérieur |
 |    Langages    |                      C, Python, PHP, Javascript                      |                                  Java, Python, C++                                  |                     OCaml, LISP, ML                     |
 
+
+
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+
+window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
+</script>

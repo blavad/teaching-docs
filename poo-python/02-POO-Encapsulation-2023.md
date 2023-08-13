@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: custom
+theme: dav-default
 title: Cours POO - IA School
 
 footer: 'Programmation Orientée Objet 2023'
@@ -434,3 +434,11 @@ Toute classe python contient un ensemble de méthodes intégrées (ou **built-in
 On peut redéfinir chacune de ces méthodes pour un usage personnalisé.
 
 </div>
+
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+
+window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
+</script>

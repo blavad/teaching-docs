@@ -1,6 +1,6 @@
-/* custom.css */
+/* dav-default.css */
 
-/* @theme custom */
+/* @theme dav-default */
 
 @import 'gaia';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css';
@@ -111,20 +111,20 @@
   background-color: #eee;
   
   background-size: 110% 120%;
-  background-image: url(./assets/img/bg1.png);
+  background-image: url(./assets/img/bg-slide1.png);
   /* background-blend-mode: luminosity; */
 }
 
 section.cover {
-  background-image: url(./assets/img/POO-cover-bg.png);
+  background-image: url(./assets/img/bg-cover.png);
 }
 
 section.bg2 {
-  background-image: url(./assets/img/bg4.png);
+  background-image: url(./assets/img/bg-slide4.png);
 }
 
 section.bg3 {
-  background-image: url(./assets/img/bg2.png);
+  background-image: url(./assets/img/bg-slide2.png);
 }
 
 section.huge {
@@ -214,6 +214,11 @@ pre {
   padding-right: 2rem;
 }
 
+.flex-sm {
+  flex: 1;
+  padding-right: 1rem;
+}
+
 .important {
   color: var(--color-highlight);
 }
@@ -301,5 +306,5 @@ h1 {
 
 .mermaid {
   background: transparent;
-  font-size: 2px;
+  font-size: 10px;
 }

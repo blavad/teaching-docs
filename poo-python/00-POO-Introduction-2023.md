@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: custom
+theme: dav-default
 title: Cours POO - IA School
 
 footer: ''
@@ -67,7 +67,7 @@ systèmes complexes
 <!-- _class: huge -->
 
 <div class="flex-horizontal">
-<div class="flex">
+<div class="flex-sm">
 
 **Comprendre python (1 séance)**
 
@@ -82,12 +82,15 @@ systèmes complexes
 **Projet (1 séance)**
 
 </div>
-<div class="flex">
+<div class="flex-sm">
 
 <div class="block warning">
 <i class="block-icon fas fa-exclamation"></i>
 
 Chaque cours est divisé en une partie **CM** puis une partie **TP**. 
+
+<!-- [Lien des CM](https://github.com/blavad/POO)  -->
+[Lien des TP](https://github.com/blavad/POO)
 
 </div>
 
@@ -114,7 +117,7 @@ Le dernier cours est un **projet** individuel. Il permettra de se préparer à l
 <!-- _class: huge bg2 -->
 
 <div class="flex-horizontal" style="height:100%;">
-<div class="flex">
+<div class="flex-sm">
 <div class="block" style="height:80%;">
 <!-- <i class="block-icon fas fa-exclamation"></i> -->
 
@@ -126,7 +129,7 @@ Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
 </div>
 </div>
-<div class="flex">
+<div class="flex-sm">
 <div class="block"style="height:80%;">
 
 # **30%**   
@@ -140,7 +143,7 @@ Le but est de réaliser une étude cas informatique.
 
 </div>
 </div>
-<div class="flex">
+<div class="flex-sm">
 <div class="block"style="height:80%;">
 
 # **20%**   

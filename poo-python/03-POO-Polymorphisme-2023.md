@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: custom
+theme: dav-default
 title: Cours POO - IA School
 
 footer: 'Programmation Orientée Objet 2023'
@@ -485,7 +485,7 @@ class G(F, B):
 Jusqu'alors nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données (**= attributs d'instances**) de ce dernier.
 
 <b class="important">Méthodes de classes</b>
-Maintenant, nous allons voir utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
+Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
 
 **Exemples d'usages**
 - Stocker des constantes de classe
@@ -538,3 +538,10 @@ if __name__ == '__main__':
 ## Méthodes statiques
 
 </div> -->
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true });
+
+window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
+</script>

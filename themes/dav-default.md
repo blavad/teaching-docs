@@ -1,10 +1,10 @@
 ---
 marp: true
 paginate: true
-theme: custom
+theme: dav-default
 ---
 
-# Handbook: `custom` theme
+# Handbook: `dav-default` theme
 
 
 
@@ -13,9 +13,9 @@ theme: custom
 ---
 
 ## Configurations
-1. Declare directive `theme: custom`
+1. Declare directive `theme: dav-default`
 2. Enable HTML in Marp configs
-3. Add path to `custom.css` theme in Marp configs
+3. Add path to `dav-default.css` theme in Marp configs
 
 
 
