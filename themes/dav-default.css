@@ -115,7 +115,7 @@
   /* background-blend-mode: luminosity; */
 }
 
-section.cover {
+section.cover, section.bg-cover {
   background-image: url(./assets/img/bg-cover.png);
 }
 
@@ -131,13 +131,27 @@ section.huge {
   font-size: 33px;
 }
 
+h1 {
+  font-size: 3rem;
+}
 
-section::after {
-  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 p {
   text-align: justify;
+}
+
+
+section::after {
+  content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
 
 ul {
@@ -221,10 +235,6 @@ pre {
 
 .important {
   color: var(--color-highlight);
-}
-
-h1 {
-  font-size: 3rem;
 }
 
 .block {
