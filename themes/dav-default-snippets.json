@@ -108,14 +108,9 @@
 	"New section": {
 		"prefix": "section",
 		"body": [
+			"---",
+			"",
 			"<!-- PARTIE ${1|01,02,03,04,05|} : ${2:Nom section} -->\n\n<div class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n$3",
-		],
-		"description": "Crée une nouvelle page de section (thème par défaut)"
-	},
-	"New slide": {
-		"prefix": "slide",
-		"body": [
-			"<div class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n---\n\n$3",
 		],
 		"description": "Crée une nouvelle page de section (thème par défaut)"
 	},
@@ -155,41 +150,25 @@
 		],
 		"description": "Crée une nouvelle slide"
 	},
-	"Slide 1": {
-		"prefix": [
-			"slide-1"
-		],
-		"body": [
-			"---\n\n<!-- _class: bg1 -->\n\n## ${1:Title}\n\n",
-		],
-		"description": "Crée une nouvelle slide"
+	"Background Cover": {
+		"prefix": ["bg-cover"],
+		"body": "<!-- _class: bg-cover -->\n\n",
+		"description": "Définir l'arrière plan de la slide."
 	},
-	"Slide 2": {
-		"prefix": [
-			"slide-2"
-		],
-		"body": [
-			"---\n\n<!-- _class: bg2 -->\n\n## ${1:Title}\n\n",
-		],
-		"description": "Crée une nouvelle slide"
+	"Background 1": {
+		"prefix": ["bg1"],
+		"body": "<!-- _class: bg1 -->\n\n",
+		"description": "Définir l'arrière plan de la slide."
 	},
-	"Slide 3": {
-		"prefix": [
-			"slide-3"
-		],
-		"body": [
-			"---\n\n<!-- _class: bg3 -->\n\n## ${1:Title}\n\n",
-		],
-		"description": "Crée une nouvelle slide"
+	"Background 2": {
+		"prefix": ["bg2"],
+		"body": "<!-- _class: bg2 -->\n\n",
+		"description": "Définir l'arrière plan de la slide."
 	},
-	"Slide 4": {
-		"prefix": [
-			"slide-4"
-		],
-		"body": [
-			"---\n\n<!-- _class: bg4 -->\n\n## ${1:Title}\n\n",
-		],
-		"description": "Crée une nouvelle slide"
+	"Background 3": {
+		"prefix": ["bg3"],
+		"body": "<!-- _class: bg3 -->\n\n",
+		"description": "Définir l'arrière plan de la slide."
 	},
 	"Font awesome icon": {
 		"prefix": [
@@ -200,5 +179,5 @@
 			"<i class='fas fa-$1'></i>$2",
 		],
 		"description": "Ajoute un icône."
-	}
+	},
 }
