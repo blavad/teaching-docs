@@ -16,7 +16,7 @@ _footer: ''
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Programmation Orientée Objet en Python</div>
-<div class="coverCourseName"><span class="important">#6 </span>UML (sequence diagram)</div>
+<div class="coverCourseName"><span class="important">#6 </span>UML <span class="coverModuleName" style="font-size:40px;font-weight:bold">Functional Diagrams</span></div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -31,19 +31,33 @@ _footer: ''
 
 ## Table des matières 
 
-<b><span class="important">01 </span> Les acteurs</b>
+<b><span class="important">01 </span> Diagramme d'activité</b>
 
 
-<b><span class="important">02 </span> Ligne de vie du programme</b>
-
-<b><span class="important">03 </span> Diagramme de classes</b>
-Typing. Documentation. Gestion des erreurs. Tests unitaires.
+<b><span class="important">02 </span> Diagramme de séquence</b>
 
 
+---
 
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
+<!-- PARTIE 01 : Diagramme d'activité -->
 
-window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
-</script>
+<div class='main'>
+
+# 01
+
+## Diagramme d'activité
+
+</div>
+
+
+---
+
+<!-- PARTIE 02 : Diagrammes de séquence -->
+
+<div class='main'>
+
+# 02
+
+## Diagrammes de séquence
+
+</div>

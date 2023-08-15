@@ -17,7 +17,8 @@ _footer: ''
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Programmation Orientée Objet en Python</div>
-<div class="coverCourseName"><span class="important">#5 </span>UML (class diagram)</div>
+<div class="coverCourseName"><span class="important">#5 </span>UML  
+<span class="coverModuleName" style="font-size:40px;font-weight:bold">Structural Diagrams</span></div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -82,7 +83,7 @@ Le **cycle en V** a un **inconvénient majeur**. La vérification de la conformi
 </div>
 
 **Méthologie AGILE**
-Pour pallier à cela, les entreprises privilégient de plus en plus des **cycles courts** et successifs. On répétera successivement les étapes de *spécifications, conception, développement, test et validation*.
+Pour pallier à cela, les entreprises privilégient de plus en plus des **cycles courts** et successifs. On répètera successivement les étapes de *spécifications, conception, développement, test et validation*.
 ![height:270](assets/img/cycle-agile.png)
 
 ---
@@ -104,8 +105,8 @@ Pour pallier à cela, les entreprises privilégient de plus en plus des **cycles
 ## **U**nified **M**odeling **L**anguage 
 
 **Motivations**
-- Besoin de conception pour réaliser une architecture complexe.
 - Besoin de se comprendre 
+- Besoin de conception pour réaliser une architecture complexe.
 
 <b class='important'>UML</b> c'est quoi ?
 - un langage de modélisation de systèmes informatiques
@@ -239,7 +240,7 @@ On souhaite réaliser une application pour un restaurant qui lui permettra de g�
 </div>
 
 **Enoncé détaillé**
-Le restaurant accueille des clients décrits par un nom, un email et un numéro de téléphone. Le restaurant est ouvert tous les jours de 19h et 23h30 durant lequel il peut accueillir au maximum 20 clients par service (1 service dure 1h30). Les clients peuvent réserver une table sur ces créneaux. S'il n'y a plus de place, ils peuvent également commander leur repas et payer via l'application et venir le récupérer dans la foulée. Sur place, un serveur s'occupera de des commandes des clients et de la paie.   
+Le restaurant accueille des clients qui sont identifiés par leur nom, leur email et leur numéro de téléphone. Le restaurant est ouvert tous les jours de 19h et 23h30. Il réalise chaque soir 3 services de 1h30 et et jusqu'à 20 clients par service. Les clients peuvent réserver une table sur ces créneaux. S'il n'y a plus de place, ils peuvent également commander leur repas en ligne, payer via l'application et venir le récupérer dans la foulée. Sur place, les serveurs s'occupent des commandes des et du paiement des clients.   
 
 
 
@@ -519,39 +520,3 @@ Fin de conception générale. Intervient dans la dernière phase de la conceptio
 
 - Enrichissement du modèle de domaine
 - Modélisation guidée par les besoins
-
-
----
-
-<!-- PARTIE 05 : Diagramme d'activité -->
-
-<div class='main'>
-
-# 06
-
-## Diagramme d'activité
-
-</div>
-
-
----
-
-<!-- PARTIE 06 : Diagrammes de séquence -->
-
-<div class='main'>
-
-# 07
-
-## Diagrammes de séquence
-
-</div>
-
-
-
-<!-- 
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-
-window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
-</script> -->
