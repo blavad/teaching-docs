@@ -24,8 +24,6 @@ _footer: ''
 <div class="coverYear coverFooterRight">2023</div>
 
 
-
-
 <!-- TABLE DES MATIERES -->
 --- 
 
@@ -39,6 +37,11 @@ Quelques exemples.
 
 <b><span class="important">03 </span> Mieux coder en python</b>
 Typing. Documentation. Gestion des erreurs. Tests unitaires.
+
+---
+
+## SOLID principle
+
 
 
 

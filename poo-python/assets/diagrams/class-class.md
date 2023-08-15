@@ -1,7 +1,14 @@
 ---
 marp: true
-theme: default
+theme: dav-default
 ---
+
+<style>
+:root {
+    background-color:#FFF;
+    font-size: 10px;
+}
+    </style>
 
 <div class="mermaid">
 %%{init: {'theme': 'base',
@@ -12,12 +19,13 @@ theme: default
       'lineColor': '#1f1b30',
       'secondaryColor': '#006100',
       'tertiaryColor': '#fff',
-      'fontFamily':'verdana'
+      'fontFamily':'verdana',
+      'fontSize':'300%'
     }, 
     "flowchart" : { "curve" : "basis" } 
 } }%%
 classDiagram
-    class NomDeClasse {
+    class ClassName {
         attributs
         methods()
     }    

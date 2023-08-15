@@ -220,6 +220,29 @@ Référence:
 
 </div>
 
+
+---
+
+
+## Etude de cas
+
+### **Gestion d'un restaurant**
+
+On souhaite réaliser une application pour un restaurant qui lui permettra de gérer les réservations et les commandes de ses clients.  
+
+<div class='block warning'>
+
+<i class='block-icon fas fa-info'></i>
+
+# On utilisera cet exemple comme fil rouge tout au long de ce cours. 
+
+</div>
+
+**Enoncé détaillé**
+Le restaurant accueille des clients décrits par un nom, un email et un numéro de téléphone. Le restaurant est ouvert tous les jours de 19h et 23h30 durant lequel il peut accueillir au maximum 20 clients par service (1 service dure 1h30). Les clients peuvent réserver une table sur ces créneaux. S'il n'y a plus de place, ils peuvent également commander leur repas et payer via l'application et venir le récupérer dans la foulée. Sur place, un serveur s'occupera de des commandes des clients et de la paie.   
+
+
+
 ---
 
 <!-- _class: bg1 -->
@@ -240,7 +263,7 @@ Référence:
 
 **Exemple**
 
-![height:400](assets/img/diag-usecase-example.png)
+![height:430](assets/diagrams/usecase-ex-full.png)
 
 </div></div>
 
@@ -257,7 +280,7 @@ Référence:
 
 # Déclenchement
 
-![width:450](assets/img/diag-usecase-declenche.png)
+![width:450](assets/diagrams/usecase-declenche.png)
 
 </div>
 
@@ -268,7 +291,7 @@ Référence:
 
 # Prolongement
 
-![width:450](assets/img/diag-usecase-extends.png)
+![width:450](assets/diagrams/usecase-extends.png)
 
 </div>
 
@@ -281,7 +304,7 @@ Référence:
 
 # Pré-requis
 
-![width:450](assets/img/diag-usecase-include.png)
+![width:450](assets/diagrams/usecase-include.png)
 
 </div>
 
@@ -292,24 +315,9 @@ Référence:
 
 # Héritage
 
-![width:180](assets/img/diag-usecase-heritage.png)
+![width:180](assets/diagrams/usecase-heritage.png)
 
 </div>
-</div></div>
-
-
----
-
-
-## Exemple (énoncé)
-<div class='flex-horizontal'><div class='flex' style='flex:0.7'>
-
-Un restaurant ....
-
-</div><div class='flex' style='flex:0.3'>
-
-![height:400](assets/img/diag-usecase-example.png)
-
 </div></div>
 
 ---
@@ -364,147 +372,39 @@ Rien de tel que quelques maquettes pour mettre tout le monde d'accord sur l'inte
 
 # Classe
 
-<b class='important'>+</b> : attributs **publics**
-<b class='important'>-</b> : attributs **privés**
-
 **Attributs** 
 *[+/-] attr : Type* 
 
 **Méthodes**
 *[+/-] method(param: Type): ReturnType* 
 
-<div class="mermaid" style='position:absolute;top:15;right:15'>
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    class NomDeClasse {
-        attributs
-        methods()
-    }    
+<div class='flex-horizontal'><div class='flex' style='flex:1'>
 
-</div>
+![height:150](assets/diagrams/class-class.png)
 
-# Interface et classes abstraites
-<div class="mermaid">
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    class NomInterface {
-        + methodAbstraite1()*
-        + methodAbstraite2()*
-    }
-    class NomClasseAbstr {
-        + methodConcrete()
-        + methodAbstraite()*
-    }
+</div><div class='flex' style='flex:1'>
 
-    <<interface>> NomInterface
-    <<abstract>> NomClasseAbstr
-</div>
+<b class='important'>+</b> attributs **publics**
+<b class='important'>-</b> attributs **privés**
 
-
-</div>
-
-</div>
+</div></div></div></div>
 
 <div class='flex'  style="flex:0.5">
 
-<div class='flex-horizontal'><div class='flex'>
+<div class='block'>
 
+# Interface et classes abstraites
+
+![height:120](assets/diagrams/class-interface.png)
+
+
+Méthodes abstraites en *italic* (ou <u>soulignée</u>)
+
+</div>
 <div class='block'>
 
 # Héritage
-<div class="mermaid">
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    Parent <|-- Child
-</div>
-
-</div>
-
-</div><div class='flex'>
-
-<div class='block'>
-
-# Association
-<div class="mermaid">
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    Parent <|-- Child
-</div>
-
-</div>
-
-</div></div>
-
-
-<div class='block'>
-
-# Association
-<div class="mermaid">
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    <!-- direction RL -->
-    Parent -- Child
-</div>
+![height:100](assets/diagrams/class-heritage.png)
 
 </div>
 
@@ -522,53 +422,62 @@ classDiagram
 
 <div class='block'  style="height:100%">
 
-# Composition
+# Association
+Si deux classes sont en intéractions dans le système on les associent.
 
-<div class="mermaid" style='position:absolute;top:20;right:30'>
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    <!-- direction RL -->
-    Class1 *-- Class2
-</div>
+</br>
+
+<img src="assets/diagrams/class-association.png"/>
+
+On peut préciser la multiplicité.
 
 </div>
 
-</div><div class='flex'>
+</div><div class='flex' style="flex:1.5">
 
 <div class='block' style="height:100%">
 
-# Aggrégation
+# Aggrégation / Composition
 
-<div class="mermaid" style='position:absolute;top:20;right:30'>
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    <!-- direction RL -->
-    Class1 o-- Class2
-</div>
+- associations particulières
+- On peut dire: "objet de la classe 1 <u>contient</u> objet(s) de la classe 2"
+
+
+<div class='flex-horizontal'><div class='flex' style="padding:0;">
+
+**Composition**
+![height:110](assets/diagrams/class-composition.png)
+
+
+</div><div class='flex' style="padding:0;">
+
+</br>
+
+Contient physiquement
+*Class1* détruite <i class='fas fa-arrow-right'></i> *Class2* détruite
+
+</div></div>
+
+<div class='flex-horizontal'><div class='flex' style="padding:0;">
+
+**Aggrégation**
+![height:100](assets/diagrams/class-aggregation.png)
+
+
+</div><div class='flex' style='padding:0;'>
+
+</br>
+
+*Class1* détruite <i class='fas fa-arrow-right'></i> *Class2* persiste
+
+
+
+</div></div>
+
+
+
+</br>
+
 
 
 </div>
@@ -593,41 +502,7 @@ Début de conception générale. Intervient juste après les premières maquette
 </div><div class='flex'>
 
 
-
-<div class="mermaid">
-%%{init: {'theme': 'base',
-    'themeVariables': {
-      'primaryColor': '#fff',
-      'primaryTextColor': '#1f1b30',
-      'primaryBorderColor': '#FF2453',
-      'lineColor': '#1f1b30',
-      'secondaryColor': '#006100',
-      'tertiaryColor': '#fff',
-      'fontSize':'200%',
-      'fontFamily':'verdana'
-    }, 
-    "flowchart" : { "curve" : "basis" } 
-} }%%
-classDiagram
-    class Restaurant {
-    }
-
-    class Client
-    class  Employee
-
-    Restaurant *-- Service
-    Restaurant *-- Employee
-
-    Employee <|-- Dresser
-    Employee <|-- Chef
-    Client <|-- FoodCritic
-    Bill -- Client
-    Service o-- Client
-    Service o-- Team
-    Team *-- Employee
-    
-
-</div>
+![height:500px](assets/diagrams/class-domain-example.png)
 
 
 </div></div>
@@ -673,10 +548,10 @@ Fin de conception générale. Intervient dans la dernière phase de la conceptio
 
 
 
-
+<!-- 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
 mermaid.initialize({ startOnLoad: true });
 
 window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
-</script>
+</script> -->

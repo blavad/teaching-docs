@@ -33,16 +33,21 @@ _footer: ''
 <b><span class="important">01 </span> L'interpréteur python</b>
 Langage compilé vs interprété. Présentation de l’interpréteur python.
 
+<b><span class="important">02 </span>Le typage en python</b>
+Typage dynamique. Bibliothèque *typing*. PEP 8.
 
-<b><span class="important">02 </span> La gestion de paquets</b>
+<b><span class="important">03 </span> La gestion de paquets</b>
 Description et utilisation du gestionnaire de paquet pip.
 
 
-<b><span class="important">03 </span> Les environnements virtuels</b>
+<b><span class="important">04 </span> Les environnements virtuels</b>
 A quoi ça sert ? Quelques outils utiles.
 
-<b><span class="important">04 </span>Le paradigme de la POO</b>
-Principales caractéristiques du paradigme orienté objet. Comparaison avec les autres paradigmes de programmation. 
+<b><span class="important">05 </span>Le paradigme de la POO</b>
+Principales caractéristiques du paradigme orienté objet. 
+Comparaison avec les autres paradigmes de programmation. 
+
+
 
 ---
 <!-- PARTIE 1 : INTERPRETEUR PYTHON -->
@@ -131,12 +136,157 @@ Puis le désactiver `deactivate`
 
 </div>
 
+---
+
+<!-- PARTIE 02 : Le typage en python -->
+
+<div class='main'>
+
+# 02
+
+## Le typage en python
+
+</div>
 
 ---
-<!-- PARTIE 2 : GESTIONNAIRE DE PAQUETS -->
+
+## Type dynamique
+
+Python <i class='fas fa-arrow-right'></i> <b class='important'>typage dynamique</b>. 
+
+- pas besoin de déclarer les variables avant de pouvoir leur affecter une valeur
+- les types sont portés par les valeurs et non les variables
+- permet aux variables de changer de type en cours d'exécution
+
+    <div class="w50">
+
+    ```python
+    a = 23
+    a = "hello"
+    ```
+    </div>
+
+<div class='block warning'>
+
+<i class='block-icon fas fa-exclamation'></i>
+
+Contrairement au C++, quand on assigne une variable en utilisant une autre, on ne copie pas la valeur mais une référence vers cette valeur.
+
+Quand on modifie une valeur:
+- si **type primitif** alors la **référence change**
+- si **type composé** alors la **référence reste la même**
+
+</div>
+
+[Référence](https://librecours.net/module/js/js16/pres/co/affectation.html?mode=html)
+
+---
+
+## Déclarer les types
+### **PEP 483** 
+
+[PEP 483](https://peps.python.org/pep-0008/) (Python Enhancement Proposals - Article 483) contient tout ce qu'il faut savoir pour déclarer  nos types dans le code python. L'objectif étant de rendre le code plus compréhensible.
+<i class='fas fa-arrow-right'></i> Cela n'affecte pas le fonctionnement du code.
+
+
+<div class='flex-horizontal'><div class='flex'>
+
+**Types primitifs**
+```python
+# Déclaration typée d'une variable
+ma_var : str = "Ceci est un string"
+
+# Déclaration typée d'une fonction
+def ma_function(arg1: int, arg2: float) -> bool
+ma_var : str = "Ceci est un string"
+```
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+En python, il existe 4 types primitifs: 
+<b class='important'>bool</b>, <b class='important'>int</b>, <b class='important'>float</b> et <b class='important'>str</b>
+
+</div>
+</div><div class='flex'>
+
+**Types composites**
+
+Depuis *python3.10*, plus besoin de passer par la bibliothèque `typing` pour les types composites standard: <b class='important'>list</b>, <b class='important'>dict</b>, <b class='important'>set</b>, etc 
+
+</br>
+
+```python
+ma_liste = list[int] = [3, 5, 7]
+mon_dict = dict[str, float] = {'pressure': 4.1}
+mon_dict = set[str] = ['pressure']
+```
+
+---
+
+## Déclarer les types <a src="https://docs.python.org/3/library/typing.html"><i class='fas fa-external-link'></i></a>
+### **PEP 483** 
+
+<div class='flex-horizontal'><div class='flex'>
+
+
+<b class='important'>Alias</b>
+
+```python
+Vector = list[float]
+
+def scale(scalar: float, vector: Vector) -> Vector:
+    return [scalar * num for num in vector]
+
+# passes type checking; a list of floats qualifies as a Vector.
+new_vector = scale(2.0, [1.0, -4.2, 5.4])
+```
+
+<b class='important'>Union</b>
+Avant 3.10: 
+```python 
+from typing import Union
+
+ma-var: Union[str, int] = 4
+``` 
+
+Après 3.10
+```python 
+ma-var: str | int = 4
+``` 
+
+</div><div class='flex'>
+
+
+<b class='important'>Généricité</b>
+```python
+from collections.abc import Sequence
+from typing import TypeVar
+
+T = TypeVar('T')                  # Declare type variable "T"
+
+def first(l: Sequence[T]) -> T:   # Function is generic over the TypeVar "T"
+    return l[0]
+```
+
+</div></div>
+
+<!-- 
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+# PEP 8
+PEP 8 contient des informations sur le style à emprunter quand on code en python.
+
+</div>
+</div></div> -->
+
+---
+<!-- PARTIE 3 : GESTIONNAIRE DE PAQUETS -->
 <div class="main">
 
-# 02 
+# 03
 
 ## Le gestionnaire de paquets
 
