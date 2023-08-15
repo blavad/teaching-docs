@@ -282,7 +282,7 @@ class Bike(MotorlessVehicule):
         print("Go cleanly by skate!")
 ```
 
-La méthode `accelerate` n'est pas la même pour un vélo et un skateboard.
+L'implémentation d'`accelerate` n'est pas la même pour un vélo et un skateboard.
 
 </div>
 </div>
@@ -486,7 +486,7 @@ class G(F, B):
 ## Définition
 
 **Avant propos**
-Jusqu'alors nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données (**= attributs d'instances**) de ce dernier.
+Jusqu'alors nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données de ce dernier (**= attributs d'instances**).
 
 <b class="important">Méthodes de classes</b>
 Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
