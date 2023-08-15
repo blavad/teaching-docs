@@ -191,7 +191,7 @@ Quand on modifie une valeur:
 
 <div class='flex-horizontal'><div class='flex'>
 
-**Types primitifs**
+**1. Types primitifs et fonctions**
 ```python
 # Déclaration typée d'une variable
 ma_var : str = "Ceci est un string"
@@ -210,16 +210,22 @@ En python, il existe 4 types primitifs:
 </div>
 </div><div class='flex'>
 
-**Types composites**
+**2. Types composites**
+Avant python3.10: 
+```python
+from typing import List, Dict
 
-Depuis *python3.10*, plus besoin de passer par la bibliothèque `typing` pour les types composites standard: <b class='important'>list</b>, <b class='important'>dict</b>, <b class='important'>set</b>, etc 
+ma_liste = List[int] = [3, 5, 7]
+mon_dict = Dict[str, float] = {'pressure': 4.1}
+```
 
-</br>
+
+Après python3.10: 
+Plus de `typing` pour les types composites standard: <b class='important'>list</b>, <b class='important'>dict</b>, <b class='important'>set</b>, ...
 
 ```python
 ma_liste = list[int] = [3, 5, 7]
 mon_dict = dict[str, float] = {'pressure': 4.1}
-mon_dict = set[str] = ['pressure']
 ```
 
 ---
@@ -229,8 +235,7 @@ mon_dict = set[str] = ['pressure']
 
 <div class='flex-horizontal'><div class='flex'>
 
-
-<b class='important'>Alias</b>
+**3. Alias**
 
 ```python
 Vector = list[float]
@@ -242,7 +247,7 @@ def scale(scalar: float, vector: Vector) -> Vector:
 new_vector = scale(2.0, [1.0, -4.2, 5.4])
 ```
 
-<b class='important'>Union</b>
+**4. Union**
 Avant 3.10: 
 ```python 
 from typing import Union
@@ -258,7 +263,7 @@ ma-var: str | int = 4
 </div><div class='flex'>
 
 
-<b class='important'>Généricité</b>
+**5. Généricité**
 ```python
 from collections.abc import Sequence
 from typing import TypeVar
@@ -268,6 +273,22 @@ T = TypeVar('T')                  # Declare type variable "T"
 def first(l: Sequence[T]) -> T:   # Function is generic over the TypeVar "T"
     return l[0]
 ```
+
+**6. Any**
+Peut être de n'importe quel type
+Avant 3.11:
+ 
+```python 
+from typing import Any
+
+ma-var: Any = 4
+``` 
+Après 3.11
+```python 
+ma-var: Any = 4
+``` 
+
+
 
 </div></div>
 

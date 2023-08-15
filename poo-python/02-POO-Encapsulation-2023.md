@@ -60,7 +60,7 @@ Fonctions intégrées : \_\_init__, \_\_str__, \_\_eq__, ...
 
 ## Les classes
 
-Une <b class="important">classe</b> est un **type de données** composite  constitué:
+Une <b class="important">classe</b> est un **type de données composite**  constitué:
 - de données que l’on appelle <b class="important">attributs</b> (des variables primitives ou des objets)
 - de <b class="important">méthodes</b> permettant de traiter ces données et des données extérieures à la classe
 
@@ -101,7 +101,8 @@ class CitroenC3:
 --- 
 ## Les objets
 
-Un <b class="important">objet</b> est une **variable** dont le type est une classe particulière. On dit qu'un objet est une <b class="important">instance de classe</b>. 
+Un <b class="important">objet</b> est une **variable** dont le type est une classe particulière 
+<i class='fas fa-arrow-right'></i> on parle <b class="important">instance de classe</b>. 
 
 
 <div class="flex-horizontal">
@@ -195,7 +196,9 @@ Fonctionnement complexe et caché
 
 ## Visibilité des attributs et méthodes
 
-L’encapsulation de données dans un objet permet de cacher ou non leur existence aux autres objets du programme. Une donnée peut être déclarée en accès :
+L’encapsulation de données dans un objet permet de cacher ou non leur existence aux autres objets du programme. 
+
+Une donnée peut être déclarée en accès :
 
 - **public** : les autres objets peuvent accéder à la valeur de cette donnée ainsi que la modifier
 
@@ -316,6 +319,7 @@ class Music:
 ```python
 # Instanciation d'un objet de type 'Music' 
 m = Music('La pluie', ['Stromae', 'Orelsan'])
+
 print(m.hasAuthor('Stromae'))
 # true
 ```
@@ -355,11 +359,9 @@ class Music:
 **Appel du constructeur par défaut**
 
 ```python
-m1 = Music('La pluie', ['Stromae', 'Orelsan'])
-print(1.hasAuthor('Stromae')) 
-# true
-
+# Appel du constructeur par défaut
 m2 = Music('La pluie')
+
 print(m.hasAuthor('Stromae')) 
 # false
 ```

@@ -77,7 +77,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 
 **Syntaxe python**
 ```python
-class Vehicule:
+class Vehicule: # ici on définit la classe mère
     def __init__(self, wheels, brand):
         self._brand = brand
         self._wheels = wheels
@@ -85,7 +85,7 @@ class Vehicule:
     def accelerate(self):
         print("Go !")
 
-class Bike(Vehicule):
+class Bike(Vehicule): # class fille
     def __init__(self):
         super().__init__(2, "Canyon")
 ```
@@ -109,10 +109,25 @@ b.accelerate()
 Une <b class="important">classe abstraite</b> est une classe qui comprend **au moins** une méthode **non implémentée**.
 
 <div class="flex-horizontal">
-<div class="flex">
+<div class="flex" style="flex:0.4;">
+
+**Syntaxe UML**
+
+
+![height:250px](assets/img/diag-abstract.png)
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Les méthodes abstraites sont écrites en *italique*. A la main, on <u>souligne</u>.
+
+</div>
+
+</div>
+<div class="flex" style="flex:0.6">
 
 **Intérêt**
-- Implémenter certains opérations communes à un groupe d'objets malgré que le concept soit encore *abstrait*
+- Implémenter certains opérationes communes à un groupe d'objets malgré que le concept soit encore *abstrait*
 
 
 **Syntaxe python**
@@ -131,15 +146,6 @@ class Vehicule:
 
 ```
 </div>
-<div class="flex">
-
-**Syntaxe UML**
-
-
-![height:250px](assets/img/diag-abstract.png)
-Les méthodes abstraites sont en *italique*.
-A la main, on <u>souligne</u>.
-</div>
 </div>
 
 ---
@@ -151,20 +157,20 @@ Une <b class="important">interface</b> est une classe abstraite particulière. E
 
 
 <div class="flex-horizontal">
-<div class="flex">
+<div class="flex" style="flex:0.4">
 
 **Intérêts**
 - Définir les opérations sans préciser leur implémentation
 - Préciser les conditions et les effets de l'invocation des opérations
 </div>
-<div class="flex">
+<div class="flex" style="flex:0.2">
 
 **Syntaxe UML**
 ![height:250px](assets/img/diag-interface.png)
 
 </div>
 
-<div class="flex">
+<div class="flex" style="flex:0.4">
 
 **Syntaxe python**
 
@@ -291,9 +297,7 @@ La méthode `accelerate` n'est pas la même pour un vélo et un skateboard.
 Nous pouvons appeler la méthode `accelerate` d'un objet sans nous soucier son type intrinsèque.
 
 ```python
-from typing import List
-
-vehicules : List[Vehicule] = [] # notation typée (depuis python3)
+vehicules : list[Vehicule] = [] 
 vehicules.append(Car())
 vehicules.append(Skateboard())
 
