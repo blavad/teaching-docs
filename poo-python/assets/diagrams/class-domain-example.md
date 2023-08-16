@@ -25,29 +25,38 @@ font-size:10px;
     "flowchart" : { "curve" : "basis" } 
 } }%%
 classDiagram
-    class Restaurant {
+    class User {
+      - username: string
+      - avatar: string
+      - email: string
     }
 
+    class Screen {
+      - id: string
+      - name: string
+      - isActive: boolean
+    }
+
+    class Site 
+
     class Client
-    class  Employee
-
-    Restaurant *-- Service
-    Restaurant *-- Employee
-
-    Service o-- "0..20" Client
-    Client <|-- FoodCritic
-    Client -- "1..*" Bill : concerne
-    Client o-- "1..*" Reservation
-    Bill -- Payment
-
-    Payment <|-- Cash
-    Payment <|-- Check
-    Payment <|-- Card
+    
+    class PaymentMethod
 
 
-    Employee <|-- Waiter
-    Employee <|-- Chef
-    Waiter -- Client
+    class PaymentManager {
+      + payBill(method:PaymentMethod, bill: Bill)
+    }
+ 
+
+    User o-- Site
+
+    Client <|-- Aeroport 
+    Client <|-- Cinema 
+
+    PaymentMethod <|-- CreditCard 
+
+
 
 </div>
 
