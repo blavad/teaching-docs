@@ -1,3 +1,7 @@
 {
-    "markdown.marp.enableHtml": true
+    "markdown.marp.enableHtml": true,
+    "markdown.marp.strictPathResolutionDuringExport": false,
+    "markdown.marp.themes": [
+        "./themes/dav-default.css"
+    ]
 }
