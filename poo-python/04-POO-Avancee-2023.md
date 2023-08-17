@@ -46,12 +46,12 @@ Documentation. Gestion des erreurs. Tests unitaires.
 
 # 01
 
-## SOLID principles*
+## SOLID principles <i class='important'>*</i>
 
 </div>
 
 <div style="position:absolute;bottom:10%">
-*cette section reprend les exemples de <a href="https://gist.github.com/dmmeteo"><b class='important'>@dmmeteo</b></a> 
+<i class='important'>*</i>cette section reprend les exemples de <a href="https://gist.github.com/dmmeteo"><b class='important'>@dmmeteo</b></a> 
 </div>
 
 ---
@@ -349,11 +349,108 @@ Dans ce cours, nous présenterons 4 patrons de conception classiques.
 
 ---
 
-## Singleton
+## Factory Method
+
+La <b class='important'>"factory method"</b> permet de construire des objets depuis du texte. 
+
+**Exemple**
+
+<div class='flex-horizontal'><div class='flex'>
+
+```python
+class FrenchLocalizer:
+    """it simply returns the french version"""
+    def __init__(self):
+        self.translations = {"car": "voiture", "bike": "bicyclette", "cycle":"cyclette"}
+ 
+    def localize(self, msg):
+        """change the message using translations"""
+        return self.translations.get(msg, msg)
+ 
+class SpanishLocalizer:
+    """it simply returns the spanish version"""
+    def __init__(self):
+        self.translations = {"car": "coche", "bike": "bicicleta", "cycle":"ciclo"}
+ 
+    def localize(self, msg):
+        """change the message using translations"""
+        return self.translations.get(msg, msg)
+ 
+class EnglishLocalizer:
+    """Simply return the same message"""
+    def localize(self, msg):
+        return msg
+```
+
+</div><div class='flex'>
+
+
+
+
+```python
+# The factory
+def TranslateFactory(language ="English"):
+ 
+    """Factory Method"""
+    localizers = {
+        "French": FrenchLocalizer,
+        "English": EnglishLocalizer,
+        "Spanish": SpanishLocalizer,
+    }
+ 
+    return localizers[language]()
+```
+
+```python
+f = Factory("French")
+print(f.localize("car")) # voiture
+```
+
+</div></div>
 
 ---
 
-## Factory Method
+## Adapter
+
+La méthode <b class='important'>"adapter"</b> permet de réutiliser le comportement fonctionnel d'une classe mais dont l'interface ne correspond pas aux attentes. 
+
+**Exemple**
+
+<div class='flex-horizontal'><div class='flex'>
+
+```python
+class Target:
+    """
+    Interface utilisé par le code client.
+    """
+    def request(self):
+        return "Target: The default target's behavior."
+
+
+class Adaptee:
+    """
+    Contient des comportements utiles mais l'interface ne correspond pas à l'interface existante.
+    """
+
+    def specific_request(self):
+        return ".eetpadA eht fo roivaheb laicepS"
+
+
+class Adapter(Target, Adaptee):
+    """
+    L'adapteur permet de faire concorder la classe véhicule avec l'interface souhaitée.
+    """
+
+    def request(self) -> str:
+        return self.specific_request() 
+
+```
+
+</div><div class='flex'>
+
+
+
+</div></div>
 
 ---
 
@@ -361,19 +458,15 @@ Dans ce cours, nous présenterons 4 patrons de conception classiques.
 
 ---
 
-## Builder
-
----
-
-## Adapter
-
----
 
 ## State
 
 ---
 
 ## Observer
+
+L'<b class='important'>observer</b> un mécanisme d'abonnement pour notifier à plusieurs objets tout événement survenant à l'objet qu'ils observent. 
+
 
 
 ---
