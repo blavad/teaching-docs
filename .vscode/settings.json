@@ -1,7 +1,9 @@
 {
-    "markdown.marp.enableHtml": true,
-    "markdown.marp.strictPathResolutionDuringExport": false,
-    "markdown.marp.themes": [
-        "./themes/dav-default.css"
-    ]
+  "markdown.marp.enableHtml": true,
+  "markdown.marp.strictPathResolutionDuringExport": false,
+  "markdown.marp.themes": [
+    "./themes/dav-default.css",
+    "./themes/dav-maths.css"
+  ],
+  "markdown.marp.chromePath": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
 }
