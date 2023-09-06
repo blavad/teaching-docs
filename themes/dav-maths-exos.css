@@ -1,0 +1,9 @@
+/* dav-maths-exos.css */
+
+/* @theme dav-maths-exos */
+
+@import 'dav-maths';
+
+:root {
+  font-size: 12px;
+}
