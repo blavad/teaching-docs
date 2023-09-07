@@ -73,14 +73,35 @@ Suites arithmétiques. Démonstration par récurrence.
 
 ---
 
-## Ensemble
+## Ensembles $\emptyset, \mathbb{N}, \mathbb{Z}, \mathbb{R}$
+
+**Ensemble vide $\emptyset$**
+Un ensemble qui ne contient aucun élément s'appelle l'ensemble vide et se note $\emptyset$
+
+**Nombres entiers naturels $\mathbb{N}$**
+Un nombre entier naturel est un nombre entier qui est positif.
+L'ensemble des **nombres entiers naturels** est noté $\mathbb{N}$.
+$\mathbb{N} = \left\{0,1,2,3,4...\right\}$
+
+**Nombres entiers relatifs $\mathbb{Z}$**
+Un nombre entier relatif est un nombre entier qui est positif ou négatif.
+L'ensemble des **nombres entiers relatifs** est noté $\mathbb{Z}$.
+$\mathbb{Z} = \left\{..., −3,−2 ,−1, 0 ,1, 2 , 3,...\right\}$
+
+**Nombres réels $\mathbb{R}$**
+L'ensemble des **nombres réels** est noté $\mathbb{R}$.
+C'est l'ensemble de tous les nombres qui peuvent être représentés par une partie entière et une liste finie ou infinie de décimales.
+
+---
+
+## Ensemble et intervalles
 
 ### **Définitions**
 
 <div class='block note'>
 <div class='block-icon'>
 <i class='far fa-heart' style='padding-right:1rem;'></i>
-<b>Ensemble</b>
+<b>Définition - Ensemble</b>
 </div>
 
 Un **ensemble** est bien défini s'il est donné par une collection d'éléments qui satisfont une propriété caractéristique explicite, c'est-à-dire commune à tous les éléments de l'ensemble et à eux seuls.
@@ -99,23 +120,58 @@ Si une telle propriété est notée $P$, on notera $\left\{ x \mid P (x)\right\}
 
 ---
 
-## Ensembles $\mathbb{N}, \mathbb{Z}, \mathbb{R}$
-
----
-
 ## Référentiel
 
 Nous supposerons toujours que les éléments constituant nos ensembles font partie d'un **référentiel** (qui peut être, par exemple, les étudiants inscrits à ce cours, les nombres entiers, les nombres réels, les villes de Belgique, ...) et que **la propriété sélectionne** certains éléments de ce référentiel (par exemple, les étudiants inscrits au cours qui mesurent moins d'1m70, les nombres pairs, les nombres réels qui sont irrationnels, les villes de Flandre, ...).
 
 S'il n'y a pas d'ambiguïté sur le référentiel, on gardera la notation implicite $\left\{x \mid P (x)\right\}$. Si par contre, on souhaite distinguer deux référentiels, par exemple, ceux des entiers $\mathbb{Z}$ et des réels $\mathbb{R}$, on écrira $\left\{x \in \mathbb{Z} \mid x \leq 0\right\}$ et $\left\{x \in \mathbb{R} \mid x \leq 0\right\}$.
 
+**Exemple**
+Soit $A=\left\{0,1,2\right\}$, $B=\{-51, 23, -1, -6, 10\}$ et $\mathbb{N}$, trois référentiels distincts.
+
+On a $\left\{x \in A \mid x < 0\right\} \ne \left\{x \in B \mid x < 0\right\} \ne \left\{x \in \mathbb{Z} \mid x < 0\right\}$
+
+En effet,
+$(i)\ \left\{x \in A \mid x < 0\right\} = \emptyset$
+$(ii)\ \left\{x \in B \mid x < 0\right\} = \{-51, -1, -6\}$
+$(iii)\ \left\{x \in \mathbb{Z} \mid x < 0\right\} = \{..., -4, -3, -2, -1\}$
+
+---
+
+## Ensembles et intervalles
+
 <div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Définition - Intervalle</b>
+</div>
 
-<i class='block-icon fas fa-info'></i>
+Un **intervalle de $\mathbb{R}$** est une partie $I$ de $\mathbb{R}$ vérifiant la propriété suivante:
 
-Le référentiel peut être vu comme est un ensemble.
+$$\forall x,y \in I,\ \forall z \in \mathbb{R};\ si\ x \le z \le y\ alors\ z \in I$$
 
 </div>
+
+On démontre alors qu'un intervalle est forcément un ensemble du type suivant :
+
+<div class='flex-horizontal'><div class='flex'>
+
+- L'ensemble vide $\emptyset$
+- $\left\{ a \right\} = [a,a]$
+- $\mathbb{R} = ]-\infty,+\infty[$
+- $\{x \in \mathbb{R} \mid a \leq x \leq b \} = [a , b]$ <i class='important' style="font-size:0.85rem">(fermé borné)</i>
+- $\{x \in \mathbb{R} \mid a < x < b \} = ]a, b[$ <i class='important' style="font-size:0.85rem">(ouvert borné)</i>
+- $\{x \in \mathbb{R} \mid a < x \leq b \} = ]a, b]$ <i class='important' style="font-size:0.85rem">(borné, ouvert à gauche)</i>
+- $\{x \in \mathbb{R} \mid a \leq x < b \} = [a, b[$ <i class='important' style="font-size:0.85rem">(borné, ouvert à droite)</i>
+
+</div><div class='flex'>
+
+- $\left\{x \in \mathbb{R} \mid x < a\right\} = ]-\infty, a[$ <i class='important' style="font-size:0.85rem">(non borné, fermé à gauche)</i>
+- $\left\{x \in \mathbb{R} \mid x \leq a\right\} = ]-\infty, a]$ <i class='important' style="font-size:0.85rem">(non borné, fermé à droite)</i>
+- $\left\{x \in \mathbb{R} \mid x > a \right\} = ]a, +\infty[$ <i class='important' style="font-size:0.85rem">(non borné, ouvert à gauche)</i>
+- $\left\{x \in \mathbb{R} \mid x \geq a\right\} = [a, +\infty[$ <i class='important' style="font-size:0.85rem">(non borné, ouvert à droite)</i>
+
+</div></div>
 
 ---
 
@@ -172,7 +228,7 @@ Soit $X$ un ensemble et soient $A, B, C ∈ P(X)$. Alors
 1. $A \cap B = B \cap A$
 2. $A \cup B=B \cup A$
 3. $X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$
-4. $X \ (A \cup B) = (X \setminus A) \cap (X \setminus B)$
+4. $X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$
 5. $A \cap (B \cap C) = (A \cap B) \cap C$
 6. $A \cup (B \cup C) = (A \cup B) \cup C$
 7. $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
@@ -431,9 +487,9 @@ Le nombre $6$, n'est pas premier: il admet 2 et 3 comme autres diviseurs
 <b>Remarques</b>
 </div>
 
-<i class='fas fa-arrow-right'></i> **0 n’est pas premier** car il admet **une infinité de diviseurs**.
+<i class='fas fa-arrow-right'></i> **0 n'est pas premier** car il admet **une infinité de diviseurs**.
 
-<i class='fas fa-arrow-right'></i> **1 n’est pas premier** car il possède **un seul diviseur** : lui-même.
+<i class='fas fa-arrow-right'></i> **1 n'est pas premier** car il possède **un seul diviseur** : lui-même.
 
 <i class='fas fa-arrow-right'></i> 2 est le seul nombre premier pair car tous les nombres pairs sont divisibles par 2.
 
