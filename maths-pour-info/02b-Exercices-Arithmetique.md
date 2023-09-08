@@ -18,23 +18,39 @@ math: mathjax
 
 https://maths.ac-creteil.fr/IMG/pdf/3.nombrespremiers.cours-2.pdf
 
-**Exercice II.1:**
-Définir l'ensemble des entiers strictements supérieurs à $12$.
+**Exercice I.1**
+Construire un nombre divisible par 2,3,4,5,6,9 et 10 en se basant uniquement sur les critère de divisibilité.
 
-**Exercice II.2:**
-Définir l'ensemble des entiers relatifs divisibles par $3$.
+<!-- **Solution**
 
-**Exercice II.2:**
-Définir l'ensemble des cercles dont l'aire est inférieure à $3$.
+- 2 160 est divisible par 2, par 5, par 10. En effet, le chiffre des unités est 0.
+- 2 160 est divisible par 4. En effet, 60 est divisible par 4.
+- 2 160 est divisible par 3 et 9. En effet, $2 + 1 + 6 + 0 = 9$ et 9 est divisible par 3 et par 9 -->
 
-**Exercice II.3:**
-Définir l'ensemble des nombres impaires strictements supérieurs à $3$..
+**Exercice I.2**
+Déterminer tous les diviseurs communs à $60$ et $100$.
 
-**Exercice II.4:**
-Définir l'ensemble des points du cercle $\mathcal{C}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $r$.
+**Exercice I.3**
+Décomposer $84$ en produit de facteurs premiers.
 
-**Exercice II.5:**
-Définir l'ensemble des points du disque ouvert $\mathcal{D}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $r$.
+**Exercice I.4**
+Décomposer $2520$ en produit de facteurs premiers.
+
+**Exercice I.5**
+Trouver la fraction irréductible égale à $\frac{84}{30}$
+
+_Indice: on peut décomposer le numérateur et le dénominateur de la fraction en produit de facteurs
+premiers_
+
+**Exercice I.2** Soient $x$ et $y$ des entiers. Montrer que $2x + 3y$ est divisible par $7$ si et seulement
+si $5x + 4y$ l'est.
+
+<!-- **Solution :** Supposons que 7 divise 2x + 3y, alors il divise 6 (2x + 3y) − 7 (x + 2y) = 5x + 4y.
+Réciproquement si 7 divise 5x + 4y, il divise 6 (5x + 4y) − 7 (4x + 3y) = 2x + 3y. -->
+
+**Exercice I.2 :** Pour quels entiers $n$ strictement positifs, le nombre $n^2 + 1$ divise-t-il $n + 1$ ?
+
+<!-- **Solution :** Si $n^2 + 1$ divise $n + 1$, comme tout est positif, on doit avoir $n^2 + 1  \le n + 1$, ce qui n'est vérifié que pour $n = 1$. On vérifie ensuite que n = 1 est bien solution. -->
 
 </div><div class='flex'>
 

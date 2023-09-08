@@ -110,11 +110,11 @@ Si une telle propriété est notée $P$, on notera $\left\{ x \mid P (x)\right\}
 
 **Exemples :**
 
-- $A = \left\{ x \in \mathbb{N} \mid x > 12 \right\}$ est l'ensemble des entiers strictements supérieurs à $12$.
+- $A = \left\{ x \in \mathbb{N} \mid x > 7 \right\}$ est l'ensemble des entiers strictement supérieur à $7$.
 
-- $B = \left\{ x \in \mathbb{N} \mid x > 3\ et\ \frac{x}{2} - \lfloor \frac{x}{2} \rfloor \neq 0 \right\}$ est l'ensemble des nombres impaires strictements supérieurs à $3$.
+- $B = \left\{ x \in \mathbb{R} \mid -5 \le x \le 12 \right\}$ est l'ensemble des nombres réels compris entre $-5$ et $12$ inclus.
 
-- $\mathcal{C}_{\Omega, r} = \left\{ (x, y) \in \mathbb{R}^2 \mid (x-x_{\Omega})^2 + (y-y_{\Omega})^2  = r^2 \right\}$ est l'ensemble des points du cercle de centre $\Omega = (x_{\Omega},y_{\Omega}) \in \mathbb{R}^2$ et de rayon $r$.
+- $C = \left\{ (\theta_1, \theta_2) \in [0,1]^2 \mid \theta_1 + \theta_2 = 1 \right\}$ est l'ensemble des échantillons possibles de la loi de probabilité de Dirichlet $Dir(1,1)$.
 
 ---
 
@@ -246,6 +246,36 @@ L'ensemble produit de $A$ et de $B$, noté $A \times B$, est définit comme suit
 
 ---
 
+## Ensembles et relations
+
+### **Exemple**
+
+Soient $A=\{1,3,5\}$ et $B = \{0,1,2,3,4 \}$ dans le référentiel $E = [\![0,10 ]\!]$.
+
+Donnez $A \cap B$, $A \cup B$, $A \setminus B$, $\overline{A}$ et $\mathcal{P}(A)$
+
+---
+
+## Ensembles et relations
+
+### **Exemple**
+
+Soient $A=\{1,3,5\}$ et $B = \{0,1,2,3,4 \}$ dans le référentiel $E = [\![0,10 ]\!]$.
+
+Donnez $\overline{A}$, $A \cap B$, $A \cup B$, $A \setminus B$, $\overline{A}$ et $\mathcal{P}(A)$
+
+$8 \notin A$ mais $1 \in A$
+$\{1,2\} \not\subset A$ mais $\{1,3\} \subset A$
+
+$A \cap B = \{1,3\}$
+$A \cup B = \{1,2,3,4,5\}$
+$A \setminus B = \{5\}$
+$\overline{A} = \{0,2,4,6,7,8,9,10\}$
+
+$\mathcal{P}(A)= \{\emptyset, \left\{1\}, \{3\},\{5\}, \{1,3\}, \{1,5\}, \{3, 5\}, \{1, 3, 5\}\right\}$
+
+---
+
 ## Relations ensemblistes
 
 ### **Représentation visuelle**
@@ -268,18 +298,10 @@ Soit $X$ un ensemble et soient $A, B, C \in \mathcal{P}(X)$. Alors
 1. $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ <i class='important'>(distributivité)</i>
 1. $\overline{A \cap B} = \bar{A} \cup \bar{B}$
 1. $\overline{A \cup B} = \bar{A} \cap \bar{B}$
-1. $A \setminus B = A \cap (X \setminus B)$
+1. $A \setminus B = A \cap \bar{B}$
 1. Si $A \subset B$, alors $\mathcal{P}(A) \subset \mathcal{P}(B)$
 
----
-
-## Ensembles et relations
-
-### **Exercices**
-
-Prouvez les propriétés (1), (2), (5) et (8)
-
----
+<i class='info'>(certaines démonstrations seront réalisées en TD)</i>
 
 <script type='module'>
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';

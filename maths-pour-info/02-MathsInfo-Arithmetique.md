@@ -23,8 +23,8 @@ math: mathjax
 
 <b><span class='important'>00 </span> Notations </b>
 
-<b><span class='important'>01 </span> Divisibilité </b>
-Disivision euclidienne. Divisibilité. Partie entière. PGCD / PPCM.
+<b><span class='important'>01 </span> Division euclidienne </b>
+Division euclidienne. Divisibilité. Partie entière. PGCD / PPCM.
 
 <b><span class='important'>02 </span> Nombres premiers </b>
 Nombres premiers. Décomposition en facteurs premiers.
@@ -63,13 +63,13 @@ Définition et propriétés.
 
 ---
 
-<!-- PARTIE 02 : Divisibilité    -->
+<!-- PARTIE 02 : Division euclidienne    -->
 
 <div class='main'>
 
 # 01
 
-## Divisibilité
+## Division euclidienne
 
 </div>
 
@@ -102,6 +102,10 @@ Les entiers $q$ et $r$ sont appelés respectivement **quotient** et **reste** de
 Soient $a \in \mathbb{Z}$ et $b \in \mathbb{Z^*}$. On note $DIV(a, b)$ (respectivement $MOD(a, b)$) le **quotient** (respectivement le **reste**) de la division euclidienne de a par b.
 
 </div>
+
+Soient $a = 7$ et $b = 3$.
+
+On a $\underbrace{7}_{a} = \underbrace{3}_{b} \times \underbrace{2}_{q} + \underbrace{1}_{r}$ l'unique décomposition de $a=7$ quand $b=3$.
 
 ---
 
@@ -144,8 +148,8 @@ Un nombre entier est divisible par :
 1. Si $a$ et $b$ sont deux entiers avec $b \ne 0$, $b$ divise $a$ si et seulement si la fraction $\frac{a}{b}$ est un entier.
 1. Tous les entiers divisent 0 et sont divisibles par 1.
 1. Un entier $n$ est toujours divisible par $1$, $−1$, $n$ et $−n$.
-1. Si $a|b$, et $b|c$, alors $a|c$.
-1. Si $a|b_1, b_2, ... , b_n$, alors $a|b_1c_1+b_2c_2+. . .+b_nc_n$, quels que soient les entiers $c_1, c_2, . . . , c_n$.
+1. Si $a \mid b$, et $b \mid c$, alors $a \mid c$.
+1. Si $a \mid b_1, b_2, ... , b_n$, alors $a \mid b_1c_1+b_2c_2+. . .+b_nc_n$, quels que soient les entiers $c_1, c_2, . . . , c_n$.
 1. Si $a$ divise $b$ et $b \ne 0$, alors $|a| \le |b|$.
 1. Si $a$ divise $b$ et $b$ divise $a$, alors $a = ±b$.
 1. Si $a$ et b sont deux entiers tels que $a^n |b^n$ pour un entier $n > 1$, alors $a|b$.
@@ -156,20 +160,7 @@ Un nombre entier est divisible par :
 
 ### **Exercices**
 
-**Exercice 1 :** Démontrez la propriété (4).
-
-<!-- **Solution :** Supposons que 7 divise 2x + 3y, alors il divise 6 (2x + 3y) − 7 (x + 2y) = 5x + 4y.
-Réciproquement si 7 divise 5x + 4y, il divise 6 (5x + 4y) − 7 (4x + 3y) = 2x + 3y. -->
-
-**Exercice 2 :** Soient $x$ et $y$ des entiers. Montrer que $2x + 3y$ est divisible par $7$ si et seulement
-si $5x + 4y$ l'est.
-
-<!-- **Solution :** Supposons que 7 divise 2x + 3y, alors il divise 6 (2x + 3y) − 7 (x + 2y) = 5x + 4y.
-Réciproquement si 7 divise 5x + 4y, il divise 6 (5x + 4y) − 7 (4x + 3y) = 2x + 3y. -->
-
-**Exercice 3 :** Pour quels entiers $n$ strictement positifs, le nombre $n^2 + 1$ divise-t-il $n + 1$ ?
-
-<!-- **Solution :** Si $n^2 + 1$ divise $n + 1$, comme tout est positif, on doit avoir $n^2 + 1  \le n + 1$, ce qui n'est vérifié que pour $n = 1$. On vérifie ensuite que n = 1 est bien solution. -->
+**Exercice 1 :** Démontrez la propriété (3), (4) et (8).
 
 ---
 
@@ -354,13 +345,7 @@ Le nombre $6$, n'est pas premier: il admet 2 et 3 comme autres diviseurs
 
 </div>
 
----
-
-## Nombres premiers
-
-### **Propriétés**
-
-1. Il existe une infinité de nombres premiers.
+**Propriété :** Il existe une infinité de nombres premiers.
 
 ---
 
