@@ -298,14 +298,18 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 1. Si $d = PGCD(a, b)$, alors $n$ divise $a$ et $b$ si et seulement si $n$ divise $d$.
 1. Si $m = PPCM (a, b)$, alors $n$ est un multiple $a$ et de $b$ si et seulement si $n$ est un multiple de $m$.
 1. Si $a$, $b$ et $n$ sont des entiers non nuls et $n > 0$, alors $PGCD(na, nb) = nPGCD (a, b)$.
+
    Si de plus $n$ divise $a$ et $b$, alors $PGCD(\frac{a}{n}, \frac{b}{n}) = \frac{1}{n} PGCD(a, b)$.
+
 1. Si $d = PGCD(a, b)$, on peut écrire $a = da'$ et $b = db'$ pour $a'$ et $b'$ des nombres premiers entre eux.
-1. Si $a$ et $b$ sont des entiers, l'égalité $PGCD(a, b) = PGCD(a, a + b)$ est toujours vérifiée lorsqu'elle a un sens. En particulier, le PGCD de deux nombres consécutifs est $1$, et plus généralement, le PGCD de $a$ et de $a + n$ est un diviseur positif de $n$.
+1. Si $a$ et $b$ sont des entiers, l'égalité $PGCD(a, b) = PGCD(a, a + b)$ est toujours vérifiée lorsqu'elle a un sens. En particulier, le $PGCD$ de deux nombres consécutifs est $1$, et plus généralement, le $PGCD$ de $a$ et de $a + n$ est un diviseur positif de $n$.
 1. Plus généralement, si $x$, $y$, $a$, $b$, $a'$ et $b'$ sont des entiers alors :
+
    $$
-   PGCD(x, y) \times | PGCD(ax + by, a'x + b'y) | \times (ab' − ba'
+   PGCD(x, y) \times \mid PGCD(ax + by, a'x + b'y) \mid \times (ab' − ba'
    ) PGCD(x, y)
    $$
+
    En particulier si $|ab' − ba'| = 1$, alors $PGCD(x, y) = PGCD(ax + by, a'x + b'y)$.
 
 ---
@@ -314,21 +318,17 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 
 ### **Exercices**
 
-**Exercice 0 :** Déterminer les valeurs suivantes: $PGCD(20, 36)$, $PGCD(36, 60)$ et $PGCD(116, 78)$
+**Exercice 1 :** Déterminer les valeurs suivantes: $PGCD(20, 36)$, $PGCD(36, 60)$ et $PGCD(116, 78)$
 
-**Exercice 1 :** Démontrez les propriétés (1), ...
+**Exercice 2 :** Démontrez les propriétés (1), ...
 
-**Exercice 2 :** Soit $a, b \in \mathbb{Z^*}$. Montrez que $\forall n \in \mathbb{N^*}$, on a $PGCD(a^n, b^n) = PGCD(a, b)^n$
-
-**Exercice 3 (Théorème de Bézout) :** Si $a$ et $b$ sont des entiers premiers entre eux, alors il existe des entiers $u$ et $v$ tels que $au + bv = 1$.
-
-**Exercice 4 (Lemme de Gauss) :** Si des entiers $a$, $b$ et $c$ sont tels que $a$ divise $bc$ et $a$ premier avec $b$, alors $a$ divise $c$
+**Exercice 3 :** Soit $a, b \in \mathbb{Z^*}$. Montrez que $\forall n \in \mathbb{N^*}$, on a $PGCD(a^n, b^n) = PGCD(a, b)^n$
 
 ---
 
 ## Algorithme d'Euclide
 
-L'algorithme d'Euclide est une méthode pour trouver pratiquement le PGCD de deux nombres sans avoir besoin de faire leur décomposition en produit de facteurs premiers. Il est basé sur la propriété suivante.
+L'algorithme d'Euclide est une méthode pour **trouver le PGCD de deux nombres sans avoir besoin de faire leur décomposition en produit de facteurs premiers**. Il est basé sur la propriété suivante.
 
 <div class='block note'>
 <div class='block-icon'>
@@ -336,7 +336,9 @@ L'algorithme d'Euclide est une méthode pour trouver pratiquement le PGCD de deu
 <b>Proposition</b>
 </div>
 
-Si $a$ et $b$ sont deux entiers naturels avec par exemple $a≥b$, si $r$ est le reste de $a$ par $b$, alors le PGCD de $a$ et $b$ vaut le PGCD de $b$ et $r$.
+Si $a, b \in \mathbb{N}$ avec $a\ge b$, si $r$ est le reste de $a$ par $b$, alors le
+
+$$PGCD(a, b)=PGCD(b,r)$$
 
 </div>
 
@@ -361,6 +363,86 @@ Le pgcd de 255 et 141 est donc 3.
 ---
 
 ## Algorithme d'Euclide
+
+![height:300px](assets/img/algo-euclide.png)
+
+---
+
+## Théorème de Bézout
+
+A chaque étape de l’algorithme d’Euclide, on a une égalité de la forme :
+$$r_{i−2} = r_{i−1}q_i + r_i$$
+où par convention $r_{−2} = a$ et $r_{−1} = b$. A l’avant-dernière étape, on a $r_k = d = PGCD (a, b)$ et donc une égalité de la forme :
+$$r_{k−2} = r_{k−1}q_k + d \Rightarrow d = r_{k−2} − r_{k−1}q$$
+A l’étape précédente, on a de même : $r_{k−1} = r_{k−3} − r_{k−2}q_{k−1}$
+Et donc en réinjectant, on obtient une expression de $d$ comme une combinaison linéaire de $r_{k−3}$ et $r_{k−2}$. En continuant à remonter, on trouve finalement une égalité de la forme :
+$$d = ur−2 + vr−1 = au + bv$$
+pour des entiers $u$ et $v$.
+
+<div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Théorème - Identité de Bachet-Bézout</b>
+</div>
+
+Soit $a,b \in \mathbb{Z}$ et $PGCD(a,b) = d$.
+Il existe deux entiers relatifs $u$ et $v$ tels que $au+bv=d$.
+
+</div>
+
+---
+
+## Théorème de Bézout
+
+<div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Théorème de Bézout</b>
+</div>
+
+Soit $a, b \in \mathbb{Z}$. $a$ et $b$ sont premiers entre eux si, et seulement si, il existe des entiers relatifs $u$ et $v$ tels que $au+bv=1$.
+
+</div>
+
+Le théorème précédent n'est pas spécifique aux entiers. Il peut être appliqué avec des polynômes :
+
+<div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Théorème de Bézout (appliqué aux polynômes)</b>
+</div>
+
+Soit $A$ et $B$ deux polynômes de $\mathbb{R}[X]$. Alors $A$ et $B$ sont premiers entre eux si et seulement s'il existe deux polynômes $U$ et $V$ tels que $AU+BV=1$.
+
+</div>
+
+**Exemple :**
+
+$59$ et $123$ sont premiers entre eux car $12 \times 123 + (- 25) \times 59 =1$
+
+<!-- $X-1$ et $X^2 +2X +1$ sont premiers entre eux car $(2X -2) \times (X-1)$ -->
+
+---
+
+## Lemme de Gauss
+
+<div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Lemme de Gauss</b>
+</div>
+
+Si des entiers $a$, $b$ et $c$ sont tels que $a$ divise $bc$ et $a$ est premier avec $b$, alors $a$ divise $c$.
+
+</div>
+
+**Démonstration**
+Comme $a$ est premier avec $b$, on peut écrire $au + bv = 1$ pour des entiers $u$ et $v$. Ainsi $auc + bvc = c$ et comme $a$ divise $auc$ (car il divise $a$) et $bvc$ (car il divise $bc$), il divise la somme qui vaut $c$.
+
+**Conséquences du lemme:**
+
+- Si un nombre premier $p$ divise le produit $a_1a_2 ...  a_n$, alors il divise l’un des $a_i$.
+- Si deux entiers premiers entre eux $a$ et $b$ divisent $n$, alors le produit $ab$ divise également $n$.
 
 ---
 
@@ -599,13 +681,9 @@ $7 = \overline{12}^5$ car $7 = \textbf{1}\times 5^1 + \textbf{2}\times 5^0$
 
 </div></div>
 
----
-
-## Décomposition en base _b_
-
-**Proposition 1 :** Soit $n, b \in \mathbb{N}^*$ avec $b \ge 2$. Le nombre de chiffres de la représentation de $n$ en base $b$ est égal à $\lfloor \log_b(n)\rfloor + 1$.
-
-**Démonstration :**
+<!-- --- -->
+<!--
+**Proposition 1 :** Soit $n, b \in \mathbb{N}^*$ avec $b \ge 2$. Le nombre de chiffres de la représentation de $n$ en base $b$ est égal à $\lfloor \log_b(n)\rfloor + 1$. -->
 
 ---
 
