@@ -11,7 +11,7 @@ math: mathjax
 ---
 
 <div class='flex-horizontal'><div class='flex'>
-
+   
 ## Exercices (Théorie des ensembles)
 
 https://f2school.com/theorie-des-ensembles/

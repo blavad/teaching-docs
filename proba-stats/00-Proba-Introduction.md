@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: Maths pour l'informatique - Groupe GEMA
 
-footer: ""
-_footer: ""
+footer: ''
+_footer: ''
 ---
 
 <!-- PARTIE 0 : Présentation du cours -->
@@ -20,11 +20,10 @@ _footer: ""
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
-<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
 <div class="coverYear coverFooterRight">2023</div>
 
 ---
-
 <!-- PARTIE 1 : Encadrement -->
 <!-- _class: huge -->
 <div style="width:30%;position:absolute;right:5%; background-color:#070219;top:10%">
@@ -33,7 +32,7 @@ _footer: ""
 
 ## **01** Intervenant
 
-**David Albert**
+**David Albert** 
 contact : david@unboared.com
 
 **Expertises**
@@ -42,56 +41,56 @@ Conception et développement logiciel
 Développement web
 
 ---
-
 <!-- PARTIE 2 : Motivation -->
 
 ## **02** Motivation du cours
-
 <!-- _class: huge -->
 
-Tous les systèmes informatiques actuels sont basés sur les mathématiques.
+Tous les systèmes informatiques actuels sont basés sur les mathématiques. 
+
+<div class='flex-horizontal'><div class='flex'>
 
 **Arithmétique**
+- Cryptographie
 
-- Cryptographie (dont RSA)
-- Codes correcteurs d'erreurs (ECC)
+
+</div><div class='flex'>
+
+**Logique**
+- Programmation logique 
+- 
+
+**Probabilités**
+- Intelligence artificielle
+- 
+
+
+</div></div>
+
 
 ---
 
 <!-- PARTIE 3 : Programme & organisation -->
 
 ## **03** Programme & Organisation
-
 <!-- _class: huge -->
 
-<div class='flex-horizontal'><div class='flex'>
-
 **Le 15 sept**
-
 - Cours théorique - 70%
-  - Théorie des ensembles
-  - Arithmétique modulaire
-- Exercices - 30%
-  - Théorie des ensembles
-  - Arithmétique modulaire
-  </div><div class='flex'>
+    - Ensembles et suites
+    - Division euclidienne et PGCD
+    - Congruences
+- Exercices et démonstrations - 30%
 
 **Les 22 et 23 nov**
-
 - Cours théorique - 30%
-  - Les suites
 - Exercices - 70%
-  - Arithmétique modulaire
-  - Les suites
-
-</div></div>
 
 ---
 
 <!-- PARTIE 4 : Evaluation -->
 
 ## **04** Evaluation
-
 <!-- _class: huge bg2 -->
 
 <div class="flex-horizontal" style="height:100%;">
@@ -99,11 +98,11 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 <div class="block" style="height:80%;">
 <!-- <i class="block-icon fas fa-exclamation"></i> -->
 
-# **50%**
 
-## Partiel
+# **50%** 
+## Partiel 
 
-Le partiel portera sur tout ce qui a été vu pendant les 3 séances de cours. Il sera constitué de questions de cours et d'exercices.
+Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
 </div>
 </div>
@@ -111,11 +110,10 @@ Le partiel portera sur tout ce qui a été vu pendant les 3 séances de cours. I
 
 <div class="block"style="height:80%;">
 
-# **50%**
+# **50%**   
+## Contrôle continue 
 
-## Contrôle continue
-
-Une note annexe sera également attribuée.
+Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.   
 
 </div>
 

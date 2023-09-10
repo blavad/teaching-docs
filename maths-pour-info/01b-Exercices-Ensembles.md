@@ -12,11 +12,13 @@ math: mathjax
 
 <div class='flex-horizontal'><div class='flex'>
 
-## Exercices (Théorie des ensembles)
+## **Théorie des ensembles**
+
+### Fiche d'exercices n°1
 
 </br>
 
-### I) Définition d'ensembles
+### _<u>Partie I : Définition d'ensembles (~20min)</u>_
 
 **Exercice I.1**
 Définir l'ensemble des entiers naturels strictements inférieurs à $5$.
@@ -38,7 +40,7 @@ Définir l'ensemble des points du disque ouvert $\mathcal{D}$ de centre $(a,b) \
 
 </br>
 
-### II) Relations ensemblistes
+### _<u>Partie II : Relations ensemblistes (~1h40)</u>_
 
 **Exercice II.1**
 Soient $A = \left\{1,2,3\right\}$ et $𝐵 = \left\{0,1,2,3\right\}$. Décrire les ensembles $𝐴 \cap 𝐵$, $𝐴 ∪ 𝐵$ et $𝐴 × 𝐵$.
@@ -92,7 +94,7 @@ On donne la définition suivante $𝐴Δ𝐵 = (𝐴 ∖ 𝐵) ∪ (𝐵 ∖ �
 
 ---
 
-### III) Pour aller plus loin
+### _<u> Partie III : Pour aller plus loin (~1h00)</u>_
 
 <div class='flex-horizontal'><div class='flex'>
 

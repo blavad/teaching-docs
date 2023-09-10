@@ -16,11 +16,17 @@ math: mathjax
 
 ### Partie I: Divisibilité
 
+https://maths.ac-creteil.fr/IMG/pdf/3.nombrespremiers.cours-2.pdf
+
 ---
 
 <div class='flex-horizontal'><div class='flex'>
 
 ### Partie III : Congruences
+
+http://www.jaicompris.com/lycee/math/arithmetique/congruence-Z.php
+
+https://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/arithm/congruence&type=fexo
 
 **Exercice XX.YY**
 
@@ -33,6 +39,6 @@ math: mathjax
 ---
 
 **Exercice XX.YY**
-Une bande de 17 pirates possède un trésor constitué de pièces d'or d'égale valeur. Ils projettent de se les partager également, et de donner le reste au cuisinier chinois. Celui-ci recevrait alors 3 pièces. Mais les pirates se querellent, et six d'entre eux sont tués. Un nouveau partage donnerait au cuisinier 4 pièces. Dans un naufrage ultérieur, seuls le trésor, six pirates et le cuisinier sont sauvés, et le partage donnerait alors 5 pièces d'or à ce dernier. Quelle est la fortune minimale que peut espérer le cuisinier s'il décide d'empoisonner le reste des pirates ?
+Une bande de 17 pirates possède un trésor constitué de pièces d'or d'égale valeur. Ils projettent de se lPes partager également, et de donner le reste au cuisinier chinois. Celui-ci recevrait alors 3 pièces. Mais les pirates se querellent, et six d'entre eux sont tués. Un nouveau partage donnerait au cuisinier 4 pièces. Dans un naufrage ultérieur, seuls le trésor, six pirates et le cuisinier sont sauvés, et le partage donnerait alors 5 pièces d'or à ce dernier. Quelle est la fortune minimale que peut espérer le cuisinier s'il décide d'empoisonner le reste des pirates ?
 
 ![height:500px](assets/exos/arith/pirates-chinois.png)

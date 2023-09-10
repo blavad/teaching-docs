@@ -302,9 +302,3 @@ Soit $X$ un ensemble et soient $A, B, C \in \mathcal{P}(X)$. Alors
 1. Si $A \subset B$, alors $\mathcal{P}(A) \subset \mathcal{P}(B)$
 
 <i class='info'>(certaines démonstrations seront réalisées en TD)</i>
-
-<script type='module'>
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
-</script>

@@ -41,6 +41,8 @@ Définition et propriétés.
 
 ## **00** Notations
 
+<!-- _class: bg2 -->
+
 <span style="display: inline-block; width:8rem;">$a \mid b$ </span>a divise b
 
 <span style="display: inline-block; width:8rem;">$\lfloor x \rfloor$ </span>partie entière de $x$
@@ -91,8 +93,6 @@ Les entiers $q$ et $r$ sont appelés respectivement **quotient** et **reste** de
 
 </div>
 
-**Remarque :** Ainsi $a$ est divisible par $b$ si et seulement si $r = 0$.
-
 <div class='block'>
 <div class='block-icon'>
 <i class='fas fa-edit' style='padding-right:1rem;'></i>
@@ -103,13 +103,15 @@ Soient $a \in \mathbb{Z}$ et $b \in \mathbb{Z^*}$. On note $DIV(a, b)$ (respecti
 
 </div>
 
-Soient $a = 7$ et $b = 3$.
+**Exemple :** Soient $a = 7$ et $b = 3$.
 
 On a $\underbrace{7}_{a} = \underbrace{3}_{b} \times \underbrace{2}_{q} + \underbrace{1}_{r}$ l'unique décomposition de $a=7$ quand $b=3$.
 
 ---
 
 ## Divisibilité
+
+<!-- _class: bg2 -->
 
 <div class='block note'>
 <div class='block-icon'>
@@ -160,11 +162,23 @@ Un nombre entier est divisible par :
 
 ### **Exercices**
 
-**Exercice 1 :** Démontrez la propriété (3), (4) et (8).
+Démontrez la propriété (3), (4) et (8).
+
+<!-- (3) $\forall n \in \mathbb{Z},\ n = -1 \times (-n) = 1 \times n$ -->
+
+<!-- (4) $a \mid b \Rightarrow a=bq\text{ avec }q \in \mathbb{Z}$ et $b \mid c \Rightarrow b=cq'\text{ avec }q' \in \mathbb{Z}$
+
+Donc $a = bq = cq'q = cq''$ avec $q''=qq' \in \mathbb{Z}$ -->
+
+<!-- (8) $a \mid b \Rightarrow a=bq\text{ avec }q \in \mathbb{Z}$
+
+Donc $a^n = (bq)^n = \underbrace{bqbq...bq}_{\text{n fois}}=b^nq^n=b^nq'$ avec $q'=q^n \in \mathbb{Z}$ car $n > 1$. -->
 
 ---
 
 ## Parties entières
+
+<!-- _class: bg2 -->
 
 ### **Définitions**
 
@@ -178,7 +192,7 @@ Un nombre entier est divisible par :
 
 Si $x$ est un réel, on appelle **partie entière** de $x$, et on note $\lfloor x \rfloor$, le plus grand entier inférieur ou égal à $x$.
 
-Ainsi, on a $\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$.
+Mathématiquement, on a $\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$.
 
 </div>
 
@@ -207,7 +221,7 @@ On définit aussi la **partie décimale** de $x$, comme la différence $x − \l
 
 ### **Propriétés**
 
-1. Pour tout réel $x$, on a $x − 1 < \lfloor x \rfloor \le x$
+1. Pour tout réel $x$, on a $x − 1 < \lfloor x \rfloor \le x$.
 1. $\lfloor -x \rfloor = −\lfloor x \rfloor − 1$ sauf si $x$ est entier, auquel cas $\lfloor -x \rfloor = −\lfloor x \rfloor$.
 1. Si $x$ et $y$ sont deux réels, $\lfloor x \rfloor + \lfloor y \rfloor \le \lfloor x + y\rfloor \le \lfloor x \rfloor + \lfloor y \rfloor + 1$.
 1. Si $m > 0$ est un entier, alors il y a exactement $\lfloor \frac{x}{m} \rfloor$ multiples de $m$ compris entre 1 et $x$.
@@ -218,7 +232,14 @@ On définit aussi la **partie décimale** de $x$, comme la différence $x − \l
 
 ### **Exercices**
 
-**Exercice 1 :** Démontrez les propriétés (1), ...
+**Exercice 1 :** Démontrez les propriétés (1) et (3).
+
+<!-- (1) Montrons que $x − 1 < \lfloor x \rfloor \le x$ pour tout réel $x$.
+
+D'une part, $\lfloor x \rfloor \le x$ est vraie par application immédiate de la définition.
+D'autre part, on a (par définition) $x < \lfloor x \rfloor + 1 \Leftrightarrow x-1 < \lfloor x \rfloor$. -->
+
+<!-- (3) Montrons que si $x$ et $y$ sont deux réels, alors $\lfloor x \rfloor + \lfloor y \rfloor \le \lfloor x + y\rfloor \le \lfloor x \rfloor + \lfloor y \rfloor + 1$. -->
 
 </br>
 </br>
@@ -270,6 +291,8 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 
 ## PGCD / PPCM
 
+<!-- _class: bg2 -->
+
 ### **Propriétés**
 
 1. Si $d = PGCD(a, b)$, alors $n$ divise $a$ et $b$ si et seulement si $n$ divise $d$.
@@ -300,6 +323,44 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 **Exercice 3 (Théorème de Bézout) :** Si $a$ et $b$ sont des entiers premiers entre eux, alors il existe des entiers $u$ et $v$ tels que $au + bv = 1$.
 
 **Exercice 4 (Lemme de Gauss) :** Si des entiers $a$, $b$ et $c$ sont tels que $a$ divise $bc$ et $a$ premier avec $b$, alors $a$ divise $c$
+
+---
+
+## Algorithme d'Euclide
+
+L'algorithme d'Euclide est une méthode pour trouver pratiquement le PGCD de deux nombres sans avoir besoin de faire leur décomposition en produit de facteurs premiers. Il est basé sur la propriété suivante.
+
+<div class='block note'>
+<div class='block-icon'>
+<i class='fas fa-info' style='padding-right:1rem;'></i>
+<b>Proposition</b>
+</div>
+
+Si $a$ et $b$ sont deux entiers naturels avec par exemple $a≥b$, si $r$ est le reste de $a$ par $b$, alors le PGCD de $a$ et $b$ vaut le PGCD de $b$ et $r$.
+
+</div>
+
+On fait donc des divisions euclidiennes, jusqu'à ce qu'on trouve un reste nul. Le dernier reste non nul est le pgcd de a et b.
+
+<div class='flex-horizontal'><div class='flex'>
+
+**Exemple :** On souhaite calculer le PGCD de 255 et 141. On effectue les divisions euclidiennes successives suivantes :
+
+</div><div class='flex'>
+
+$255 =1 \times 141 + 114$
+$142 =1 \times 114 + 27$
+$114 =4 \times 27 + 6$
+$27 =4 \times 6 + 3$
+$6 =2 \times 3 + 0$
+
+</div></div>
+
+Le pgcd de 255 et 141 est donc 3.
+
+---
+
+## Algorithme d'Euclide
 
 ---
 
@@ -395,6 +456,8 @@ Pour cela on remarquera que $p_{1}^{\alpha_1}p_{2}^{\alpha_2} ... p_{k}^{\alpha_
 
 ## Décomposition en facteurs premiers
 
+<!-- _class: bg2 -->
+
 <div class='block'>
 <div class='block-icon'>
 Proposition
@@ -437,6 +500,8 @@ $$(ii)\ PPCM(a,b) = p_1^{\max(\alpha_1, \beta_1)}p_2^{\max(\alpha_2, \beta_2)}..
 
 ## Décomposition en base **_b_**
 
+<!-- _class: bg2 -->
+
 <div class='block note'>
 <div class='block-icon'>
 <i class='far fa-heart' style='padding-right:1rem;'></i>
@@ -463,13 +528,28 @@ On notera $a = \overline{a_k a_{k−1} ... a_0}^b$, l'écriture en base _b_ de $
 
 </div>
 
+<div class='flex-horizontal'><div class='flex'>
+
 **Exemples :**
-$4 = \overline{100}^2 = \overline{11}^3 = \overline{4}^5 = \overline{4}^{10}$
-$7 = \overline{111}^2 = \overline{21}^3 = \overline{12}^5 = \overline{7}^{10}$
+$4 = \overline{100}^2$ car $4 = \textbf{1}\times 2^2 + \textbf{0}\times 2^1 +\textbf{0}\times 2^0$
+$4 = \overline{11}^3$ car $4 = \textbf{1}\times 3^1 + \textbf{1}\times 3^0$
+$4 = \overline{4}^5$ car $4 = \textbf{4}\times 5^0$
+
+</div><div class='flex'>
+
+</br>
+
+$7 = \overline{111}^2$ car $7 = \textbf{1}\times 2^2 + \textbf{1}\times 2^1 +\textbf{1}\times 2^0$
+$7 = \overline{21}^3$ car $7 = \textbf{2}\times 3^1 + \textbf{1}\times 3^0$
+$7 = \overline{12}^5$ car $7 = \textbf{1}\times 5^1 + \textbf{2}\times 5^0$
+
+</div></div>
 
 ---
 
 ## Tableau des bases classiques
+
+<!-- _class: bg2 -->
 
 <div class='flex-horizontal'><div class='flex'>
 
@@ -495,6 +575,8 @@ $7 = \overline{111}^2 = \overline{21}^3 = \overline{12}^5 = \overline{7}^{10}$
 ---
 
 ## Tableau des bases classiques (suite)
+
+<!-- _class: bg2 -->
 
 <div class='flex-horizontal'><div class='flex'>
 
@@ -524,18 +606,6 @@ $7 = \overline{111}^2 = \overline{21}^3 = \overline{12}^5 = \overline{7}^{10}$
 **Proposition 1 :** Soit $n, b \in \mathbb{N}^*$ avec $b \ge 2$. Le nombre de chiffres de la représentation de $n$ en base $b$ est égal à $\lfloor \log_b(n)\rfloor + 1$.
 
 **Démonstration :**
-
----
-
-## Décomposition en base _b_
-
-### **Exercices**
-
-<b class='important'>Division euclidienne</b>
-**Exercice :** Démontrez les propriétés (1), ...
-
-<b class='important'>Congruences</b>
-**Exercice :** Démontrez les propriétés (1), ...
 
 ---
 
@@ -666,6 +736,8 @@ Conséquences immédiates:
 
 ## Congruences
 
+<!-- _class: bg2 -->
+
 ### **Astuces de calcul**
 
 </hr>
@@ -694,6 +766,8 @@ _Exemple :_ On veut savoir le reste dans la division euclidienne de $2^{1495}$ p
 
 ## Congruences
 
+<!-- _class: bg2 -->
+
 ### **Théorème des restes chinois**
 
 <b>Théorème des restes chinois</b>
@@ -718,7 +792,9 @@ où $N_i = \frac{N}{n_i}$ et $y_i \equiv \frac{1}{N_i}\left[n_i\right]$ pour $i$
 
 ## Congruences
 
-### **Théorème des restes chinois**
+<!-- _class: bg2 -->
+
+### **Théorème des restes chinois (exemple)**
 
 <b>Problème :</b> Soient des objets en nombre inconnu. Si on les range par 3 il en reste 2. Si on les range par 5, il en reste 3 et si on les range par 7, il en reste 2. Combien a-t-on d'objets ?
 
@@ -741,38 +817,3 @@ On applique le théorème chinois : on a $N = 3 \times 5 \times 7 = 105$, $N_1 =
 Donc, $x \equiv 2\times 70+3\times 21+2\times 15  [105] \equiv 233 [105] \equiv 23 [105]$
 
 Ainsi, le nombre d'objets est de la forme $23 + 105k$ avec $k \in \mathbb{N}$.
-
----
-
-## Congruences
-
-### **Exercices**
-
-<!-- [ici](http://www.jaicompris.com/lycee/math/arithmetique/congruence-Z.php) -->
-
-**Exercice 1 :** Les propositions suivantes sont-elles vraies ?
-a. $37≡4 [3]$; b. $101≡1 [5]$; c. $−16≡0 [6]$; d. $−15≡6 [7]$
-
-**Exercice 2 :** Démontrer les propositions suivantes:
-a. $\forall n \in \mathbb{N},\ n\left(n^2 + 11 \right)\text{ est divisible par }3$
-b. $\forall n \in \mathbb{N},\ n^3 + 5n\text{ est divisible par }6$
-
-**Exercice 3 :** Déterminer le reste de la division euclidienne de $2024^{2024}$ par $5$.
-
-**Exercice 4 :** Démontrer que $a \equiv b \left[ n \right] \Leftrightarrow n\text{ divise }a-b$
-
-**Exercice 5 :** Démontrer que $a \equiv b \left[ n \right] \Leftrightarrow \text{a et b ont le meme reste dans la division euclidienne par n}$
-
-**Exercice 6 :** Démontrer que (1) si dessus. (i.e. $a+a' \equiv b + b' \left[ n \right]$)
-
-<!-- **Solution :**
-$2024 \equiv -1[5]$ car $2024 - (-1) = 2025$ est divisible par $5$.
-Donc $2024^{2024} \equiv (-1)^{2024}[5] \equiv 1[5]$
-Or $−1 \equiv 4[5]$ donc $2009^{2009} \equiv 4[5]$
-Comme $0 \le 4 < 5$, le reste de la division euclidienne de $2009^{2009}$ par 5 est 4. -->
-
-<script type='module'>
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
-mermaid.initialize({ startOnLoad: true });
-window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });
-</script>
