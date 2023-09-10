@@ -95,7 +95,6 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 </div>
 
 <br/>
-<br/>
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>

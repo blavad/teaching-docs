@@ -81,7 +81,7 @@
 
 /* Gaia styles */
 :root {
-  --white: #FFF;
+  --white: #f0f2f5;
   --black1: #070219;
   --black2: #424867;
   --red: 255, 36, 83;
@@ -99,6 +99,9 @@
 
   --color-note: rgb(var(--blue));
   --color-note2: rgba(var(--blue), 0.3);
+  
+  --color-success: rgb(var(--green));
+  --color-success2: rgba(var(--green), 0.3);
 
   --color-warning: rgb(var(--red));
   --color-warning2: rgba(var(--red), 0.3);
@@ -108,7 +111,7 @@
   font-size: 24px;
   padding: 2rem;
   font-family: 'Inter';
-  background-color: #eee;
+  background-color: var(--white);
   
   background-size: 110% 120%;
   background-image: url(./assets/img/bg-slide1.png);
@@ -241,6 +244,10 @@ pre {
   color: rgb(var(--green));
 }
 
+.info {
+  color: rgb(var(--blue));
+}
+
 .error {
   color: rgb(var(--orange));
 }
@@ -255,11 +262,17 @@ pre {
   font-size:0.8rem;
 }
 
+.block.no-icon {
+  margin-top: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
 .block-icon {
   background-color: var(--white);
   border-radius: 100px;
   border: 0.1rem solid var(--black1);
-  width: 1.5rem;
+  /* padding: 0 1rem; */
+  min-width: 1.5rem;
   height: 1.5rem;
   position:absolute;
   display: flex;
@@ -283,12 +296,18 @@ pre {
   font-size: 0.7rem;
 }
 
-.note {
+.block.note {
   border: 3px solid var(--color-note);
   background-color: var(--color-note2);
 }
 
-.warning {
+.block.green {
+  border: 3px solid var(--color-success);
+  background-color: var(--color-success2);
+}
+
+
+.block.warning {
   border: 3px solid var(--color-warning);
   background-color: var(--color-warning2);
 }
