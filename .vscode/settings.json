@@ -6,5 +6,5 @@
     "./themes/dav-maths.css",
     "./themes/dav-maths-exos.css"
   ],
-  "markdown.marp.chromePath": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe"
+  "markdown.marp.chromePath": ""
 }
