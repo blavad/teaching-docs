@@ -56,32 +56,35 @@ Les nombres suivants sont-ils premiers ? Justifier. $0, 1, 2, 3, 4, 91, 123$
 Décomposer en produit de facteurs premiers les nombres suivants : $12, 17, 84,2520$
 
 **Exercice II.4**
-...
-
-**Exercice II.5**
 Trouver la fraction irréductible égale à $\frac{84}{30}$ et $\frac{2520}{77}$.
 
 <!-- _Indice: on peut décomposer le numérateur et le dénominateur de la fraction en produit de facteurs premiers_ -->
 
-**Exercice II.6**
+**Exercice II.5**
 Déterminer le PGCD de 4480 et 400 à l'aide de la décomposition en facteurs premiers.
+
+**Exercice II.6**
+Déterminer le PGCD de 3045 et 300 à l'aide de l'algorithme d'Euclide.
+
+**Exercice II.7**
+Déterminer tous les diviseurs communs à $60$ et $100$.
 
 </div><div class='flex'>
 
-**Exercice II.7**
-Déterminer le PGCD de 3045 et 300 à l'aide de l'algorithme d'Euclide.
-
-**Exercice II.8**
-Déterminer tous les diviseurs communs à $60$ et $100$.
-
-**Exercice II.9**
+**Exercice II.7 (bis)**
 Déterminer tous les diviseurs communs à $168$ et $204$.
 
-**Exercice II.10**
+**Exercice II.8**
+Soit $a, b \in \mathbb{Z^*}$. Montrez que $\forall n \in \mathbb{N^*}$, on a $PGCD(a^n, b^n) = PGCD(a, b)^n$
+
+**Exercice II.9**
 Soient $a$ et $b$ des nombres premiers entre eux. Montrer que $ab$ et $a + b$ sont aussi premiers entre eux.
 
 <!-- **Solution**
 Soit $d$ un diviseur commun de $ab$ et de $a+b$. Alors $d$ divise $a (a + b)−ab = a^2$. De même $d$ divise $b^2$. Or on a $PGCD(a^2, b^2) = PGCD(a, b)^n = 1^n = 1$ car $a$ et $b$ sont premiers entre eux. Donc $d = ±1$ et donc $ab$ et $a+b$ sont premiers entre eux. -->
+
+**Exercice II.10**
+Montrez que $PGCD(a,b) \times PPCM(a, b) = ab$.
 
 **Exercice II.11**
 Déterminer l'ensemble des naturels $n$ tel que la fraction $\frac{3n + 2}{n+2}$ soit irréductible.
@@ -184,17 +187,14 @@ Donnez les écritures des nombres entiers suivants dans la base hexadécimale (_
 Les propositions suivantes sont-elles vraies ?
 $(a)\ 37≡4 [3]\ \ \ \ (b)\ 101≡1 [5]\ \ \ \ (c)\ −16≡0 [6]\ \ \ \ (d)\ −15≡6 [7]$
 
+<!-- **Solution**
+Vrai, Vrai, Faux, Vrai -->
+
 **Exercice IV.2**
 Démontrer les propriétés de cours suivantes.
 
 1. Démontrer que $a \equiv b \left[ n \right] \Leftrightarrow n\text{ divise }a-b$
 2. Démontrer que (1) si dessus. (i.e. $a+a' \equiv b + b' \left[ n \right]$)
-
-<!-- **Solution :**
-$2024 \equiv -1[5]$ car $2024 - (-1) = 2025$ est divisible par $5$.
-Donc $2024^{2024} \equiv (-1)^{2024}[5] \equiv 1[5]$
-Or $−1 \equiv 4[5]$ donc $2009^{2009} \equiv 4[5]$
-Comme $0 \le 4 < 5$, le reste de la division euclidienne de $2009^{2009}$ par 5 est 4. -->
 
 **Exercice IV.3**
 ...
@@ -205,8 +205,31 @@ Démontrer les propositions suivantes:
 a. $\forall n \in \mathbb{N},\ n\left(n^2 + 11 \right)\text{ est divisible par }3$
 b. $\forall n \in \mathbb{N},\ n^3 + 5n\text{ est divisible par }6$
 
+<!--
+**Solution**
+a) On sait que $a\mid b  \Leftrightarrow b \equiv 0[a]$
+
+Donc $3 \mid n(n^2+11) \Leftrightarrow n(n^2 +11) \equiv 0[3]$
+
+Soit $n \in \mathbb{Z}$, $11\equiv 2[3] donc $n(n^2 +11) \equiv n(n^2 +2)[3]$
+
+On établit la table de congruences suivante:
+
+|     $n[3]$     | $0$ |     $1$      |     $2$      |
+| :------------: | :-: | :----------: | :----------: |
+|    $n^2[3]$    | $2$ | $3 \equiv 0$ | $6 \equiv 0$ |
+| $n(n^2 +2)[3]$ | $0$ |     $0$      |     $0$      |
+
+Ainsi, $\forall n\in \mathbb{Z}\text{, on a } 3 \mid n(n^2+11)$. -->
+
 **Exercice IV.5**
 Déterminer le reste de la division euclidienne de $2024^{2024}$ par $5$.
+
+<!-- **Solution :**
+$2024 \equiv -1[5]$ car $2024 - (-1) = 2025$ est divisible par $5$.
+Donc $2024^{2024} \equiv (-1)^{2024}[5] \equiv 1[5]$
+Or $−1 \equiv 4[5]$ donc $2009^{2009} \equiv 4[5]$
+Comme $0 \le 4 < 5$, le reste de la division euclidienne de $2009^{2009}$ par 5 est 4. -->
 
 **Exercice IV.7 :**
 Démontrer que $a \equiv b \left[ n \right] \Leftrightarrow \text{a et b ont le meme reste dans la division euclidienne par n}$
@@ -231,12 +254,15 @@ Résoudre le système suivant, d'inconnue $x\in \mathbb{Z}$ :
 <div style="width:100px">
 
 $$
+
 \begin{equation}
-  \begin{cases}
-    x \equiv 1[5]\\
-    x \equiv 2[11]
-  \end{cases}
+\begin{cases}
+x \equiv 1[5]\\
+x \equiv 2[11]
+\end{cases}
 \end{equation}
+
+
 $$
 
 </div>
@@ -251,3 +277,4 @@ $$
 Une bande de 17 pirates possède un trésor constitué de pièces d'or d'égale valeur. Ils projettent de se les partager également, et de donner le reste au cuisinier chinois. Celui-ci recevrait alors 3 pièces. Mais les pirates se querellent, et six d'entre eux sont tués. Un nouveau partage donnerait au cuisinier 4 pièces. Dans un naufrage ultérieur, seuls le trésor, six pirates et le cuisinier sont sauvés, et le partage donnerait alors 5 pièces d'or à ce dernier. Quelle est la fortune minimale que peut espérer le cuisinier s'il décide d'empoisonner le reste des pirates ?
 
 </div></div>
+$$

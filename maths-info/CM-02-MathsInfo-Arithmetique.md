@@ -316,13 +316,9 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 
 ## PGCD / PPCM
 
-### **Exercices**
+### **Exemples**
 
-**Exercice 1 :** Déterminer les valeurs suivantes: $PGCD(20, 36)$, $PGCD(36, 60)$ et $PGCD(116, 78)$
-
-**Exercice 2 :** Démontrez les propriétés (1), ...
-
-**Exercice 3 :** Soit $a, b \in \mathbb{Z^*}$. Montrez que $\forall n \in \mathbb{N^*}$, on a $PGCD(a^n, b^n) = PGCD(a, b)^n$
+Donner les valeurs suivantes: $PGCD(20, 36)$, $PGCD(36, 60)$ et $PPCM(9, 6)$.
 
 ---
 
@@ -358,7 +354,7 @@ $6 =2 \times 3 + 0$
 
 </div></div>
 
-Le pgcd de 255 et 141 est donc 3.
+Le $PGCD$ de $255$ et $141$ est donc $3$.
 
 ---
 
@@ -557,14 +553,6 @@ où les $p_i$ sont deux à deux distincts, mais les $\alpha_i$ et $\beta_i$ sont
 $$(i)\ PGCD(a,b) = p_1^{\min(\alpha_1, \beta_1)}p_2^{\min(\alpha_2, \beta_2)}...p_k^{\min(\alpha_k, \beta_k)}$$
 
 $$(ii)\ PPCM(a,b) = p_1^{\max(\alpha_1, \beta_1)}p_2^{\max(\alpha_2, \beta_2)}...p_k^{\max(\alpha_k, \beta_k)}$$
-
----
-
-## Décomposition en facteurs premiers
-
-### **Exercices**
-
-**Exercice :** Montrez que $PGCD(a,b) \times PPCM(a, b) = ab$
 
 ---
 

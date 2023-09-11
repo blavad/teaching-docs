@@ -246,6 +246,14 @@ L'ensemble produit de $A$ et de $B$, noté $A \times B$, est définit comme suit
 
 ---
 
+## Relations ensemblistes
+
+### **Représentation visuelle**
+
+![height:520](assets/diagrams/maths-relations-ensembles.png)
+
+---
+
 ## Ensembles et relations
 
 ### **Exemple**
@@ -273,14 +281,6 @@ $A \setminus B = \{5\}$
 $\overline{A} = \{0,2,4,6,7,8,9,10\}$
 
 $\mathcal{P}(A)= \{\emptyset, \left\{1\}, \{3\},\{5\}, \{1,3\}, \{1,5\}, \{3, 5\}, \{1, 3, 5\}\right\}$
-
----
-
-## Relations ensemblistes
-
-### **Représentation visuelle**
-
-![height:520](assets/diagrams/maths-relations-ensembles.png)
 
 ---
 

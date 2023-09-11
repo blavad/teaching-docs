@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Maths pour l'informatique - Groupe GEMA
 
 footer: ""
@@ -51,9 +51,14 @@ Développement web
 
 Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 
+**Théorie des ensembles**
+
+- Dans tous les domaines qui impliquent des mathématiques
+
 **Arithmétique**
 
 - Cryptographie (dont RSA)
+- Représentation des nombres en machine
 - Codes correcteurs d'erreurs (ECC)
 
 ---

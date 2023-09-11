@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: Cours POO - IA School
 
-footer: 'Programmation Orientée Objet 2023'
-_footer: ''
+footer: "Programmation Orientée Objet 2023"
+_footer: ""
 ---
 
 <!-- PARTIE 0 : Présentation du cours -->
@@ -23,16 +23,14 @@ _footer: ''
 <img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
 <div class="coverYear coverFooterRight">2023</div>
 
-
-
-
 <!-- TABLE DES MATIERES -->
---- 
 
-## Table des matières 
+---
+
+## Table des matières
 
 <b><span class="important">01 </span> Héritage</b>
-Héritage. Classe abstraites. Interfaces. 
+Héritage. Classe abstraites. Interfaces.
 
 <b><span class="important">02 </span> Polymorphisme</b>
 Définition. Spécialisation. Surcharge de méthodes.
@@ -41,15 +39,15 @@ Définition. Spécialisation. Surcharge de méthodes.
 Héritage multiple. Ordre d'héritage.
 
 <b><span class="important">04 </span> Méthodes de classes</b>
-Attribut / méthodes de classes. Décorateur ***@classmethod***. Mot-clé **cls**.
-
+Attribut / méthodes de classes. Décorateur **_@classmethod_**. Mot-clé **cls**.
 
 ---
+
 <!-- PARTIE 1 : Héritage -->
 
 <div class="main">
 
-# 01 
+# 01
 
 ## Héritage
 
@@ -57,10 +55,9 @@ Attribut / méthodes de classes. Décorateur ***@classmethod***. Mot-clé **cls*
 
 ---
 
-
 ## Héritage
-En POO, l'<b class="important">héritage</b>  est le concept qui permet de créer une nouvelle classe à partir d'une classe existante. 
 
+En POO, l'<b class="important">héritage</b> est le concept qui permet de créer une nouvelle classe à partir d'une classe existante.
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -76,6 +73,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 <div class="flex">
 
 **Syntaxe python**
+
 ```python
 class Vehicule: # ici on définit la classe mère
     def __init__(self, wheels, brand):
@@ -91,17 +89,17 @@ class Bike(Vehicule): # class fille
 ```
 
 En héritant de `Vehicule`, la classe `Bike` hérite de ses méthodes.
+
 ```python
 b = Bike()
 b.accelerate()
 # Go !
 ```
-</div>
-</div>
 
+</div>
+</div>
 
 ---
-
 
 ## Classe abstraite
 
@@ -113,13 +111,13 @@ Une <b class="important">classe abstraite</b> est une classe qui comprend **au m
 
 **Syntaxe UML**
 
-
 ![height:250px](assets/img/diag-abstract.png)
+
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-Les méthodes abstraites sont écrites en *italique*. A la main, on <u>souligne</u>.
+Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne</u>.
 
 </div>
 
@@ -127,17 +125,16 @@ Les méthodes abstraites sont écrites en *italique*. A la main, on <u>souligne<
 <div class="flex" style="flex:0.6">
 
 **Intérêt**
-- Implémenter certains opérationes communes à un groupe d'objets malgré que le concept soit encore *abstrait*
 
+- Implémenter certains opérationes communes à un groupe d'objets malgré que le concept soit encore _abstrait_
 
 **Syntaxe python**
-
 
 ```python
 class Vehicule:
     def accelerate(self):
         print("Go !")
-    
+
     def turnLeft(self):
         print("Go left !")
 
@@ -145,6 +142,7 @@ class Vehicule:
         raise NotImplementedError("The method is abstract")
 
 ```
+
 </div>
 </div>
 
@@ -155,11 +153,11 @@ class Vehicule:
 **Définition**
 Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attributs** et ses méthodes ne sont **pas implémentées**.
 
-
 <div class="flex-horizontal">
 <div class="flex" style="flex:0.4">
 
 **Intérêts**
+
 - Définir les opérations sans préciser leur implémentation
 - Préciser les conditions et les effets de l'invocation des opérations
 </div>
@@ -174,12 +172,11 @@ Une <b class="important">interface</b> est une classe abstraite particulière. E
 
 **Syntaxe python**
 
-
 ```python
 class Vehicule:
     def accelerate(self):
         raise NotImplementedError("The method is abstract")
-    
+
     def turnLeft(self):
         raise NotImplementedError("The method is abstract")
 
@@ -187,11 +184,11 @@ class Vehicule:
         raise NotImplementedError("The method is abstract")
 
 ```
+
 Les méthodes abstraites renvoient une erreur.
+
 </div>
 </div>
-
-
 
 <div class="block warning">
 
@@ -202,6 +199,7 @@ Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées
 </div>
 
 ---
+
 <!-- PARTIE 2 : Polymorphisme -->
 
 <div class="main">
@@ -219,9 +217,10 @@ Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées
 <div class="flex-horizontal">
 <div class="flex">
 
-En POO, le <b class="important">polymorphisme</b> est le concept qui permet de **modifier le comportement** d’une classe fille par rapport à sa classe mère. 
+En POO, le <b class="important">polymorphisme</b> est le concept qui permet de **modifier le comportement** d’une classe fille par rapport à sa classe mère.
 
 Cela permet d’utiliser l’héritage comme:
+
 - mécanisme de **spécialisation** d'un concept.
 - mécanisme d’**extension du système**.
 
@@ -229,7 +228,8 @@ Cela permet d’utiliser l’héritage comme:
 <i class="block-icon fas fa-info"></i>
 
 **Bonne pratique**
-1. On définit une **interface commune** à une famille d'objets (la classe de base). 
+
+1. On définit une **interface commune** à une famille d'objets (la classe de base).
 
 2. On écrit les **détails d'implémentations** des classes spécialisées.
 </div>
@@ -239,19 +239,22 @@ Cela permet d’utiliser l’héritage comme:
 <h4 style="text-align:center; font-style:italic;">Polymorphisme</h4>
 <p style="text-align:center;; font-style:italic;">"qui peut prendre plusieurs formes"</p>
 
-
 ![width:100%](assets/img/metamorphe.png)
+
 <!-- ![bg right:40% contain 90%](https://www.pokepedia.fr/images/c/c2/Sprite_0132_HOME.png) -->
 </div>
 </div>
 
 ---
+
 ## Surcharger une méthode
+
 **Mot-clé <span class="important">super</span>**
 
-# ***TO DO***
+# **_TO DO_**
 
 ---
+
 ## Polymorphisme en pratique (1)
 
 <div class="flex-horizontal">
@@ -287,9 +290,6 @@ L'implémentation d'`accelerate` n'est pas la même pour un vélo et un skateboa
 </div>
 </div>
 
-
-
-
 ---
 
 ## Polymorphisme en pratique (2)
@@ -297,7 +297,7 @@ L'implémentation d'`accelerate` n'est pas la même pour un vélo et un skateboa
 Nous pouvons appeler la méthode `accelerate` d'un objet sans nous soucier son type intrinsèque.
 
 ```python
-vehicules : list[Vehicule] = [] 
+vehicules : list[Vehicule] = []
 vehicules.append(Car())
 vehicules.append(Skateboard())
 
@@ -309,9 +309,8 @@ for v in vehicules:
 # Go cleanly by skate!
 ```
 
-
-
 ---
+
 <!-- PARTIE 2 : Polymorphisme -->
 
 <div class="main">
@@ -326,16 +325,14 @@ for v in vehicules:
 
 ## Héritage multiple
 
-# ***TO DO***
-
-
+# **_TO DO_**
 
 ---
 
 ## Ordre d'héritage
 
 Afin de pouvoir déboguer lors d'erreurs avec l'héritage multiple, il est possible de connaître l'ordre d'héritage. Pour cela, on utilise la méthode `__mro__`.
- 
+
 ```python
 class A():
     pass
@@ -359,12 +356,14 @@ L'exécution de ce code renvoit
 ```
 
 ---
+
 ### Order d'héritage
 
 <div class="flex-horizontal">
 <div class="flex">
 
 **Exercice**
+
 ```python
 class A():
     pass
@@ -386,38 +385,46 @@ class F(C, D, B):
 
 
 ```
+
 </div>
 <div class="flex">
 
-**Question 1 :** Qu'affiche ce programme  ?
+**Question 1 :** Qu'affiche ce programme ?
+
 ```python
 print(C.__mro__)
 ```
 
-**Question 2 :** Qu'affiche ce programme  ?
+**Question 2 :** Qu'affiche ce programme ?
+
 ```python
 print(D.__mro__)
 ```
 
-**Question 3 :** Qu'affiche ce programme  ?
+**Question 3 :** Qu'affiche ce programme ?
+
 ```python
 print(E.__mro__)
 ```
 
-**Question 4 :** Qu'affiche ce programme  ?
+**Question 4 :** Qu'affiche ce programme ?
+
 ```python
 print(G.__mro__)
 ```
+
 </div>
 </div>
 
 ---
+
 ### Order d'héritage
 
 <div class="flex-horizontal">
 <div class="flex">
 
 **Exercice**
+
 ```python
 class A():
     pass
@@ -441,37 +448,41 @@ class G(F, B):
     pass
 
 ```
+
 </div>
 <div class="flex">
 
-**Réponse 1 :** 
+**Réponse 1 :**
+
 ```
 (<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>)
 ```
 
-**Réponse 2 :** 
+**Réponse 2 :**
+
 ```
 (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
 ```
 
-**Réponse 3 :** 
+**Réponse 3 :**
+
 ```
-(<class '__main__.E'>, <class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, 
+(<class '__main__.E'>, <class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>,
 <class 'object'>)
 ```
 
-**Réponse 4 :** 
+**Réponse 4 :**
+
 ```
-(<class '__main__.G'>, <class '__main__.F'>, <class '__main__.E'>, <class '__main__.D'>, 
+(<class '__main__.G'>, <class '__main__.F'>, <class '__main__.E'>, <class '__main__.D'>,
 <class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
 ```
+
 </div>
 </div>
-
-
-
 
 ---
+
 <!-- PARTIE 4 : Attributs et méthodes de classes -->
 
 <div class="main">
@@ -483,6 +494,7 @@ class G(F, B):
 </div>
 
 ---
+
 ## Définition
 
 **Avant propos**
@@ -492,12 +504,14 @@ Jusqu'alors nous avons utilisé des **méthodes d'instances**. Celles-ci sont pr
 Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
 
 **Exemples d'usages**
+
 - Stocker des constantes de classe
 - Garder un compteur du nombre d'instances
 - Créer un constructeur alternatif
 - Profiling (nombre de passage et temps dans passé dans chaque fonction)
 
 ---
+
 ## Exemple
 
 ```python
@@ -513,27 +527,27 @@ class Counter:
 
 
 if __name__ == '__main__':
-    c1 = Counter("Counter #1")      
+    c1 = Counter("Counter #1")
     c2 = Counter("Counter #2")
 
-    print(Counter.count, c1.count, c2.count)                
+    print(Counter.count, c1.count, c2.count)
     # output : 0 0 0
 
-    Counter.add(5)         
+    Counter.add(5)
     print(Counter.count, c1.count, c2.count)
     # output : 5 5 5
 
-    c1.add(5)         
+    c1.add(5)
     print(Counter.count, c1.count, c2.count)
     # output : 10 10 10
 
-    c2.add(-10)         
+    c2.add(-10)
     print(Counter.count, c1.count, c2.count)
     # output : 0 0 0
 ```
 
-<!-- 
---- 
+<!--
+---
 
 <div class="main">
 

@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: Cours POO - IA School
 
-footer: 'Programmation Orientée Objet 2023'
-_footer: ''
+footer: "Programmation Orientée Objet 2023"
+_footer: ""
 ---
 
 <!-- PARTIE 0 : Présentation du cours -->
@@ -23,34 +23,31 @@ _footer: ''
 <img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
 <div class="coverYear coverFooterRight">2023</div>
 
-
-
 <!-- TABLE DES MATIERES -->
---- 
 
-## Table des matières 
+---
+
+## Table des matières
 
 <b><span class="important">01 </span> Classes et objets</b>
 Classes. Objets. Attributs et méthodes. Instances.
 
-
 <b><span class="important">02 </span> Encapsulation</b>
-Données privées, publiques. Getter / Setter. Mot-clé self. 
-
+Données privées, publiques. Getter / Setter. Mot-clé self.
 
 <b><span class="important">03 </span> Instanciation</b>
 Constructeur. Constructeur par défaut.
 
-
 <b><span class="important">03 </span> Built-in functions</b>
-Fonctions intégrées : \_\_init__, \_\_str__, \_\_eq__, ...
+Fonctions intégrées : \_\_init**, \_\_str**, \_\_eq\_\_, ...
 
 ---
+
 <!-- PARTIE 1 : OBJETS ET CLASSES -->
 
 <div class="main">
 
-# 01 
+# 01
 
 ## Classes et objets
 
@@ -60,7 +57,8 @@ Fonctions intégrées : \_\_init__, \_\_str__, \_\_eq__, ...
 
 ## Les classes
 
-Une <b class="important">classe</b> est un **type de données composite**  constitué:
+Une <b class="important">classe</b> est un **type de données composite** constitué:
+
 - de données que l’on appelle <b class="important">attributs</b> (des variables primitives ou des objets)
 - de <b class="important">méthodes</b> permettant de traiter ces données et des données extérieures à la classe
 
@@ -80,10 +78,10 @@ Une <b class="important">classe</b> est un **type de données composite**  const
 class CitroenC3:
     def __init__(self):
         self._id = 0
-        self._currentSpeed = 0 
+        self._currentSpeed = 0
         self._maxSpeed = 210
         self._year = 2010
-    
+
     def accelerate(self):
         pass
 
@@ -97,13 +95,12 @@ class CitroenC3:
 </div>
 </div>
 
+---
 
---- 
 ## Les objets
 
-Un <b class="important">objet</b> est une **variable** dont le type est une classe particulière 
-<i class='fas fa-arrow-right'></i> on parle <b class="important">instance de classe</b>. 
-
+Un <b class="important">objet</b> est une **variable** dont le type est une classe particulière
+<i class='fas fa-arrow-right'></i> on parle <b class="important">instance de classe</b>.
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -119,7 +116,7 @@ Un <b class="important">objet</b> est une **variable** dont le type est une clas
 
 Pour instancier un objet en python on fait appel à une méthode particulière: le <b class="important">constructeur</b>.
 
-```python 
+```python
   myCar : CitroenC3 = CitroenC3()
 # ------   ---------   -----------
 # objet     classe     constructeur
@@ -127,7 +124,7 @@ Pour instancier un objet en python on fait appel à une méthode particulière: 
 
 <div class="block note">
     
-<i class="block-icon fas fa-info"></i> 
+<i class="block-icon fas fa-info"></i>
 
 Dans un même programme il y a généralement plusieurs instances d'une même classe.
 
@@ -135,8 +132,6 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 </div>
 </div>
-
-
 
 ---
 
@@ -146,7 +141,7 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 <div class="block note">
     
-<i class="block-icon fas fa-info"></i> 
+<i class="block-icon fas fa-info"></i>
 
 # Pour mieux comprendre
 
@@ -157,18 +152,19 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 </div>
 
 ---
+
 <!-- PARTIE 2 : ENCAPSULATION -->
 
 <div class="main">
 
-# 02 
+# 02
 
 ## Encapsulation
 
 </div>
 
-
 ---
+
 ## Princpe
 
 <!-- _class: bg2 -->
@@ -176,7 +172,7 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 <div class="flex-horizontal">
 <div class="flex">
 
-Usage simple et visible 
+Usage simple et visible
 
 ![width:500px](assets/img/Encapsulation-visible.png)
 
@@ -191,12 +187,11 @@ Fonctionnement complexe et caché
 </div>
 </div>
 
-
 ---
 
 ## Visibilité des attributs et méthodes
 
-L’encapsulation de données dans un objet permet de cacher ou non leur existence aux autres objets du programme. 
+L’encapsulation de données dans un objet permet de cacher ou non leur existence aux autres objets du programme.
 
 Une donnée peut être déclarée en accès :
 
@@ -204,19 +199,18 @@ Une donnée peut être déclarée en accès :
 
 - **privé** : les autres objets n’ont pas le droit d’accéder directement à la valeur de cette donnée (ni de la modifier). En revanche, ils peuvent le faire indirectement par grâce aux méthodes publiques de l’objet concerné
 
-
 <div class="block warning">
     
-<i class="block-icon fas fa-exclamation"></i> 
+<i class="block-icon fas fa-exclamation"></i>
 
-Par convention, les attributs et méthodes privés commencent par **_** en *python*.
+Par convention, les attributs et méthodes privés commencent par **\_** en _python_.
 
 Exemple: `_currentSpeed` et `_increaseSpeed()`
+
 </div>
 
 </div>
 </div>
-
 
 ---
 
@@ -224,14 +218,12 @@ Exemple: `_currentSpeed` et `_increaseSpeed()`
 
 - ne rendre publique que le stricte nécessaire
   - les fonctions nécessaires à l’usage (`accelerate`, `turnLeft`, `turnRight`)
-  - et pas plus (`_increaseSpeed`, `_turnLeftWheel`) 
-- n’utiliser que des **attributs privés** 
-  -  utiliser un **getter** si besoin de lire depuis l’extérieur
+  - et pas plus (`_increaseSpeed`, `_turnLeftWheel`)
+- n’utiliser que des **attributs privés**
+  - utiliser un **getter** si besoin de lire depuis l’extérieur
   - utiliser un **setter** si besoin de modifier depuis l’extérieur
 - suivre le principe de **responsabilité unique** - **S** de **S**OLID
-    - exemple [Animal / AnimalDB](https://gist.github.com/dmmeteo/f630fa04c7a79d3c132b9e9e5d037bfd) 
-
-
+  - exemple [Animal / AnimalDB](https://gist.github.com/dmmeteo/f630fa04c7a79d3c132b9e9e5d037bfd)
 
 ---
 
@@ -277,22 +269,22 @@ Il doit impérativement être le **premier argument** de chaque méthode.
 </div>
 
 ---
+
 <!-- PARTIE 3 : ENCAPSULATION -->
 
 <div class="main">
 
 # 03
 
-## Constructeur : **\_\_init__**
+## Constructeur : **\_\_init\_\_**
 
 </div>
-
 
 ---
 
 ## Constructeur
 
-Le <b class="important">constructeur</b> est une méthode spéciale (**\_\_init__** en python) qui est appelée au moment de la création de l'objet.
+Le <b class="important">constructeur</b> est une méthode spéciale (**\_\_init\_\_** en python) qui est appelée au moment de la création de l'objet.
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -317,7 +309,7 @@ class Music:
 **Appel du constructeur**
 
 ```python
-# Instanciation d'un objet de type 'Music' 
+# Instanciation d'un objet de type 'Music'
 m = Music('La pluie', ['Stromae', 'Orelsan'])
 
 print(m.hasAuthor('Stromae'))
@@ -327,7 +319,6 @@ print(m.hasAuthor('Stromae'))
 </div>
 
 </div>
-
 
 ---
 
@@ -362,7 +353,7 @@ class Music:
 # Appel du constructeur par défaut
 m2 = Music('La pluie')
 
-print(m.hasAuthor('Stromae')) 
+print(m.hasAuthor('Stromae'))
 # false
 ```
 
@@ -370,8 +361,8 @@ print(m.hasAuthor('Stromae'))
 
 </div>
 
-
 ---
+
 <!-- PARTIE 3 : ENCAPSULATION -->
 
 <div class="main">
@@ -382,23 +373,22 @@ print(m.hasAuthor('Stromae'))
 
 </div>
 
-
-
 ---
-<h2>(1) Built-in functions  <a href="https://www.w3schools.com/python/python_ref_functions.asp"><i class="fa fa-external-link"></i></a> </h2> 
 
-Toute classe python contient un ensemble de méthodes intégrées (ou **built-in**). 
+<h2>(1) Built-in functions  <a href="https://www.w3schools.com/python/python_ref_functions.asp"><i class="fa fa-external-link"></i></a> </h2>
 
-- **\_\_init__** : retourne une instance de la classe 
+Toute classe python contient un ensemble de méthodes intégrées (ou **built-in**).
+
+- **\_\_init\_\_** : retourne une instance de la classe
   `MyClass()` ou `obj.__init__()`
 
-- **\_\_str__** : retourne une représentation lisible pour l'humain de l'objet
+- **\_\_str\_\_** : retourne une représentation lisible pour l'humain de l'objet
   `str(obj)` ou `obj.__str__()`
 
-- **\_\_repr__** : retourne une représentation machine de l'objet
+- **\_\_repr\_\_** : retourne une représentation machine de l'objet
   `repr(obj)` ou `obj.__repr__()`
 
-- **\_\_len__** : retourne la longueur de l'objet
+- **\_\_len\_\_** : retourne la longueur de l'objet
   `len(obj)` ou `obj.__len__()`
 
 <div class="block note">
@@ -408,27 +398,26 @@ On peut redéfinir chacune de ces méthodes pour un usage personnalisé.
 
 </div>
 
-
 ---
-<h2>(2) Built-in functions  <a href="https://www.w3schools.com/python/python_ref_functions.asp"><i class="fa fa-external-link"></i></a> </h2> 
 
-Toute classe python contient un ensemble de méthodes intégrées (ou **built-in**). 
+<h2>(2) Built-in functions  <a href="https://www.w3schools.com/python/python_ref_functions.asp"><i class="fa fa-external-link"></i></a> </h2>
 
-- **\_\_eq__** : redéfinit l'opérateur d'égalité 
+Toute classe python contient un ensemble de méthodes intégrées (ou **built-in**).
+
+- **\_\_eq\_\_** : redéfinit l'opérateur d'égalité
   `obj1 == obj2` ou `obj1.__eq__(obj2)`
 
-- **\_\_le__** : redéfinit l'opérateur inférieur ou égal 
+- **\_\_le\_\_** : redéfinit l'opérateur inférieur ou égal
   `obj1 <= obj2` ou `obj1.__le__(obj2)`
 
-- **\_\_ue__** : redéfinit l'opérateur supéreur ou égal 
+- **\_\_ue\_\_** : redéfinit l'opérateur supéreur ou égal
   `obj1 >= obj2` ou `obj1.__ue__(obj2)`
 
-- **\_\_lt__** : redéfinit l'opérateur inférieur strict
+- **\_\_lt\_\_** : redéfinit l'opérateur inférieur strict
   `obj1 < obj2` ou `obj1.__lt__(obj2)`
 
-- **\_\_ut__** : redéfinit l'opérateur supéreur strict
+- **\_\_ut\_\_** : redéfinit l'opérateur supéreur strict
   `obj1 > obj2` ou `obj1.__ut__(obj2)`
-
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>
@@ -436,7 +425,6 @@ Toute classe python contient un ensemble de méthodes intégrées (ou **built-in
 On peut redéfinir chacune de ces méthodes pour un usage personnalisé.
 
 </div>
-
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';

@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: Cours POO - IA School
 
-footer: ''
-_footer: ''
+footer: ""
+_footer: ""
 ---
 
 <!-- PARTIE 0 : Présentation du cours -->
@@ -24,6 +24,7 @@ _footer: ''
 <div class="coverYear coverFooterRight">2023</div>
 
 ---
+
 <!-- PARTIE 1 : Encadrement -->
 <!-- _class: huge -->
 <div style="width:30%;position:absolute;right:5%; background-color:#070219;top:10%">
@@ -32,7 +33,7 @@ _footer: ''
 
 ## **01** Intervenant
 
-**David Albert** 
+**David Albert**
 contact : david@unboared.com
 
 **Expertises**
@@ -40,13 +41,16 @@ Apprentissage par renforcement
 Conception et développement logiciel
 Développement web
 
+<!--
 **Langages**
-Français, Anglais, Python, C++, Javascript
+Français, Anglais, Python, C++, Javascript -->
 
 ---
+
 <!-- PARTIE 2 : Motivation -->
 
 ## **02** Motivation du cours
+
 <!-- _class: huge -->
 
 **Approche orientée objet**
@@ -64,6 +68,7 @@ systèmes complexes
 <!-- PARTIE 3 : Programme & organisation -->
 
 ## **03** Programme & Organisation
+
 <!-- _class: huge -->
 
 <div class="flex-horizontal">
@@ -73,7 +78,6 @@ systèmes complexes
 
 **POO (3 séances)**
 ◦ Classe, objet, Encapsulation
-
 
 **UML (2 séances)**
 ◦ Diagramme de classes
@@ -87,9 +91,10 @@ systèmes complexes
 <div class="block warning">
 <i class="block-icon fas fa-exclamation"></i>
 
-Chaque cours est divisé en une partie **CM** puis une partie **TP**. 
+Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 
 <!-- [Lien des CM](https://github.com/blavad/POO)  -->
+
 [Lien des TP](https://github.com/blavad/POO)
 
 </div>
@@ -99,20 +104,19 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 <div class="block note">
 <i class="block-icon fas fa-info"></i>
 
-Le dernier cours est un **projet** individuel. Il permettra de se préparer à l'examen final. 
+Le dernier cours est un **projet** individuel. Il permettra de se préparer à l'examen final.
 
 </div>
 
-
 </div>
 </div>
-
 
 ---
 
 <!-- PARTIE 4 : Evaluation -->
 
 ## **04** Evaluation
+
 <!-- _class: huge bg2 -->
 
 <div class="flex-horizontal" style="height:100%;">
@@ -120,9 +124,9 @@ Le dernier cours est un **projet** individuel. Il permettra de se préparer à l
 <div class="block" style="height:80%;">
 <!-- <i class="block-icon fas fa-exclamation"></i> -->
 
+# **50%**
 
-# **50%** 
-## Partiel 
+## Partiel
 
 Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
@@ -131,12 +135,13 @@ Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 <div class="flex-sm">
 <div class="block"style="height:80%;">
 
-# **30%**   
-## Projet 
+# **30%**
 
-Le projet est réalisé lors de la dernière séance de cours. 
+## Projet
 
-Tous les supports seront autorisés. 
+Le projet est réalisé lors de la dernière séance de cours.
+
+Tous les supports seront autorisés.
 
 Le but est de réaliser une étude cas informatique.
 
@@ -145,10 +150,11 @@ Le but est de réaliser une étude cas informatique.
 <div class="flex-sm">
 <div class="block"style="height:80%;">
 
-# **20%**   
-## Contrôle continue 
+# **20%**
 
-Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.   
+## Contrôle continue
+
+Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.
 
 </div>
 
