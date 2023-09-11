@@ -99,11 +99,6 @@ On donne la définition suivante $𝐴Δ𝐵 = (𝐴 ∖ 𝐵) ∪ (𝐵 ∖ �
 <div class='flex-horizontal'><div class='flex'>
 
 **Exercice III.1**
-Montrez les propriétés de cours suivantes:
-$$(i)\ X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$$
-$$(ii)\ X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$$
-
-**Exercice III.2**
 Soit $E$ un ensemble et soit $\mathcal{P}(E)$ l’ensemble des parties de $E$.
 Pour $A$ et $B$ dans $\mathcal{P}(E)$, on appelle différence symétrique de $A$ par $B$ l’ensemble, noté $𝐴Δ𝐵$ défini par : $𝐴Δ𝐵 = (𝐴 ∪ 𝐵) ∖ (𝐴 ∩ 𝐵)$
 
@@ -115,6 +110,20 @@ Pour $A$ et $B$ dans $\mathcal{P}(E)$, on appelle différence symétrique de $A$
    c) Montrer que $𝐴Δ(𝐵Δ𝐶) = (𝐶𝛥𝐵)𝛥𝐴$
    d) A l’aide du b), montrer que $(𝐴𝛥𝐵)𝛥𝐶 = (𝐶𝛥𝐵)𝛥𝐴$
    e) En déduire que : $(𝐴Δ𝐵)Δ𝐶 = 𝐴Δ(𝐵Δ𝐶)$
+
+**Exercice III.2 (démo de cours)**
+Soit $E$ un ensemble et $F$ et $G$ deux parties de $E$. Démontrer que :
+
+1. $(\overline{𝐴 \cap 𝐵}) = \overline{𝐴} \cup \overline{𝐵}$
+1. $(\overline{𝐴 \cup 𝐵}) = \overline{𝐴} \cap \overline{𝐵}$
+<!-- 1. $E \setminus (A \cap B) = (E \setminus A) \cup (E \setminus B)$
+1. $E \setminus (A \cup B) = (E \setminus A) \cap (E \setminus B)$ -->
+
+**Exercice III.3**
+Soit $E$ un ensemble et $F$ et $G$ deux parties de $E$. Démontrer que :
+
+1. $F \subset G \Leftrightarrow F ∪ G = G$
+2. $F \subset G \Leftrightarrow F ∩ \overline{G} = ∅$
 
 </div><div class='flex'>
 

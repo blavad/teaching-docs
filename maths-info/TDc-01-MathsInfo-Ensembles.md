@@ -69,18 +69,22 @@ Soient $A = \left\{1,2,3\right\}$ et $𝐵 = \left\{0,1,2,3\right\}$. Décrire l
 $A \cap B = \{1,2,3\}$, $A \cup B = \{0, 1,2,3\}$, $A \times B = \{(1,0),(1,1),(1,2),...,(3,3)\}$
 
 **Exercice II.2 :**
+Soient $A=\{0,2,4\}$ et $B = \{1,3,4,5 \}$ dans le référentiel $E=\{0,1,2,3,4,5\}$.
+Déterminer les ensembles $\overline{A}$,$\overline{B}$,$A \cap B$, $A \cup B$, $A \setminus B$, $\mathcal{P}(A)$ et $A \times B$
+
+**Exercice II.3 :**
 Soient $A = [1, 3]$ et $B=[2,4]$. Déterminer les ensembles $A \cap B$ et $A\cup B$.
 
 $A \cap B = [2,3]$ et $A \cup B = [1, 4]$
 
-**Exercice II.3 :**
+**Exercice II.4 :**
 Déterminer le complémentaire dans $\mathbb{R}$ des ensembles suivants : $A_1 = ] −\infty, 0]$, $A_2 = ] −\infty, 0[$, $A_3 = ]0, +\infty[$, $A_4 = [0, +\infty[$, $A_5 =]1,2[$, $A_6 = [1,2[$ 2.
 
 $\bar{A_1} = ]0,+\infty[$ et $A \cup B = [1, 4]$
 
-**Exercice II.4** Soient $A = ] − \infty, 1[ \cup ]2, +\infty[$, $B =] − \infty, 1[$ et $B = [2, +\infty[$. Comparer les ensembles $\bar{A}$ et $\bar{B} \cap \bar{C}$
+**Exercice II.5** Soient $A = ] − \infty, 1[ \cup ]2, +\infty[$, $B =] − \infty, 1[$ et $B = [2, +\infty[$. Comparer les ensembles $\bar{A}$ et $\bar{B} \cap \bar{C}$
 
-**Exercice II.5**
+**Exercice II.6**
 Soient $𝐴 =] −\infty, 3]$, $𝐵 =] − 2,7]$ et $𝐶 =] − 5, +\infty[$ trois parties de $\mathbb{R}$.
 Déterminer $𝐴 ∩ 𝐵$, $𝐴 ∪ 𝐵$, $𝐵 ∩ 𝐶$, $𝐵 ∪ 𝐶$, $ℝ ∖ 𝐴$, $𝐴 ∖ 𝐵$, $(ℝ ∖ 𝐴) ∩ (ℝ ∖ 𝐵)$, $(ℝ ∖ (𝐴 ∪ 𝐵)$, $(𝐴 ∩ 𝐵) ∪
 (𝐴 ∩ 𝐶)$ et $𝐴 ∩ (𝐵 ∪ 𝐶)$
@@ -89,10 +93,10 @@ Déterminer $𝐴 ∩ 𝐵$, $𝐴 ∪ 𝐵$, $𝐵 ∩ 𝐶$, $𝐵 ∪ 𝐶$, 
 $(ℝ ∖ 𝐴) ∩ (ℝ ∖ 𝐵) = ℝ ∖ (𝐴 ∪ 𝐵) =]7, +∞[$
 $(𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶) =] − 2,3] ∪] − 5,3] =] − 5,3]$
 
-**Exercice II.6 :**
+**Exercice II.7 :**
 Soit $A = \left\{1,8,10\right\}$. Décrire $\mathcal{P}(A)$, l'ensemble des parties de $A$.
 
-**Exercice II.7 :**
+**Exercice II.8 :**
 Soit $C_{red} = [\![ 0; 2 ]\!],C_{green} = [\![ 0; 2 ]\!], C_{blue} = [\![ 0; 2 ]\!],$. Décrire $C_{red} \times C_{green} \times C_{blue}$.
 
 </div></div>
@@ -101,18 +105,54 @@ Soit $C_{red} = [\![ 0; 2 ]\!],C_{green} = [\![ 0; 2 ]\!], C_{blue} = [\![ 0; 2 
 
 <div class='flex-horizontal'><div class='flex'>
 
-**Exercice II.8 (démo de cours)**
+**Exercice II.9 (démo de cours)**
 Soient $A$, $B$ et $C$ trois parties d’un ensemble $E$. Montrer que :
 
 1. $𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)$
 2. $𝐴 ∩ (𝐵 ∪ 𝐶) = (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)$
 
-**Exercice II.9:**
-Montrez les propriétés de cours suivantes:
-$(i)\ X \setminus (A \cap B) = (X \setminus A) \cup (X \setminus B)$
-$(ii)\ X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$
+**Solution**
+Il s’agit de résultats du cours que l’on peut utiliser sans démonstration mais cet exercice demande de les
+redémontrer.
+
+1. Si 𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)
+   Alors (𝑥 ∈ 𝐴 ou 𝑥 ∈ (𝐵 ∩ 𝐶))
+   Alors (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶))
+   Si 𝑥 ∈ 𝐴 alors 𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶, par conséquent 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶).
+   Si (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
+   Donc si (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶)) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
+   On a montré que 𝐴 ∪ (𝐵 ∩ 𝐶) ⊂ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
+   Si 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶).
+   (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶) ⇔ ((𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵) et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶))
+   Si (𝑥 ∈ 𝐴 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐴 ∩ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶
+   Si (𝑥 ∈ 𝐵 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+   Alors 𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)
+   On a montré que (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) ⊂ 𝐴 ∪ (𝐵 ∩ 𝐶)
+   Finalement 𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
+
+2. Si 𝑥 ∈ 𝐴 ∩ (𝐵 ∪ 𝐶)
+   Alors (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐵 ∪ 𝐶)
+   Alors (𝑥 ∈ 𝐴 et (𝑥 ∈ 𝐵 ou 𝑥 ∈ 𝐶))
+   Alors (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐵) ou (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐶)
+   Alors 𝑥 ∈ 𝐴 ∩ 𝐵 ou 𝑥 ∈ 𝐴 ∩ 𝐶
+   Alors 𝑥 ∈ (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)
+   On a montré que 𝐴 ∩ (𝐵 ∪ 𝐶) ⊂ (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)
+   Si 𝑥 ∈ (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)
+   Alors 𝑥 ∈ 𝐴 ∩ 𝐵 ou 𝑥 ∈ 𝐴 ∩ 𝐶
+   Alors (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐵) ou (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐶)
+   Alors (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴) et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶) et (𝑥 ∈ 𝐵 ou 𝑥 ∈ 𝐴) et (𝑥 ∈ 𝐵 ou 𝑥 ∈ 𝐶)
 
 </div><div class='flex'>
+
+Alors 𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐴 ∪ 𝐶 et 𝑥 ∈ 𝐵 ∪ 𝐴 et 𝑥 ∈ 𝐵 ∪ 𝐶
+Comme 𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐴 ∪ 𝐶 et 𝑥 ∈ 𝐵 ∪ 𝐴 entraine que 𝑥 ∈ 𝐴
+
+𝑥 ∈ (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶) ⇒ 𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐵 ∪ 𝐶 ⇒ 𝑥 ∈ 𝐴 ∩ (𝐵 ∪ 𝐶)
+On a montré que (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶) ⊂ 𝐴 ∩ (𝐵 ∪ 𝐶)
+Et finalement 𝐴 ∩ (𝐵 ∪ 𝐶) = (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)
 
 **Exercice II.10**
 
@@ -122,8 +162,7 @@ $(ii)\ X \setminus (A \cup B) = (X \setminus A) \cap (X \setminus B)$
 **Solution**
 
 1. $(𝐴 ∖ 𝐵) ∖ 𝐶 = (𝐴 ∩ \overline{𝐵}) ∖ 𝐶 = (𝐴 ∩ \overline{𝐵}) ∩ \overline{C} = 𝐴 ∩ (\overline{𝐵} ∩ \overline{C}) = 𝐴 ∩ (\overline{𝐵 ∪ 𝐶}) = 𝐴 ∖ (𝐵 ∪ 𝐶)$
-2. $(𝐴 ∖ 𝐵) ∩ (𝐶 ∖ 𝐷) = (𝐴 ∩ \overline{𝐵}) ∩ (𝐶 ∩ \overline{D}) = (𝐴 ∩ 𝐶) ∩ (\overline{𝐵} ∩ \overline{D}) = (𝐴 ∩ 𝐶) ∩ (\overline{𝐵 ∪ 𝐷}) = (𝐴 ∩ 𝐶) ∖
-(𝐵 ∪ 𝐷)$
+2. $(𝐴 ∖ 𝐵) ∩ (𝐶 ∖ 𝐷) = (𝐴 ∩ \overline{𝐵}) ∩ (𝐶 ∩ \overline{D}) = (𝐴 ∩ 𝐶) ∩ (\overline{𝐵} ∩ \overline{D}) = (𝐴 ∩ 𝐶) ∩ (\overline{𝐵 ∪ 𝐷}) = (𝐴 ∩ 𝐶) ∖ (𝐵 ∪ 𝐷)$
 
 **Exercice II.11**
 On donne la définition suivante $𝐴Δ𝐵 = (𝐴 ∖ 𝐵) ∪ (𝐵 ∖ 𝐴)$
@@ -172,5 +211,62 @@ Pour $A$ et $B$ dans $\mathcal{P}(E)$, on appelle différence symétrique de $A$
 </div><div class='flex'>
 
 ![height:600px](./assets/exos/ensembles/exo_supp_1.png)
+
+</div></div>
+
+---
+
+<div class='flex-horizontal'><div class='flex'>
+
+**Exercice III.2 (démo de cours)**
+Soit $E$ un ensemble et $F$ et $G$ deux parties de $E$. Démontrer que :
+
+1. $(\overline{𝐴 \cap 𝐵}) = \overline{𝐴} \cup \overline{𝐵}$
+1. $(\overline{𝐴 \cup 𝐵}) = \overline{𝐴} \cap \overline{𝐵}$
+1. $E \setminus (A \cap B) = (E \setminus A) \cup (E \setminus B)$
+1. $E \setminus (A \cup B) = (E \setminus A) \cap (E \setminus B)$
+
+**Solution**
+
+Il s’agit de résultats du cours, on peut les utiliser sans démonstration mais c’est l’objet de cet exercice.
+
+1. Soit $𝑥 ∈ \overline{(𝐴 ∩ 𝐵)}$, $𝑥 ∉ 𝐴 ∩ 𝐵$ et donc $𝑥 ∉ 𝐴$ ou $𝑥 ∉ 𝐵$, ce qui signifie que $𝑥 ∈ \overline{𝐴} ∪ \overline{𝐵}$
+   Cela montre que $\overline{(𝐴 ∩ 𝐵)} ⊂ \overline{𝐴} ∪ \overline{𝐵}$.
+   Soit $𝑥 ∈ \overline{A} ∪ \overline{B}$, $𝑥 ∉ 𝐴$ ou $𝑥 ∉ 𝐵$ donc $𝑥 ∉ 𝐴 ∩ 𝐵$ ce qui entraine que $𝑥 ∈ \overline{(𝐴 ∩ 𝐵)}$.
+   Cela montre que $\overline{A} ∪ \overline{B} ⊂ \overline{(𝐴 ∩ 𝐵)}$.
+   Et finalement $\overline{(𝐴 ∩ 𝐵)} = \overline{A} ∪ \overline{B}$
+   **Remarque :** On aurait raisonner par équivalence.
+2. Soit $𝑥 ∈ \overline{(𝐴 ∪ 𝐵)}$, $𝑥 ∉ 𝐴 ∪ 𝐵$ et donc $𝑥 ∉ 𝐴$ et $𝑥 ∉ 𝐵$, ce qui signifie que $𝑥 ∈ \overline{A} ∩ \overline{B}$
+   Cela montre que $\overline{(𝐴 ∪ 𝐵)} ⊂ \overline{A} ∩ \overline{B}$.
+   Soit $𝑥 ∈ \overline{A} ∩ \overline{B}$, $𝑥 ∉ 𝐴$ et $𝑥 ∉ 𝐵$ donc $𝑥 ∉ 𝐴 ∪ 𝐵$ ce qui entraine que $𝑥 ∈ \overline{(𝐴 ∪ 𝐵)}$.
+   Cela montre que $\overline{A} ∩ \overline{B} ⊂ \overline{(𝐴 ∪ 𝐵)}$.
+   Et finalement $\overline{(𝐴 ∪ 𝐵)} = \overline{A} ∩ \overline{B}$
+   **Remarque :** On aurait raisonner par équivalence.
+
+</div><div class='flex'>
+
+**Exercice III.3**
+Soit $E$ un ensemble et $F$ et $G$ deux parties de $E$. Démontrer que :
+
+1. $𝐹 ⊂ 𝐺 ⇔ 𝐹 ∪ 𝐺 = 𝐺$
+2. $𝐹 ⊂ 𝐺 ⇔ 𝐹 ∩ \overline{𝐺} = ∅$
+
+**Solution**
+
+Il s’agit de résultats du cours, on peut les utiliser sans démonstration mais c’est l’objet de cet exercice.
+
+1. Supposons que 𝐹 ⊂ 𝐺.
+   Si 𝑥 ∈ 𝐹 ∪ 𝐺 alors 𝑥 ∈ 𝐹 ⊂ 𝐺 ou 𝑥 ∈ 𝐺 alors 𝑥 ∈ 𝐺. Donc 𝐹 ∪ 𝐺 ⊂ 𝐺.
+   Si 𝑥 ∈ 𝐺 alors 𝑥 ∈ 𝐹 ∪ 𝐺, par conséquent 𝐹 ∪ 𝐺 = 𝐺.
+   On a montré que 𝐹 ⊂ 𝐺 ⇒ 𝐹 ∪ 𝐺 = 𝐺
+   Supposons que 𝐹 ∪ 𝐺 = 𝐺.
+   Soit 𝑥 ∈ 𝐹, 𝑥 ∈ 𝐹 ∪ 𝐺 = 𝐺 donc 𝑥 ∈ 𝐺.
+   On a montré que 𝐹 ∪ 𝐺 = 𝐺 ⇒ 𝐹 ⊂ 𝐺.
+   Finalement 𝐹 ⊂ 𝐺 ⇔ 𝐹 ∪ 𝐺 = 𝐺.
+2. Supposons que 𝐹 ⊂ 𝐺.
+   Si 𝑥 ∈ 𝐹 ∩ 𝐶𝐸 𝐺, 𝑥 ∈ 𝐹 et 𝑥 ∉ 𝐺 ⊃ 𝐹 donc 𝑥 ∈ 𝐹 et 𝑥 ∉ 𝐹 ce qui est impossible par conséquent
+   𝐹 ∩ 𝐶𝐸𝐺 = ∅.
+   On a montré que 𝐹 ⊂ 𝐺 ⇒ 𝐹 ∩ 𝐶𝐸 𝐺 = ∅
+   Supposons que 𝐹 ∩ 𝐶𝐸 𝐺 = ∅.
 
 </div></div>
