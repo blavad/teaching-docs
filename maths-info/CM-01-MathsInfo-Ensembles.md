@@ -136,6 +136,8 @@ $(iii)\ \left\{x \in \mathbb{Z} \mid x < 0\right\} = \{..., -4, -3, -2, -1\}$
 
 ---
 
+<!-- _class: bg2 -->
+
 ## Ensembles et intervalles
 
 <div class='block note'>
@@ -246,6 +248,8 @@ L'ensemble produit de $A$ et de $B$, noté $A \times B$, est définit comme suit
 
 ---
 
+<!-- _class: bg2 -->
+
 ## Relations ensemblistes
 
 ### **Représentation visuelle**
@@ -266,11 +270,11 @@ Donnez $A \cap B$, $A \cup B$, $A \setminus B$, $\overline{A}$ et $\mathcal{P}(A
 
 ## Ensembles et relations
 
-### **Exemple**
+### **Exemple (Correction)**
 
 Soient $A=\{1,3,5\}$ et $B = \{0,1,2,3,4 \}$ dans le référentiel $E = [\![0,10 ]\!]$.
 
-Donnez $\overline{A}$, $A \cap B$, $A \cup B$, $A \setminus B$, $\overline{A}$ et $\mathcal{P}(A)$
+Donnez $A \cap B$, $A \cup B$, $A \setminus B$, $\overline{A}$ et $\mathcal{P}(A)$
 
 $8 \notin A$ mais $1 \in A$
 $\{1,2\} \not\subset A$ mais $\{1,3\} \subset A$
@@ -288,7 +292,7 @@ $\mathcal{P}(A)= \{\emptyset, \left\{1\}, \{3\},\{5\}, \{1,3\}, \{1,5\}, \{3, 5\
 
 ### **Propriétés**
 
-Soit $X$ un ensemble et soient $A, B, C \in \mathcal{P}(X)$. Alors
+Soit $E$ un ensemble et soient $A, B, C \in \mathcal{P}(E)$. Alors
 
 1. $A \cap B = B \cap A$ <i class='important'>(commutativité)</i>
 1. $A \cup B=B \cup A$ <i class='important'>(commutativité)</i>

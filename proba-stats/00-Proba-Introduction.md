@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: Maths pour l'informatique - Groupe GEMA
 
-footer: ''
-_footer: ''
+footer: ""
+_footer: ""
 ---
 
 <!-- PARTIE 0 : Présentation du cours -->
@@ -24,6 +24,7 @@ _footer: ''
 <div class="coverYear coverFooterRight">2023</div>
 
 ---
+
 <!-- PARTIE 1 : Encadrement -->
 <!-- _class: huge -->
 <div style="width:30%;position:absolute;right:5%; background-color:#070219;top:10%">
@@ -32,8 +33,8 @@ _footer: ''
 
 ## **01** Intervenant
 
-**David Albert** 
-contact : david@unboared.com
+**David Albert**
+contact : david.albert.int@groupe-gema.com
 
 **Expertises**
 Apprentissage par renforcement
@@ -41,48 +42,53 @@ Conception et développement logiciel
 Développement web
 
 ---
+
 <!-- PARTIE 2 : Motivation -->
 
 ## **02** Motivation du cours
+
 <!-- _class: huge -->
 
-Tous les systèmes informatiques actuels sont basés sur les mathématiques. 
+Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 
 <div class='flex-horizontal'><div class='flex'>
 
 **Arithmétique**
-- Cryptographie
 
+- Cryptographie
 
 </div><div class='flex'>
 
 **Logique**
-- Programmation logique 
-- 
+
+- Programmation logique
+-
 
 **Probabilités**
-- Intelligence artificielle
-- 
 
+- Intelligence artificielle
+-
 
 </div></div>
-
 
 ---
 
 <!-- PARTIE 3 : Programme & organisation -->
 
 ## **03** Programme & Organisation
+
 <!-- _class: huge -->
 
 **Le 15 sept**
+
 - Cours théorique - 70%
-    - Ensembles et suites
-    - Division euclidienne et PGCD
-    - Congruences
+  - Ensembles et suites
+  - Division euclidienne et PGCD
+  - Congruences
 - Exercices et démonstrations - 30%
 
 **Les 22 et 23 nov**
+
 - Cours théorique - 30%
 - Exercices - 70%
 
@@ -91,6 +97,7 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 <!-- PARTIE 4 : Evaluation -->
 
 ## **04** Evaluation
+
 <!-- _class: huge bg2 -->
 
 <div class="flex-horizontal" style="height:100%;">
@@ -98,9 +105,9 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 <div class="block" style="height:80%;">
 <!-- <i class="block-icon fas fa-exclamation"></i> -->
 
+# **50%**
 
-# **50%** 
-## Partiel 
+## Partiel
 
 Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
@@ -110,10 +117,11 @@ Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
 <div class="block"style="height:80%;">
 
-# **50%**   
-## Contrôle continue 
+# **50%**
 
-Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.   
+## Contrôle continue
+
+Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.
 
 </div>
 

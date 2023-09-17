@@ -34,7 +34,7 @@ _footer: ""
 ## **01** Intervenant
 
 **David Albert**
-contact : david@unboared.com
+contact : david.albert.int@groupe-gema.com
 
 **Expertises**
 Apprentissage par renforcement
@@ -63,9 +63,27 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 
 ---
 
-<!-- PARTIE 3 : Programme & organisation -->
+<!-- _class: huge -->
 
-## **03** Programme & Organisation
+<!-- PARTIE 3 : Objectifs pédagogiques -->
+
+## **03** Objectifs du cours
+
+</br>
+
+- Comprendre et définir des notions concernant:
+  - les ensembles et leurs opérations
+  - la division euclidienne
+  - les nombres premiers
+  - les congruences
+- Connaître les principaux théorèmes d'arithmétiques
+- S'initier au raisonnement mathématique
+
+---
+
+<!-- PARTIE 4 : Programme & organisation -->
+
+## **04** Programme & Organisation
 
 <!-- _class: huge -->
 
@@ -93,9 +111,9 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 
 ---
 
-<!-- PARTIE 4 : Evaluation -->
+<!-- PARTIE 5 : Evaluation -->
 
-## **04** Evaluation
+## **05** Evaluation
 
 <!-- _class: huge bg2 -->
 
@@ -104,11 +122,11 @@ Tous les systèmes informatiques actuels sont basés sur les mathématiques.
 <div class="block" style="height:80%;">
 <!-- <i class="block-icon fas fa-exclamation"></i> -->
 
-# **50%**
+# **70%**
 
 ## Partiel
 
-Le partiel portera sur tout ce qui a été vu pendant les 3 séances de cours. Il sera constitué de questions de cours et d'exercices.
+Le partiel portera sur tout ce qui a été vu pendant pendant le cours. Il sera constitué de questions de cours et d'exercices.
 
 </div>
 </div>
@@ -116,11 +134,11 @@ Le partiel portera sur tout ce qui a été vu pendant les 3 séances de cours. I
 
 <div class="block"style="height:80%;">
 
-# **50%**
+# **30%**
 
 ## Contrôle continue
 
-Une note annexe sera également attribuée.
+Participation.
 
 </div>
 

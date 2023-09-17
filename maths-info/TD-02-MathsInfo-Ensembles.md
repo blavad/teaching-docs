@@ -21,13 +21,20 @@ math: mathjax
 ### _<u>Partie I : Définition d'ensembles (~20min)</u>_
 
 **Exercice I.1**
-Définir l'ensemble des entiers naturels strictements inférieurs à $5$.
+Définir l'ensemble des entiers naturels divisibles par $5$.
 
 **Exercice I.2**
-Définir l'ensemble des entiers relatifs divisibles par $3$ de deux façons différentes.
 
 **Exercice I.3**
-Définir l'ensemble des nombres impaires strictements supérieurs à $3$.
+
+**Exercice I.4**
+Définir l'ensemble des points du cercle $\mathcal{C}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $r$.
+
+**Exercice I.5**
+Définir l'ensemble des points de tous les cercles dont l'aire est égale à $1$.
+
+**Exercice I.6**
+Définir l'ensemble des points du disque ouvert $\mathcal{D}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $2$.
 
 </br>
 
@@ -48,6 +55,8 @@ Déterminer le complémentaire dans $\mathbb{R}$ des ensembles suivants $A_1 = ]
 
 **Exercice II.5** Soient $A = ] − \infty, 1[ \cup ]2, +\infty[$, $B =] − \infty, 1[$ et $B = [2, +\infty[$. Comparer les ensembles $\bar{A}$ et $\bar{B} \cap \bar{C}$
 
+</div><div class='flex'>
+
 **Exercice II.6**
 Soient $𝐴 =] −\infty, 3]$, $𝐵 =] − 2,7]$ et $𝐶 =] − 5, +\infty[$ trois parties de $\mathbb{R}$.
 Déterminer $𝐴 ∩ 𝐵$, $𝐴 ∪ 𝐵$, $𝐵 ∩ 𝐶$, $𝐵 ∪ 𝐶$, $ℝ ∖ 𝐴$, $𝐴 ∖ 𝐵$, $(ℝ ∖ 𝐴) ∩ (ℝ ∖ 𝐵)$, $(ℝ ∖ (𝐴 ∪ 𝐵)$, $(𝐴 ∩ 𝐵) ∪
@@ -55,8 +64,6 @@ Déterminer $𝐴 ∩ 𝐵$, $𝐴 ∪ 𝐵$, $𝐵 ∩ 𝐶$, $𝐵 ∪ 𝐶$, 
 
 **Exercice II.7**
 Soit $A = \left\{1,8,10\right\}$. Décrire $\mathcal{P}(A)$, l'ensemble des parties de $A$.
-
-</div><div class='flex'>
 
 **Exercice II.8**
 Soit $C_{red} = [\![ 0; 2 ]\!],C_{green} = [\![ 0; 2 ]\!], C_{blue} = [\![ 0; 2 ]\!],$. Décrire $C_{red} \times C_{green} \times C_{blue}$.

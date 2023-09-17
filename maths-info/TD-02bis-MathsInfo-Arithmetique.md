@@ -139,6 +139,15 @@ Soient $a$ et $b$ deux entiers naturels, on note $\mathcal{D}(a,b)$ l'ensemble d
 
 5. Ecrire en langage naturel un algorithme permettant de déterminer le $PGCD$ de $a$ et $b$.
 
+**Exercice II.21 (Nombres de Fermat et infinitude des nombres premiers)**
+
+On définit les **nombres de Fermat** comme étant les entiers $F_n = 2^{2^n}+1$ avec $n$ un entier naturel.
+
+1. Etablir que pour tous entiers naturels $n$ et $k$, on a: $F_{n+k} = (F_n -1)^{2^k}$
+2. En déduire que si $k$ est un entier naturel non nul alors pour tout entier naturel $n$, on a : $F_{n+k} \equiv 2 [F_n]$
+3. En déduire que deux nombres de Fermat distincts sont premiers entre eux.
+4. Retrouver alors qu'il existe une infinité de nombres premiers.
+
 </div><div class='flex'>
 
 ### _<u>Partie III : Décomposition en base b (~30min)</u>_

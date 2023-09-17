@@ -34,7 +34,7 @@ _footer: ""
 ## **01** Intervenant
 
 **David Albert**
-contact : david@unboared.com
+contact : david.albert.int@groupe-gema.com
 
 **Expertises**
 Apprentissage par renforcement

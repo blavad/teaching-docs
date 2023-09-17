@@ -23,24 +23,29 @@ https://f2school.com/theorie-des-ensembles/
 **Exercice I.1:**
 Définir l'ensemble des entiers naturels strictements inférieurs à $5$.
 
-**Solution :** $A = \left\{ x \in \mathbb{N} \mid x < 5 \right\}$
+**Solution :** $A = \left\{ x \mid  x \in \mathbb{N}\text{ et } x < 5 \right\}$ ou $A = \left\{ x \in \mathbb{N} \mid x < 5 \right\}$
 
 **Exercice I.2:**
 Définir l'ensemble des entiers relatifs divisibles par $3$ de deux façons différentes.
 
 **Solution :**
-$A = \left\{ x \in \mathbb{Z} \mid \frac{x}{3} - \lfloor \frac{x}{3} \rfloor \neq 0 \right\}$
+
+$A = \left\{ x \in \mathbb{Z} \mid \exists k \in \mathbb{Z},\ x = 3k\right\}$
+
 ou
-$A = \left\{ x \in \mathbb{Z} \mid x = 3k,\ k \in \mathbb{Z} \right\}$
-ou
-$A = \left\{ 3k \mid k \in \mathbb{Z} \right\}$
+
+$A = \left\{ 3k \mid k \in \mathbb{Z}\right\}$
+
+ou encore (en utilisant la fonction partie entière):
+
+$A = \left\{ x \in \mathbb{Z} \mid \frac{x}{3} =  \lfloor \frac{x}{3} \rfloor  \right\}$
 
 **Exercice I.3:**
 Définir l'ensemble des nombres impaires strictements supérieurs à $3$.
 
-$A = \left\{ x \in \mathbb{Z} \mid x=2k + 1, k \in \mathbb{Z}\ et\ k>0 \right\}$
+$A = \left\{ 2k+1 \mid k \in \mathbb{N}\ et\ k>0 \right\}$
 
-**Exercice I.4:**
+<!-- **Exercice I.4:**
 Définir l'ensemble des points du cercle $\mathcal{C}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $r$.
 
 $\mathcal{C} = \left\{ (x, y) \in \mathbb{R}^2 \mid (x-a)^2 + (y-b)^2  = r^2 \right\}$
@@ -55,7 +60,7 @@ $\mathcal{C} = \left\{ (x, y) \in \mathbb{R}^2 \mid \forall a,b \in \mathbb{R},\
 **Exercice I.6:**
 Définir l'ensemble des points du disque ouvert $\mathcal{D}$ de centre $(a,b) \in \mathbb{R}^2$ et de rayon $2$.
 
-$\mathcal{D} = \left\{ (x, y) \in \mathbb{R}^2 \mid (x-a)^2 + (y-b)^2  < 4 \right\}$
+$\mathcal{D} = \left\{ (x, y) \in \mathbb{R}^2 \mid (x-a)^2 + (y-b)^2  < 4 \right\}$ -->
 
 </div><div class='flex'>
 
@@ -111,27 +116,29 @@ Soient $A$, $B$ et $C$ trois parties d’un ensemble $E$. Montrer que :
 1. $𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)$
 2. $𝐴 ∩ (𝐵 ∪ 𝐶) = (𝐴 ∩ 𝐵) ∪ (𝐴 ∩ 𝐶)$
 
-**Solution**
+**Solution II.9.1**
 Il s’agit de résultats du cours que l’on peut utiliser sans démonstration mais cet exercice demande de les
 redémontrer.
 
-1. Si 𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)
-   Alors (𝑥 ∈ 𝐴 ou 𝑥 ∈ (𝐵 ∩ 𝐶))
-   Alors (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶))
-   Si 𝑥 ∈ 𝐴 alors 𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶, par conséquent 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶).
-   Si (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
-   Donc si (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶)) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
-   On a montré que 𝐴 ∪ (𝐵 ∩ 𝐶) ⊂ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
-   Si 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶).
-   (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶) ⇔ ((𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵) et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶))
-   Si (𝑥 ∈ 𝐴 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐴 ∩ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶
-   Si (𝑥 ∈ 𝐵 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
-   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
-   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
-   Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
-   Alors 𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)
-   On a montré que (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) ⊂ 𝐴 ∪ (𝐵 ∩ 𝐶)
-   Finalement 𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
+Montrons que $𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)$
+
+Si $𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)$
+Alors (𝑥 ∈ 𝐴 ou 𝑥 ∈ (𝐵 ∩ 𝐶))
+Alors (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶))
+Si 𝑥 ∈ 𝐴 alors 𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶, par conséquent 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶).
+Si (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
+Donc si (𝑥 ∈ 𝐴 ou (𝑥 ∈ 𝐵 et 𝑥 ∈ 𝐶)) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶)
+On a montré que 𝐴 ∪ (𝐵 ∩ 𝐶) ⊂ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
+Si 𝑥 ∈ (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) alors (𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶).
+(𝑥 ∈ 𝐴 ∪ 𝐵 et 𝑥 ∈ 𝐴 ∪ 𝐶) ⇔ ((𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵) et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶))
+Si (𝑥 ∈ 𝐴 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐴 ∩ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶
+Si (𝑥 ∈ 𝐵 et (𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐶)) alors 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐴 ∩ 𝐶 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐴 ⊂ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+Alors 𝑥 ∈ 𝐴 ou 𝑥 ∈ 𝐵 ∩ 𝐶
+Alors 𝑥 ∈ 𝐴 ∪ (𝐵 ∩ 𝐶)
+On a montré que (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶) ⊂ 𝐴 ∪ (𝐵 ∩ 𝐶)
+Finalement 𝐴 ∪ (𝐵 ∩ 𝐶) = (𝐴 ∪ 𝐵) ∩ (𝐴 ∪ 𝐶)
 
 2. Si 𝑥 ∈ 𝐴 ∩ (𝐵 ∪ 𝐶)
    Alors (𝑥 ∈ 𝐴 et 𝑥 ∈ 𝐵 ∪ 𝐶)
