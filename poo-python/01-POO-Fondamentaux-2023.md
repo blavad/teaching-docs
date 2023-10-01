@@ -124,14 +124,9 @@ Il existe différentes [versions](https://www.python.org/downloads/) de l’inte
 - Lancer le mode interactif : `python`
 - Afficher la version : `python -V`
 - Afficher la version : `python monProg.py`
+- Exécuter un module : `python -m <module-name> <args>`
 - Créer un environnement virtuel : `python -m venv .env`
-
-<div class="block">
-
-On peut ensuite activer l'environnement `source .env/bin/activate`
-Puis le désactiver `deactivate`
-
-</div>
+- Installer un paquet : `python -m pip install numpy`
 
 ---
 
@@ -197,8 +192,8 @@ Quand on modifie une valeur:
 ma_var : str = "Ceci est un string"
 
 # Déclaration typée d'une fonction
-def ma_function(arg1: int, arg2: float) -> bool
-ma_var : str = "Ceci est un string"
+def ma_function(arg1: int, arg2: float) -> bool:
+    ...
 ```
 
 <div class='block note'>
@@ -212,21 +207,21 @@ En python, il existe 4 types primitifs:
 </div><div class='flex'>
 
 **2. Types composites**
+Après python3.10:
+
+```python
+ma_liste = list[int] = [3, 5, 7]
+mon_dict = dict[str, float] = {'pressure': 4.1}
+```
+
 Avant python3.10:
+On utilise `typing` pour les types composites standard: <b class='important'>list</b>, <b class='important'>dict</b>, <b class='important'>set</b>, ...
 
 ```python
 from typing import List, Dict
 
 ma_liste = List[int] = [3, 5, 7]
 mon_dict = Dict[str, float] = {'pressure': 4.1}
-```
-
-Après python3.10:
-Plus de `typing` pour les types composites standard: <b class='important'>list</b>, <b class='important'>dict</b>, <b class='important'>set</b>, ...
-
-```python
-ma_liste = list[int] = [3, 5, 7]
-mon_dict = dict[str, float] = {'pressure': 4.1}
 ```
 
 ---
@@ -250,18 +245,18 @@ new_vector = scale(2.0, [1.0, -4.2, 5.4])
 ```
 
 **4. Union**
+Après 3.10
+
+```python
+ma-var: str | int = 4
+```
+
 Avant 3.10:
 
 ```python
 from typing import Union
 
 ma-var: Union[str, int] = 4
-```
-
-Après 3.10
-
-```python
-ma-var: str | int = 4
 ```
 
 </div><div class='flex'>
@@ -280,17 +275,17 @@ def first(l: Sequence[T]) -> T:   # Function is generic over the TypeVar "T"
 
 **6. Any**
 Peut être de n'importe quel type
+Après 3.11
+
+```python
+ma-var: Any = 4
+```
+
 Avant 3.11:
 
 ```python
 from typing import Any
 
-ma-var: Any = 4
-```
-
-Après 3.11
-
-```python
 ma-var: Any = 4
 ```
 
@@ -369,6 +364,7 @@ Il va nous permettre de **gérer plusieurs projets** sur une même machine. Cert
 
 En général, on crée un environnement virtuel pour chaque nouveau projet => il sera ainsi plus simple de gérer ses dépendances.
 
+<br/>
 <div class="flex-horizontal">
 <div class="flex">
 
@@ -393,7 +389,27 @@ En général, on crée un environnement virtuel pour chaque nouveau projet => il
 
 ## Création et utilisation
 
-Pour créer un environnement virtuel
+Le module utilisé pour créer et gérer des environnements virtuels s'appelle `venv`.
+
+1. Créer un enviromment virtuel python 3
+
+```bash
+# python3 -m venv <env-name>
+python3 -m venv .env
+```
+
+2. Activer l'environnement virtuel
+
+```bash
+# source <env-name>/bin/activate
+source .env/bin/activate
+```
+
+3. Désactiver l'environnement virtuel
+
+```bash
+deactivate
+```
 
 ---
 
@@ -424,7 +440,6 @@ Pour maintenir mon ancien projet, je crée donc un environnement virtuel dans le
 ## Rappel : La programmation impérative
 
 <b class="important">Définition</b>
-
 La **programmation impérative** décrit les opérations d'un programme comme des séquences d'instructions exécutées par l'ordinateur pour modifier l'état du programme.
 
 <div class="flex-horizontal">
@@ -468,7 +483,6 @@ else:
 ## La programmation orientée objet
 
 <b class="important">Définition</b>
-
 La **programmation orienté objet (POO)** décrit les opérations d'un programme grâce à la définition et l’interaction de briques logicielles appelées _objets_. En POO, on cherche à représenter ces objets et leurs relations.
 
 <div class="flex-horizontal">

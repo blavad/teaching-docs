@@ -39,7 +39,7 @@ Données privées, publiques. Getter / Setter. Mot-clé self.
 Constructeur. Constructeur par défaut.
 
 <b><span class="important">03 </span> Built-in functions</b>
-Fonctions intégrées : \_\_init**, \_\_str**, \_\_eq\_\_, ...
+Fonctions intégrées : \_\_init\_\_, \_\_str\_\_, \_\_eq\_\_, ...
 
 ---
 
@@ -100,7 +100,7 @@ class CitroenC3:
 ## Les objets
 
 Un <b class="important">objet</b> est une **variable** dont le type est une classe particulière
-<i class='fas fa-arrow-right'></i> on parle <b class="important">instance de classe</b>.
+<i class='fas fa-arrow-right'></i> on parle d'une <b class="important">instance de classe</b>.
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -165,7 +165,9 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 ---
 
-## Princpe
+## Encapsulation
+
+### **Princpe**
 
 <!-- _class: bg2 -->
 
@@ -197,15 +199,22 @@ Une donnée peut être déclarée en accès :
 
 - **public** : les autres objets peuvent accéder à la valeur de cette donnée ainsi que la modifier
 
-- **privé** : les autres objets n’ont pas le droit d’accéder directement à la valeur de cette donnée (ni de la modifier). En revanche, ils peuvent le faire indirectement par grâce aux méthodes publiques de l’objet concerné
+- **protégé** : l’accès aux données est réservé aux fonctions des classes héritières
+
+- **privé** : l’accès aux données est limité aux méthodes de la classe elle-même
 
 <div class="block warning">
     
 <i class="block-icon fas fa-exclamation"></i>
 
-Par convention, les attributs et méthodes privés commencent par **\_** en _python_.
+Par convention en _python_ :
 
-Exemple: `_currentSpeed` et `_increaseSpeed()`
+- attributs et méthodes **public** par défaut
+- attributs et méthodes **protégés** commencent par un simple underscore **\_**
+  Exemple: `_increaseSpeed()`
+
+- attributs et méthodes privés commencent par un double underscore **\_\_**
+  Exemple: `__currentSpeed`
 
 </div>
 
@@ -214,12 +223,22 @@ Exemple: `_currentSpeed` et `_increaseSpeed()`
 
 ---
 
-## Bonnes pratiques
+## Encapsulation
+
+### **Parallèle avec les objets du quotidien**
+
+![width:1200px](assets/img/LesObjets.png)
+
+---
+
+## Encapsulation
+
+### **Bonnes pratiques**
 
 - ne rendre publique que le stricte nécessaire
   - les fonctions nécessaires à l’usage (`accelerate`, `turnLeft`, `turnRight`)
-  - et pas plus (`_increaseSpeed`, `_turnLeftWheel`)
-- n’utiliser que des **attributs privés**
+  - et pas plus (`__currentSpeed`, `_increaseSpeed`, `_turnLeftWheel`)
+- n’utiliser que des **attributs privés ou protégés**
   - utiliser un **getter** si besoin de lire depuis l’extérieur
   - utiliser un **setter** si besoin de modifier depuis l’extérieur
 - suivre le principe de **responsabilité unique** - **S** de **S**OLID
@@ -228,6 +247,8 @@ Exemple: `_currentSpeed` et `_increaseSpeed()`
 ---
 
 ## Encapsulation
+
+### **get, set, self**
 
 <div class="flex-horizontal">
 <div class="flex" style="margin-right:1rem">
@@ -260,7 +281,7 @@ Utilisé pour accéder à l'instance d'une classe. On pourra l'utiliser dans la 
 <div class="block warning">
 <i class="block-icon fas fa-exclamation"></i>
 
-Il doit impérativement être le **premier argument** de chaque méthode.
+Il doit impérativement être le **premier argument** de chaque méthode d'instance.
 
 </div>
 
@@ -320,6 +341,14 @@ print(m.hasAuthor('Stromae'))
 
 </div>
 
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Le constructeur permet de configurer l'instance.
+
+</div>
+
 ---
 
 ## Constructeur par défaut
@@ -370,6 +399,22 @@ print(m.hasAuthor('Stromae'))
 # 04
 
 ## Built-in functions
+
+</div>
+
+---
+
+## La classe `object`
+
+Depuis python 3, tous les types pythons de bases (**int**, **float**, **str**, **list**, **dict**, **set**, ...) sont des classes qui héritent de la même classe racine, la classe **object**.
+
+La classe **object** contient un certains nombres de méthodes intégrées (les **built-in functions**).
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Quand on crée une classe en python, celle-ci hérite par défaut de de cette classe **object** et donc, on peut redéfinir les fonctions built-in dans l'implémentation.
 
 </div>
 

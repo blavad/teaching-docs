@@ -294,7 +294,7 @@ L'implémentation d'`accelerate` n'est pas la même pour un vélo et un skateboa
 
 ## Polymorphisme en pratique (2)
 
-Nous pouvons appeler la méthode `accelerate` d'un objet sans nous soucier son type intrinsèque.
+Nous pouvons appeler la méthode `accelerate` d'un objet sans nous soucier de son type intrinsèque.
 
 ```python
 vehicules : list[Vehicule] = []
@@ -546,7 +546,6 @@ if __name__ == '__main__':
     # output : 0 0 0
 ```
 
-<!--
 ---
 
 <div class="main">
@@ -555,7 +554,13 @@ if __name__ == '__main__':
 
 ## Méthodes statiques
 
-</div> -->
+</div>
+
+---
+
+## Méthodes statiques
+
+# **_TO DO_**
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
