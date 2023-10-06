@@ -427,7 +427,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 **Syntaxe python**
 
 ```python
-class Vehicule: # ici on définit la classe mère
+class Vehicule(ABC): # ici on définit la classe mère
     def __init__(self, wheels, brand):
         self._brand = brand
         self._wheels = wheels
@@ -483,16 +483,18 @@ Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne<
 **Syntaxe python**
 
 ```python
-class Vehicule:
+from abc import ABC, abstractmethod
+
+class Vehicule(ABC):
     def accelerate(self):
         print("Go !")
 
     def turnLeft(self):
         print("Go left !")
 
+    @abstractmethod
     def isFrenchBrand(self):
-        raise NotImplementedError("The method is abstract")
-
+        pass
 ```
 
 </div>
@@ -506,41 +508,21 @@ class Vehicule:
 Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attribut** et ses méthodes ne sont **pas implémentées**.
 
 <div class="flex-horizontal">
-<div class="flex" style="flex:0.4">
+<div class="flex" style="flex:80">
+
+<div class='flex-horizontal'><div class='flex' style='flex:0.9'>
 
 **Intérêts**
 
 - Définir les opérations sans préciser leur implémentation
 - Préciser les conditions et les effets de l'invocation des opérations
-</div>
-<div class="flex" style="flex:0.2">
+
+</div><div class='flex' style='flex:0.1'>
 
 **Syntaxe UML**
 ![height:250px](assets/img/diag-interface.png)
 
-</div>
-
-<div class="flex" style="flex:0.4">
-
-**Syntaxe python**
-
-```python
-class Vehicule:
-    def accelerate(self):
-        raise NotImplementedError("The method is abstract")
-
-    def turnLeft(self):
-        raise NotImplementedError("The method is abstract")
-
-    def isFrenchBrand(self):
-        raise NotImplementedError("The method is abstract")
-
-```
-
-Les méthodes abstraites renvoient une erreur.
-
-</div>
-</div>
+</div></div>
 
 <div class="block warning">
 
@@ -548,6 +530,32 @@ Les méthodes abstraites renvoient une erreur.
 
 Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées** directement.
 
+</div>
+
+</div>
+
+<div class="flex" style="flex:35">
+
+**Syntaxe python**
+
+```python
+from abc import ABC, abstractmethod
+
+class Vehicule(ABC):
+    @abstractmethod
+    def accelerate(self):
+        pass
+
+    @abstractmethod
+    def turnLeft(self):
+        pass
+
+    @abstractmethod
+    def isFrenchBrand(self):
+        pass
+```
+
+</div>
 </div>
 
 ---

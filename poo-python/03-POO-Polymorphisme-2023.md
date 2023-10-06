@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-maths
+theme: dav-default
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -70,7 +70,7 @@ La classe `Bike` hérite de la classe `Vehicule`.
 La classe <b class="important">fille</b> est `Bike`.
 La classe <b class="important">parente</b> est `Vehicule`.
 
-![height:300px](assets/img/diag-heritage.png)
+![height:250px](assets/img/diag-heritage.png)
 
 </div>
 <div class="flex">
@@ -78,7 +78,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 **Syntaxe python**
 
 ```python
-class Vehicule: # ici on définit la classe mère
+class Vehicule(ABC): # ici on définit la classe mère
     def __init__(self, wheels, brand):
         self._brand = brand
         self._wheels = wheels
@@ -117,10 +117,8 @@ Une <b class="important">classe abstraite</b> est une classe qui comprend **au m
 ![height:250px](assets/img/diag-abstract.png)
 
 <div class='block note'>
-<div class='block-icon'>
-<i class='fas fa-info' style='padding-right:1rem;'></i>
-<b>Note</b>
-</div>
+
+<i class='block-icon fas fa-info'></i>
 
 Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne</u>.
 
@@ -136,16 +134,18 @@ Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne<
 **Syntaxe python**
 
 ```python
-class Vehicule:
+from abc import ABC, abstractmethod
+
+class Vehicule(ABC):
     def accelerate(self):
         print("Go !")
 
     def turnLeft(self):
         print("Go left !")
 
+    @abstractmethod
     def isFrenchBrand(self):
-        raise NotImplementedError("The method is abstract")
-
+        pass
 ```
 
 </div>
@@ -159,50 +159,54 @@ class Vehicule:
 Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attribut** et ses méthodes ne sont **pas implémentées**.
 
 <div class="flex-horizontal">
-<div class="flex" style="flex:0.4">
+<div class="flex" style="flex:80">
+
+<div class='flex-horizontal'><div class='flex' style='flex:0.9'>
 
 **Intérêts**
 
 - Définir les opérations sans préciser leur implémentation
 - Préciser les conditions et les effets de l'invocation des opérations
-</div>
-<div class="flex" style="flex:0.2">
+
+</div><div class='flex' style='flex:0.1'>
 
 **Syntaxe UML**
 ![height:250px](assets/img/diag-interface.png)
 
+</div></div>
+
+<div class="block warning">
+
+<i class="block-icon fas fa-exclamation"></i>
+
+Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées** directement.
+
 </div>
 
-<div class="flex" style="flex:0.4">
+</div>
+
+<div class="flex" style="flex:35">
 
 **Syntaxe python**
 
 ```python
-class Vehicule:
+from abc import ABC, abstractmethod
+
+class Vehicule(ABC):
+    @abstractmethod
     def accelerate(self):
-        raise NotImplementedError("The method is abstract")
+        pass
 
+    @abstractmethod
     def turnLeft(self):
-        raise NotImplementedError("The method is abstract")
+        pass
 
+    @abstractmethod
     def isFrenchBrand(self):
-        raise NotImplementedError("The method is abstract")
-
+        pass
 ```
 
-Les méthodes abstraites renvoient une erreur.
-
 </div>
-</div>
-
-<div class='block warning'>
-<div class='block-icon'>
-<i class='far fa-exclamation' style='padding-right:1rem;'></i>
-<b>Important</b>
-</div>
-
-Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées** directement.
-
 </div>
 
 ---
@@ -315,6 +319,8 @@ for v in vehicules:
 
 ---
 
+<!-- _class: sm-font-size -->
+
 ## Surcharger une méthode
 
 Pour un fonctionnement ...
@@ -347,6 +353,8 @@ c.method() # C
 ```
 
 ---
+
+<!-- _class: sm-font-size -->
 
 ## Surcharger une méthode
 
@@ -391,6 +399,8 @@ e.method() # A E
 </div>
 
 ---
+
+<!-- _class: sm-font-size -->
 
 ## Héritage multiple
 
@@ -566,12 +576,8 @@ class G(F, B):
 **Avant propos**
 Jusqu'à présent nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données de ce dernier (**= attributs d'instances**).
 
-</br>
-
 <b class="important">Méthodes de classes</b>
 Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
-
-</br>
 
 **Exemples d'usages**
 

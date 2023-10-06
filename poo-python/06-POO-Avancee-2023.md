@@ -459,10 +459,9 @@ Le méthode <b class='important'>"bridge"</b> permet de séparer une grosse clas
 <div class='flex-horizontal'><div class='flex'>
 
 ```python
-from __future__ import annotations
 from abc import ABC, abstractmethod
 
-class Shape:
+class Shape(ABC):
     def __init__(self, x: int, y: int, drawAPI: DrawAPI) -> None:
         self._x = x
         self._y = y

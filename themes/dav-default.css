@@ -158,6 +158,11 @@ section::after {
   content: '' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
 
+
+section.sm-font-size {
+  font-size: 22px;
+}
+
 ul {
   margin:0;
 }
@@ -216,8 +221,6 @@ pre {
   font-weight: bold;
   font-size: 0.9rem;
 }
-
-
 
 
 
