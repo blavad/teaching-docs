@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -29,27 +29,30 @@ _footer: ""
 
 ## Table des matières
 
-<b><span class="important">01 </span> Héritage</b>
-Héritage. Classe abstraites. Interfaces.
-
-<b><span class="important">02 </span> Polymorphisme</b>
+<b><span class="important">00 </span> Rappel: Héritage</b>
 Définition. Spécialisation. Surcharge de méthodes.
 
-<b><span class="important">03 </span> Héritage multiple</b>
+<b><span class="important">01 </span> Polymorphisme</b>
+Définition. Spécialisation. Surcharge de méthodes.
+
+<b><span class="important">02 </span> Héritage multiple</b>
 Héritage multiple. Ordre d'héritage.
 
-<b><span class="important">04 </span> Méthodes de classes</b>
+<b><span class="important">03 </span> Méthodes de classes</b>
 Attribut / méthodes de classes. Décorateur **_@classmethod_**. Mot-clé **cls**.
+
+<b><span class="important">04 </span> Méthodes statiques</b>
+Méthodes de statiques. Décorateur **_@staticmethod_**.
 
 ---
 
-<!-- PARTIE 1 : Héritage -->
+<!-- PARTIE 4 : Héritage -->
 
 <div class="main">
 
-# 01
+# 00
 
-## Héritage
+## Rappel : Héritage
 
 </div>
 
@@ -67,7 +70,7 @@ La classe `Bike` hérite de la classe `Vehicule`.
 La classe <b class="important">fille</b> est `Bike`.
 La classe <b class="important">parente</b> est `Vehicule`.
 
-![height:250px](assets/img/diag-heritage.png)
+![height:300px](assets/img/diag-heritage.png)
 
 </div>
 <div class="flex">
@@ -114,8 +117,10 @@ Une <b class="important">classe abstraite</b> est une classe qui comprend **au m
 ![height:250px](assets/img/diag-abstract.png)
 
 <div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
+<div class='block-icon'>
+<i class='fas fa-info' style='padding-right:1rem;'></i>
+<b>Note</b>
+</div>
 
 Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne</u>.
 
@@ -151,7 +156,7 @@ class Vehicule:
 ## Interface
 
 **Définition**
-Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attributs** et ses méthodes ne sont **pas implémentées**.
+Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attribut** et ses méthodes ne sont **pas implémentées**.
 
 <div class="flex-horizontal">
 <div class="flex" style="flex:0.4">
@@ -190,9 +195,11 @@ Les méthodes abstraites renvoient une erreur.
 </div>
 </div>
 
-<div class="block warning">
-
-<i class="block-icon fas fa-exclamation"></i>
+<div class='block warning'>
+<div class='block-icon'>
+<i class='far fa-exclamation' style='padding-right:1rem;'></i>
+<b>Important</b>
+</div>
 
 Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées** directement.
 
@@ -200,11 +207,11 @@ Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées
 
 ---
 
-<!-- PARTIE 2 : Polymorphisme -->
+<!-- PARTIE 1 : Polymorphisme -->
 
 <div class="main">
 
-# 02
+# 01
 
 ## Polymorphisme
 
@@ -224,15 +231,20 @@ Cela permet d’utiliser l’héritage comme:
 - mécanisme de **spécialisation** d'un concept.
 - mécanisme d’**extension du système**.
 
-<div class="block note">
-<i class="block-icon fas fa-info"></i>
+</br>
 
-**Bonne pratique**
+<div class='block note'>
+<div class='block-icon'>
+<i class='fas fa-info' style='padding-right:1rem;'></i>
+<b>Bonnes pratiques</b>
+</div>
 
 1. On définit une **interface commune** à une famille d'objets (la classe de base).
 
 2. On écrit les **détails d'implémentations** des classes spécialisées.
+
 </div>
+
 </div>
 <div class="flex" style="flex:0.5;">
 
@@ -244,14 +256,6 @@ Cela permet d’utiliser l’héritage comme:
 <!-- ![bg right:40% contain 90%](https://www.pokepedia.fr/images/c/c2/Sprite_0132_HOME.png) -->
 </div>
 </div>
-
----
-
-## Surcharger une méthode
-
-**Mot-clé <span class="important">super</span>**
-
-# **_TO DO_**
 
 ---
 
@@ -311,11 +315,76 @@ for v in vehicules:
 
 ---
 
+## Surcharger une méthode
+
+Pour un fonctionnement ...
+
+**Cas 1 : ... identique à la classe mère**
+On ne fait rien. Le mécanisme d'héritage se chargera d'appeler la bonne fonction.
+
+```python
+class A:
+    def method(self):
+        print('A')
+
+class B(A):
+    pass
+
+b = B()
+b.method() # A
+```
+
+**Cas 2 : ... différent de la classe mère**
+On réimplémente la méthode dans la classe fille.
+
+```python
+class C(A):
+    def method(self):
+        print('C')
+
+c = C()
+c.method() # C
+```
+
+---
+
+## Surcharger une méthode
+
+Pour un fonctionnement ...
+
+**Cas 3 : ... avec des fonctionnalités en plus de celles de la classe mère**
+On utilise le mot-clé <b class='important'>super</b> pour appeler la méthode mère de façon intelligente.
+
+```python
+class D(C):
+    def method(self):
+        super().method()
+        print('D')
+
+d = D()
+d.method() # C D
+```
+
+**Cas 4 : ... identique à une classe parente spécifique**
+On appel la méthode d'une classe parente comme ci-dessous.
+
+```python
+class E(C):
+    def method(self):
+        A.method(self)
+        print('E')
+
+e = E()
+e.method() # A E
+```
+
+---
+
 <!-- PARTIE 2 : Polymorphisme -->
 
 <div class="main">
 
-# 03
+# 02
 
 ## Héritage multiple
 
@@ -325,11 +394,8 @@ for v in vehicules:
 
 ## Héritage multiple
 
-# **_TO DO_**
-
----
-
-## Ordre d'héritage
+**Python permet d'hériter de plusieurs classes.**
+`class Fille(Parent1, Parent2, Parent3)`
 
 Afin de pouvoir déboguer lors d'erreurs avec l'héritage multiple, il est possible de connaître l'ordre d'héritage. Pour cela, on utilise la méthode `__mro__`.
 
@@ -357,7 +423,7 @@ L'exécution de ce code renvoit
 
 ---
 
-### Order d'héritage
+## Order d'héritage
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -418,7 +484,7 @@ print(G.__mro__)
 
 ---
 
-### Order d'héritage
+## Order d'héritage
 
 <div class="flex-horizontal">
 <div class="flex">
@@ -487,7 +553,7 @@ class G(F, B):
 
 <div class="main">
 
-# 04
+# 03
 
 ## Méthodes de classes
 
@@ -498,10 +564,14 @@ class G(F, B):
 ## Définition
 
 **Avant propos**
-Jusqu'alors nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données de ce dernier (**= attributs d'instances**).
+Jusqu'à présent nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données de ce dernier (**= attributs d'instances**).
+
+</br>
 
 <b class="important">Méthodes de classes</b>
 Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
+
+</br>
 
 **Exemples d'usages**
 
@@ -550,7 +620,7 @@ if __name__ == '__main__':
 
 <div class="main">
 
-# 05
+# 04
 
 ## Méthodes statiques
 

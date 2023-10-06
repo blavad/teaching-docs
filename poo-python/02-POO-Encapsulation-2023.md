@@ -32,13 +32,16 @@ _footer: ""
 <b><span class="important">01 </span> Classes et objets</b>
 Classes. Objets. Attributs et méthodes. Instances.
 
-<b><span class="important">02 </span> Encapsulation</b>
-Données privées, publiques. Getter / Setter. Mot-clé self.
-
-<b><span class="important">03 </span> Instanciation</b>
+<b><span class="important">02 </span> Constructeur</b>
 Constructeur. Constructeur par défaut.
 
-<b><span class="important">03 </span> Built-in functions</b>
+<b><span class="important">03 </span> Encapsulation</b>
+Données privées, publiques. Getter / Setter. Mot-clé self.
+
+<b><span class="important">04 </span> Héritage</b>
+Héritage. Classe abstraites. Interfaces.
+
+<b><span class="important">05 </span> Built-in functions</b>
 Fonctions intégrées : \_\_init\_\_, \_\_str\_\_, \_\_eq\_\_, ...
 
 ---
@@ -67,7 +70,7 @@ Une <b class="important">classe</b> est un **type de données composite** consti
 
 **Syntaxe UML**
 
-![height:300px](assets/img/class-citroenC3.png)
+![height:350px](assets/img/class-citroenC3.png)
 
 </div>
 <div class="flex">
@@ -153,11 +156,112 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 ---
 
-<!-- PARTIE 2 : ENCAPSULATION -->
+<!-- PARTIE 3 : ENCAPSULATION -->
 
 <div class="main">
 
 # 02
+
+## Constructeur : **\_\_init\_\_**
+
+</div>
+
+---
+
+## Constructeur
+
+Le <b class="important">constructeur</b> est une méthode spéciale (**\_\_init\_\_** en python) qui est appelée au moment de la création de l'objet.
+
+<div class="flex-horizontal">
+<div class="flex">
+
+**Définition du constructeur**
+
+```python
+class Music:
+    # Définition du constructeur
+    def __init__(self, title, artists):
+        self._title = title
+        self._artists = artists
+
+    def hasAuthor(self, name):
+        return name in self._artists
+```
+
+</div>
+
+<div class="flex">
+
+**Appel du constructeur**
+
+```python
+# Instanciation d'un objet de type 'Music'
+m = Music('La pluie', ['Stromae', 'Orelsan'])
+
+print(m.hasAuthor('Stromae'))
+# true
+```
+
+</div>
+
+</div>
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Le constructeur permet de configurer l'instance.
+
+</div>
+
+---
+
+## Constructeur par défaut
+
+Le constructeur (comme toute fonction) peut prendre des arguments par défaut.
+
+<div class="flex-horizontal">
+<div class="flex">
+
+**Définition du constructeur**
+
+```python
+class Music:
+    # Définition du constructeur
+    # avec arguments par défaut
+    def __init__(self, title, artists = []):
+        self._title = title
+        self._artists = artists
+
+    def hasAuthor(self, name):
+        return name in self._artists
+```
+
+</div>
+
+<div class="flex">
+
+**Appel du constructeur par défaut**
+
+```python
+# Appel du constructeur par défaut
+m2 = Music('La pluie')
+
+print(m.hasAuthor('Stromae'))
+# false
+```
+
+</div>
+
+</div>
+
+---
+
+<!-- PARTIE 3 : ENCAPSULATION -->
+
+<div class="main">
+
+# 03
 
 ## Encapsulation
 
@@ -291,102 +395,158 @@ Il doit impérativement être le **premier argument** de chaque méthode d'insta
 
 ---
 
-<!-- PARTIE 3 : ENCAPSULATION -->
+<!-- PARTIE 4 : Héritage -->
 
 <div class="main">
 
-# 03
+# 04
 
-## Constructeur : **\_\_init\_\_**
+## Héritage
 
 </div>
 
 ---
 
-## Constructeur
+## Héritage
 
-Le <b class="important">constructeur</b> est une méthode spéciale (**\_\_init\_\_** en python) qui est appelée au moment de la création de l'objet.
+En POO, l'<b class="important">héritage</b> est le concept qui permet de créer une nouvelle classe à partir d'une classe existante.
 
 <div class="flex-horizontal">
 <div class="flex">
 
-**Définition du constructeur**
+**Syntaxe UML**
+La classe `Bike` hérite de la classe `Vehicule`.
+La classe <b class="important">fille</b> est `Bike`.
+La classe <b class="important">parente</b> est `Vehicule`.
 
-```python
-class Music:
-    # Définition du constructeur
-    def __init__(self, title, artists):
-        self._title = title
-        self._artists = artists
-
-    def hasAuthor(self, name):
-        return name in self._artists
-```
+![height:250px](assets/img/diag-heritage.png)
 
 </div>
-
 <div class="flex">
 
-**Appel du constructeur**
+**Syntaxe python**
 
 ```python
-# Instanciation d'un objet de type 'Music'
-m = Music('La pluie', ['Stromae', 'Orelsan'])
+class Vehicule: # ici on définit la classe mère
+    def __init__(self, wheels, brand):
+        self._brand = brand
+        self._wheels = wheels
 
-print(m.hasAuthor('Stromae'))
-# true
+    def accelerate(self):
+        print("Go !")
+
+class Bike(Vehicule): # class fille
+    def __init__(self):
+        super().__init__(2, "Canyon")
+```
+
+En héritant de `Vehicule`, la classe `Bike` hérite de ses méthodes.
+
+```python
+b = Bike()
+b.accelerate()
+# Go !
 ```
 
 </div>
-
 </div>
+
+---
+
+## Classe abstraite
+
+**Définition**
+Une <b class="important">classe abstraite</b> est une classe qui comprend **au moins** une méthode **non implémentée**.
+
+<div class="flex-horizontal">
+<div class="flex" style="flex:0.4;">
+
+**Syntaxe UML**
+
+![height:250px](assets/img/diag-abstract.png)
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-Le constructeur permet de configurer l'instance.
+Les méthodes abstraites sont écrites en _italique_. A la main, on <u>souligne</u>.
 
+</div>
+
+</div>
+<div class="flex" style="flex:0.6">
+
+**Intérêt**
+
+- Implémenter certains opérationes communes à un groupe d'objets malgré que le concept soit encore _abstrait_
+
+**Syntaxe python**
+
+```python
+class Vehicule:
+    def accelerate(self):
+        print("Go !")
+
+    def turnLeft(self):
+        print("Go left !")
+
+    def isFrenchBrand(self):
+        raise NotImplementedError("The method is abstract")
+
+```
+
+</div>
 </div>
 
 ---
 
-## Constructeur par défaut
+## Interface
 
-Le constructeur (comme toute fonction) peut prendre des arguments par défaut.
+**Définition**
+Une <b class="important">interface</b> est une classe abstraite particulière. Elle ne contient **aucun attribut** et ses méthodes ne sont **pas implémentées**.
 
 <div class="flex-horizontal">
-<div class="flex">
+<div class="flex" style="flex:0.4">
 
-**Définition du constructeur**
+**Intérêts**
 
-```python
-class Music:
-    # Définition du constructeur
-    # avec arguments par défaut
-    def __init__(self, title, artists = []):
-        self._title = title
-        self._artists = artists
+- Définir les opérations sans préciser leur implémentation
+- Préciser les conditions et les effets de l'invocation des opérations
+</div>
+<div class="flex" style="flex:0.2">
 
-    def hasAuthor(self, name):
-        return name in self._artists
-```
+**Syntaxe UML**
+![height:250px](assets/img/diag-interface.png)
 
 </div>
 
-<div class="flex">
+<div class="flex" style="flex:0.4">
 
-**Appel du constructeur par défaut**
+**Syntaxe python**
 
 ```python
-# Appel du constructeur par défaut
-m2 = Music('La pluie')
+class Vehicule:
+    def accelerate(self):
+        raise NotImplementedError("The method is abstract")
 
-print(m.hasAuthor('Stromae'))
-# false
+    def turnLeft(self):
+        raise NotImplementedError("The method is abstract")
+
+    def isFrenchBrand(self):
+        raise NotImplementedError("The method is abstract")
+
 ```
 
+Les méthodes abstraites renvoient une erreur.
+
 </div>
+</div>
+
+<div class="block warning">
+
+<i class="block-icon fas fa-exclamation"></i>
+
+Les **classes abstraites** et les **interfaces** ne seront **jamais instanciées** directement.
 
 </div>
 
@@ -396,7 +556,7 @@ print(m.hasAuthor('Stromae'))
 
 <div class="main">
 
-# 04
+# 05
 
 ## Built-in functions
 
@@ -406,7 +566,7 @@ print(m.hasAuthor('Stromae'))
 
 ## La classe `object`
 
-Depuis python 3, tous les types pythons de bases (**int**, **float**, **str**, **list**, **dict**, **set**, ...) sont des classes qui héritent de la même classe racine, la classe **object**.
+Depuis python 3, tous les types pythons de bases (**int**, **float**, **str**, **list**, **dict**, **set**, ...) sont des classes qui héritent de la même classe racine: la classe **object**.
 
 La classe **object** contient un certains nombres de méthodes intégrées (les **built-in functions**).
 
@@ -435,6 +595,9 @@ Toute classe python contient un ensemble de méthodes intégrées (ou **built-in
 
 - **\_\_len\_\_** : retourne la longueur de l'objet
   `len(obj)` ou `obj.__len__()`
+
+</br>
+</br>
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>

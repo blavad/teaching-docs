@@ -416,6 +416,8 @@ Si deux classes sont en intéractions dans le système on les associent.
 
 On peut préciser la multiplicité.
 
+- On peut dire: "objet de la classe 1 <u>utilise</u> objet(s) de la classe 2"
+
 </div>
 
 </div><div class='flex' style="flex:1.5">

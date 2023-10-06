@@ -339,7 +339,15 @@ Dans ce cours, nous présenterons 4 patrons de conception classiques.
 
 ---
 
-## Factory Method
+## Types de patterns
+
+<br/>
+
+![](./assets/img/design_patterns_hierarchy.png)
+
+---
+
+<h2>Factory Method  <span style="border-radius:10px; font-size:20px; font-weight:bold;padding:8px;background-color:#99ccff;">creational</span></h2>
 
 La <b class='important'>"factory method"</b> permet de construire des objets depuis du texte.
 
@@ -351,7 +359,7 @@ La <b class='important'>"factory method"</b> permet de construire des objets dep
 class FrenchLocalizer:
     """it simply returns the french version"""
     def __init__(self):
-        self.translations = {"car": "voiture", "bike": "bicyclette", "cycle":"cyclette"}
+        self.translations = {"car": "voiture", "bike": "bicyclette"}
 
     def localize(self, msg):
         """change the message using translations"""
@@ -360,7 +368,7 @@ class FrenchLocalizer:
 class SpanishLocalizer:
     """it simply returns the spanish version"""
     def __init__(self):
-        self.translations = {"car": "coche", "bike": "bicicleta", "cycle":"ciclo"}
+        self.translations = { "car": "coche", "bike": "bicicleta"}
 
     def localize(self, msg):
         """change the message using translations"""
@@ -397,7 +405,7 @@ print(f.localize("car")) # voiture
 
 ---
 
-## Adapter
+<h2> Adapter <span style="border-radius:10px; font-size:20px; font-weight:bold;padding:8px;background-color:#ffcb99">structural</span></h2>
 
 La méthode <b class='important'>"adapter"</b> permet de réutiliser le comportement fonctionnel d'une classe mais dont l'interface ne correspond pas aux attentes.
 
@@ -410,49 +418,243 @@ class Target:
     """
     Interface utilisé par le code client.
     """
-    def request(self):
+    def request(self) -> str:
         return "Target: The default target's behavior."
-
 
 class Adaptee:
     """
-    Contient des comportements utiles mais l'interface ne correspond pas à l'interface existante.
+    Contient des comportements utiles mais  l'interface
+    ne correspond pas à l'interface existante.
     """
-
-    def specific_request(self):
-        return ".eetpadA eht fo roivaheb laicepS"
-
-
-class Adapter(Target, Adaptee):
-    """
-    L'adapteur permet de faire concorder la classe véhicule avec l'interface souhaitée.
-    """
-
-    def request(self) -> str:
-        return self.specific_request()
-
+    def specific_request(self) -> int:
+        return 12301384
 ```
 
 </div><div class='flex'>
+
+```python
+class Adapter(Target):
+    """
+    L'adapteur permet de faire concorder la classe
+    véhicule avec l'interface souhaitée.
+    """
+    def __init__(self, adaptee: Adaptee):
+        self.__adaptee = adaptee
+
+    def request(self) -> str:
+        return "Adapted request : " +
+            str(self.__adaptee.specific_request())
+```
 
 </div></div>
 
 ---
 
-## Strategy
+## Bridge <span style="border-radius:10px; font-size:20px; font-weight:bold;padding:8px;background-color:#ffcb99;">structural</span></h2>
+
+Le méthode <b class='important'>"bridge"</b> permet de séparer une grosse classe ou un ensemble de classes connexes en deux hiérarchies — abstraction et implémentation — qui peuvent évoluer indépendamment l’une de l’autre.
+
+**Exemple :**
+
+<div class='flex-horizontal'><div class='flex'>
+
+```python
+from __future__ import annotations
+from abc import ABC, abstractmethod
+
+class Shape:
+    def __init__(self, x: int, y: int, drawAPI: DrawAPI) -> None:
+        self._x = x
+        self._y = y
+        self._drawAPI = drawAPI
+
+    @abstractmethod
+    def draw(self) -> None:
+        pass
+
+class Circle(Shape):
+    def draw(self) -> None:
+        self._drawAPI.draw_circle(color)
+```
+
+</div><div class='flex'>
+
+```python
+class DrawAPI(ABC):
+    """ Définit l'interface de notre système de dessin. """
+    @abstractmethod
+    def draw_circle(self, x: int, y: int) -> None:
+        pass
+
+    @abstractmethod
+    def draw_rectangle(self, x: int, y: int) -> None:
+        pass
+
+class ShellDrawAPI(DrawAPI):
+    # ... impélemente DrawAPI pour un affichage en terminal ...
+
+class TkinterDrawAPI(DrawAPI):
+    # ... impélemente DrawAPI pour un affichage en via Tkinter ...
+```
+
+```python
+api_type : DrawAPI = new ShellDrawAPI()
+circle1 : Shape = new Circle(0, 0, api_type)
+circle2 : Shape = new Circle(20, 10, api_type)
+circle1.draw()
+circle2.draw()
+```
+
+</div></div>
 
 ---
 
-## State
+## Strategy <span style="border-radius:10px; font-size:20px; font-weight:bold;padding:8px;background-color:#cafd9e;">behavioral</span></h2>
+
+La méthode <b class='important'>"strategy"</b> permet de définir une famille d’algorithmes, de les mettre dans des classes séparées et de rendre leurs objets interchangeables.
+
+**Exemple :**
+
+<div class='flex-horizontal'><div class='flex'>
+
+```python
+import random
+from abc import ABC, abstractmethod
+
+class SortStrategy(ABC):
+    """
+    L'interface Strategy déclare les opération communes
+    à toutes les versions supportées d'un algorithme.
+    """
+    @abstractmethod
+    def sort(self, data: List):
+        pass
+
+class StandardSort(SortStrategy):
+    def sort(self, data: List) -> List:
+        return sorted(data)
+
+class ReverseSort(SortStrategy):
+    def sort(self, data: List) -> List:
+        return reversed(sorted(data))
+```
+
+</div><div class='flex'>
+
+```python
+class Context():
+    def __init__(self, sort_strategy: SortStrategy) -> None:
+        """
+        Souvent, le contexte accepte la stratégie comme
+        entrée du constructeur, mais fournit aussi un
+        setter pour la modifier pendant l'exécution.
+        """
+        self._sort_strategy = sort_strategy
+
+    def get_sort_strategy(self) -> SortStrategy:
+        return self._sort_strategy
+
+    def set_sort_strategy(self, sort_strategy: SortStrategy) -> None:
+        self._sort_strategy = sort_strategy
+
+    def do_some_business_logic(self) -> None:
+        print("Context: Sorting data using the strategy (not sure how \it'll do it)")
+        result = self._sort_strategy.sort(["a", "b", "c", "d", "e"])
+        print(",".join(result))
+```
+
+```python
+context = Context(new StandardSort())
+
+context.do_some_business_logic() # a,b,c,d,e
+context.set_sort_strategy(new ReverseSort())
+context.do_some_business_logic() # e,d,c,b,a
+```
+
+</div></div>
 
 ---
 
-## Observer
+<!-- PARTIE 03 : Documentation, Gestion erreurs,  -->
 
-L'<b class='important'>observer</b> un mécanisme d'abonnement pour notifier à plusieurs objets tout événement survenant à l'objet qu'ils observent.
+<div class='main'>
+
+# 03
+
+## Mieux développer
+
+</div>
 
 ---
 
-## Patron de méthode
+## Documentation
 
-https://refactoring.guru/fr/design-patterns/template-method
+---
+
+## Gestion des erreurs
+
+---
+
+## Gestion des logs
+
+---
+
+## Tests unitaires
+
+---
+
+<!-- PARTIE 04 : Annexes -->
+
+<div class='main'>
+
+# 04
+
+## Annexes
+
+</div>
+
+---
+
+## Annexes 1 : Patrons de conception
+
+### Patterns de comportement
+
+<img width="100%" src="./assets/img/design_pattern_apercu_1.jpg"/>
+
+---
+
+### Patterns de comportement
+
+<br/>
+
+<img width="100%" src="./assets/img/design_pattern_apercu_2.jpg"/>
+
+---
+
+### Patterns de comportement
+
+<br/>
+
+<img width="100%" src="./assets/img/design_pattern_apercu_3.jpg"/>
+
+---
+
+### Patterns structurels
+
+<br/>
+
+<img width="100%" src="./assets/img/design_pattern_apercu_4.jpg"/>
+
+---
+
+### Patterns structurels
+
+<br/>
+
+<img width="100%" src="./assets/img/design_pattern_apercu_5.jpg"/>
+
+---
+
+### Patterns de création
+
+<img width="100%" src="./assets/img/design_pattern_apercu_6.jpg"/>
