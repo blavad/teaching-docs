@@ -123,7 +123,7 @@ Il existe différentes [versions](https://www.python.org/downloads/) de l’inte
 - Afficher les options : `python -h`
 - Lancer le mode interactif : `python`
 - Afficher la version : `python -V`
-- Afficher la version : `python monProg.py`
+- Interpréter un fichier python : `python monProg.py`
 - Exécuter un module : `python -m <module-name> <args>`
 - Créer un environnement virtuel : `python -m venv .env`
 - Installer un paquet : `python -m pip install numpy`
@@ -210,8 +210,8 @@ En python, il existe 4 types primitifs:
 Après python3.10:
 
 ```python
-ma_liste = list[int] = [3, 5, 7]
-mon_dict = dict[str, float] = {'pressure': 4.1}
+ma_liste : list[int] = [3, 5, 7]
+mon_dict : dict[str, float] = {'pressure': 4.1}
 ```
 
 Avant python3.10:
@@ -220,8 +220,8 @@ On utilise `typing` pour les types composites standard: <b class='important'>lis
 ```python
 from typing import List, Dict
 
-ma_liste = List[int] = [3, 5, 7]
-mon_dict = Dict[str, float] = {'pressure': 4.1}
+ma_liste : List[int] = [3, 5, 7]
+mon_dict : Dict[str, float] = {'pressure': 4.1}
 ```
 
 ---
@@ -391,19 +391,34 @@ En général, on crée un environnement virtuel pour chaque nouveau projet => il
 
 Le module utilisé pour créer et gérer des environnements virtuels s'appelle `venv`.
 
-1. Créer un enviromment virtuel python 3
+(1) Créer un enviromment virtuel python 3
 
 ```bash
 # python3 -m venv <env-name>
 python3 -m venv .env
 ```
 
-2. Activer l'environnement virtuel
+(2) Activer l'environnement virtuel
+
+<div class='flex-horizontal'><div class='flex'>
+
+UNIX (Linux et MacOS)
 
 ```bash
 # source <env-name>/bin/activate
 source .env/bin/activate
 ```
+
+</div><div class='flex'>
+
+Windows
+
+```bash
+# source <env-name>/bin/activate
+.env\Scripts\activate
+```
+
+</div></div>
 
 3. Désactiver l'environnement virtuel
 

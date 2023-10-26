@@ -41,9 +41,6 @@ Héritage multiple. Ordre d'héritage.
 <b><span class="important">03 </span> Méthodes de classes</b>
 Attribut / méthodes de classes. Décorateur **_@classmethod_**. Mot-clé **cls**.
 
-<b><span class="important">04 </span> Méthodes statiques</b>
-Méthodes de statiques. Décorateur **_@staticmethod_**.
-
 ---
 
 <!-- PARTIE 4 : Héritage -->
@@ -239,8 +236,7 @@ Cela permet d’utiliser l’héritage comme:
 
 <div class='block note'>
 <div class='block-icon'>
-<i class='fas fa-info' style='padding-right:1rem;'></i>
-<b>Bonnes pratiques</b>
+<i class='fas fa-info'></i>
 </div>
 
 1. On définit une **interface commune** à une famille d'objets (la classe de base).
@@ -388,7 +384,35 @@ e.method() # A E
 
 ---
 
-<!-- PARTIE 2 : Polymorphisme -->
+## Spécialisation / Généralisation
+
+### **En pratique**
+
+<div class='flex-horizontal'><div class='flex'>
+
+#### Spécialisation
+
+**En pratique**
+C'est ce que l'on fait quand on a besoin d'une nouvelle brique logicielle très proche d'une existante. On spécialise la brique existante.
+
+**Exemple**
+On a une classe **Client** et on souhaiterait avoir une fonctionnalité supplémentaire pour un type de client particulier (les **ClientPremium**) sans avoir à modifier le système actuel. On spécialise la classe **Client** en y ajoutant la fonctionnalité.
+
+</div><div class='flex'>
+
+#### Généralisation
+
+**En pratique**
+C'est ce que l'on fait quand on remarque que l'utilisation de plusieurs briques logicielles est proche et que l'on veut les utiliser de façon interchangeable.
+
+**Exemple**
+On a une classe **Client** et une classe **Administrateur** et on se rend compte que certains comportements sont identiques. On généralise le concept d'**Utilisateur** en créant une interface / classe abstraite dont héritent **Client** et **Administrateur**.
+
+</div></div>
+
+---
+
+<!-- PARTIE 2 : Héritage multiple -->
 
 <div class="main">
 
@@ -447,7 +471,7 @@ class A():
 class B():
     pass
 
-class C(A, B):
+class C(A):
     pass
 
 class D(B,A):
@@ -456,10 +480,11 @@ class D(B,A):
 class E(D,A):
     pass
 
-class F(C, D, B):
+class F(E, D):
     pass
 
-
+class G(F, C):
+    pass
 ```
 
 </div>
@@ -508,7 +533,7 @@ class A():
 class B():
     pass
 
-class C(A, B):
+class C(A):
     pass
 
 class D(B,A):
@@ -520,9 +545,8 @@ class E(D,A):
 class F(E, D):
     pass
 
-class G(F, B):
+class G(F, C):
     pass
-
 ```
 
 </div>
@@ -531,7 +555,7 @@ class G(F, B):
 **Réponse 1 :**
 
 ```
-(<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>)
+(<class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
 ```
 
 **Réponse 2 :**
@@ -551,7 +575,7 @@ class G(F, B):
 
 ```
 (<class '__main__.G'>, <class '__main__.F'>, <class '__main__.E'>, <class '__main__.D'>,
-<class '__main__.B'>, <class '__main__.A'>, <class 'object'>)
+<class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
 ```
 
 </div>
@@ -621,22 +645,6 @@ if __name__ == '__main__':
     print(Counter.count, c1.count, c2.count)
     # output : 0 0 0
 ```
-
----
-
-<div class="main">
-
-# 04
-
-## Méthodes statiques
-
-</div>
-
----
-
-## Méthodes statiques
-
-# **_TO DO_**
 
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';

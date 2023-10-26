@@ -137,7 +137,7 @@ Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
 
 # **30%**
 
-## Projet
+## Etude de cas
 
 Le projet est réalisé lors de la dernière séance de cours.
 
@@ -152,9 +152,9 @@ Le but est de réaliser une étude cas informatique.
 
 # **20%**
 
-## Contrôle continue
+## Travaux Pratiques
 
-Une note annexe sera également attribuée. Il pourra s'agir d'une séance de TP notée ou d'une mini étude de cas de 45min.
+Une note de rendu des travaux pratiques sera également attribuée.
 
 </div>
 

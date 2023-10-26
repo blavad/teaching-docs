@@ -230,7 +230,7 @@ On souhaite réaliser une application pour un restaurant qui lui permettra de g�
 </div>
 
 **Enoncé détaillé**
-Le restaurant accueille des clients qui sont identifiés par leur nom, leur email et leur numéro de téléphone. Le restaurant est ouvert tous les jours de 19h et 23h30. Il réalise chaque soir 3 services de 1h30 et et jusqu'à 20 clients par service. Les clients peuvent réserver une table sur ces créneaux. S'il n'y a plus de place, ils peuvent également commander leur repas en ligne, payer via l'application et venir le récupérer dans la foulée. Sur place, les serveurs s'occupent des commandes des et du paiement des clients.
+Le restaurant accueille des clients qui sont identifiés par leur nom, leur email et leur numéro de téléphone. Le restaurant est ouvert tous les jours de 19h et 23h30. Il réalise chaque soir 3 services de 1h30 et accueille jusqu'à 20 clients par service. Les clients peuvent réserver une table sur ces créneaux. S'il n'y a plus de place, ils peuvent également commander leur repas en ligne, payer via l'application et venir le récupérer dans la foulée. Sur place, les serveurs s'occupent des commandes et du paiement des clients.
 
 ---
 
@@ -410,24 +410,40 @@ Méthodes abstraites en _italic_ (ou <u>soulignée</u>)
 
 Si deux classes sont en intéractions dans le système on les associent.
 
+- On peut dire: "objet de la classe 1 <u>utilise</u> objet(s) de la classe 2"
+
 </br>
 
 <img src="assets/diagrams/class-association.png"/>
 
-On peut préciser la multiplicité.
+On peut préciser la multiplicité de chaque côté de la branche.
 
-- On peut dire: "objet de la classe 1 <u>utilise</u> objet(s) de la classe 2"
-
+- `1`, `0..1`, `*`, `1..*`
+- `n`, `0..n`, `1..n`
 </div>
 
 </div><div class='flex' style="flex:1.5">
 
-<div class='block' style="height:100%">
+<div class='block' style="height:110%">
 
 # Aggrégation / Composition
 
-- associations particulières
+Ce sont des associations particulières. Les deux classes ne sont pas au même niveau : une classe contient l’autre.
+
 - On peut dire: "objet de la classe 1 <u>contient</u> objet(s) de la classe 2"
+
+<div class='flex-horizontal'><div class='flex' style="padding:0;">
+
+**Aggrégation**
+![height:100](assets/diagrams/class-aggregation.png)
+
+</div><div class='flex' style='padding:0;'>
+
+</br>
+
+_Class1_ détruite <i class='fas fa-arrow-right'></i> _Class2_ persiste
+
+</div></div>
 
 <div class='flex-horizontal'><div class='flex' style="padding:0;">
 
@@ -443,24 +459,19 @@ _Class1_ détruite <i class='fas fa-arrow-right'></i> _Class2_ détruite
 
 </div></div>
 
-<div class='flex-horizontal'><div class='flex' style="padding:0;">
-
-**Aggrégation**
-![height:100](assets/diagrams/class-aggregation.png)
-
-</div><div class='flex' style='padding:0;'>
-
-</br>
-
-_Class1_ détruite <i class='fas fa-arrow-right'></i> _Class2_ persiste
-
-</div></div>
-
 </br>
 
 </div>
 
 </div></div>
+
+---
+
+## Diagramme de classes
+
+### **Aller plus loin**
+
+Pour mieux comprendre les relations entre classes et leur traduction en programmation, vous pouvez lire [ce billet](https://ressources.unisciel.fr/algoprog/s24krelation/emodules/kr00macours1/res/kr00cours-texte-xxx.pdf).
 
 ---
 

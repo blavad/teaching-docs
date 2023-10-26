@@ -28,7 +28,6 @@ classDiagram
     class ClassName {
         attributs
         methods()
-    }    
+    }
 
 </div>
-

@@ -29,6 +29,9 @@ _footer: ""
 
 ## Table des matières
 
+<b><span class="important">00 </span> Les 5 concepts de la POO</b>
+Classes. Objets. Encapsulation. Héritage. Polymorphisme.
+
 <b><span class="important">01 </span> Classes et objets</b>
 Classes. Objets. Attributs et méthodes. Instances.
 
@@ -43,6 +46,42 @@ Héritage. Classe abstraites. Interfaces.
 
 <b><span class="important">05 </span> Built-in functions</b>
 Fonctions intégrées : \_\_init\_\_, \_\_str\_\_, \_\_eq\_\_, ...
+
+---
+
+<!-- PARTIE 0 : Concepts -->
+
+<div class="main">
+
+# 00
+
+## Concepts clés
+
+</div>
+
+---
+
+## Les 5 concepts clés en POO
+
+</br>
+
+- ### les **classes**
+
+</br>
+
+- ### les **objets**
+
+</br>
+
+- ### l'**encapsulation**
+
+</br>
+
+- ### l'**héritage**
+
+</br>
+
+- ### le **polymorphisme**
 
 ---
 
@@ -69,8 +108,7 @@ Une <b class="important">classe</b> est un **type de données composite** consti
 <div class="flex">
 
 **Syntaxe UML**
-
-![height:350px](assets/img/class-citroenC3.png)
+![height:400px](assets/img/class-citroenC3.png)
 
 </div>
 <div class="flex">
@@ -110,7 +148,7 @@ Un <b class="important">objet</b> est une **variable** dont le type est une clas
 
 **Syntaxe UML**
 
-![height:350px](assets/img/diag-obj-citroen2.png)
+![height:250px](assets/img/diag-obj-citroen0.png)
 
 </div>
 <div class="flex">
@@ -140,6 +178,8 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 
 ## Objets et classes
 
+<div class='flex-horizontal'><div class='flex'>
+
 <b class="important">Différence classe et objet</b>
 
 <div class="block note">
@@ -153,6 +193,12 @@ Dans un même programme il y a généralement plusieurs instances d'une même cl
 **Objet =** une instance de classe (l’objet une fois créé) = une donnée spécifique
 
 </div>
+
+</div><div class='flex'>
+
+![height:500px](assets/img/diag-object-doc.png)
+
+## </div></div>
 
 ---
 

@@ -25,6 +25,6 @@ background-color:#FFF;
 } }%%
 classDiagram
     direction RL
-    Class1 -- Class2
+    Class1 "1" -- "*" Class2
 
 </div>
