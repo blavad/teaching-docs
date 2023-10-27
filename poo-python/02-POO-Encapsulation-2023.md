@@ -412,7 +412,7 @@ class Music:
         self._duration = duration
 
     # Ceci est un getter
-    def get_title(self, name):
+    def get_title(self):
         return self._title
 
     # Ceci est un setter
@@ -473,7 +473,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 **Syntaxe python**
 
 ```python
-class Vehicule(ABC): # ici on définit la classe mère
+class Vehicule: # ici on définit la classe mère
     def __init__(self, wheels, brand):
         self._brand = brand
         self._wheels = wheels

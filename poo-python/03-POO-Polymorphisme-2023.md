@@ -38,8 +38,8 @@ Définition. Spécialisation. Surcharge de méthodes.
 <b><span class="important">02 </span> Héritage multiple</b>
 Héritage multiple. Ordre d'héritage.
 
-<b><span class="important">03 </span> Méthodes de classes</b>
-Attribut / méthodes de classes. Décorateur **_@classmethod_**. Mot-clé **cls**.
+<b><span class="important">03 </span> Méthodes de classe</b>
+Attribut / méthodes de classe. Décorateur **_@classmethod_**. Mot-clé **cls**.
 
 ---
 
@@ -75,7 +75,7 @@ La classe <b class="important">parente</b> est `Vehicule`.
 **Syntaxe python**
 
 ```python
-class Vehicule(ABC): # ici on définit la classe mère
+class Vehicule: # ici on définit la classe mère
     def __init__(self, wheels, brand):
         self._brand = brand
         self._wheels = wheels
@@ -589,7 +589,7 @@ class G(F, C):
 
 # 03
 
-## Méthodes de classes
+## Méthodes de classe
 
 </div>
 
@@ -600,8 +600,8 @@ class G(F, C):
 **Avant propos**
 Jusqu'à présent nous avons utilisé des **méthodes d'instances**. Celles-ci sont propres à un objet et manipulent les données de ce dernier (**= attributs d'instances**).
 
-<b class="important">Méthodes de classes</b>
-Maintenant, nous allons voir comment utiliser des **méthodes de classes**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classes sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
+<b class="important">Méthodes de classe</b>
+Maintenant, nous allons voir comment utiliser des **méthodes de classe**. Celles-ci manipulent des données communes à toutes les instances d'une même classe (**= les attributs de classes**). Les méthodes de classe sont définies grâce au décorateur `@classmethod` et prennent en 1er argument le paramètre `cls` (une référence vers la classe).
 
 **Exemples d'usages**
 
