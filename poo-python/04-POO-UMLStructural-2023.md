@@ -477,31 +477,38 @@ Pour mieux comprendre les relations entre classes et leur traduction en programm
 
 ## **Modèle du domaine**
 
-<div class='flex-horizontal'><div class='flex' style='flex:1.5'>
+<div class='flex-horizontal'><div class='flex' style='flex:0.7'>
 
 **Phase**
-Début de conception générale. Intervient juste après les premières maquettes et cas d'utilisation.
+Fin de la phase de spécifications. Intervient juste après les premières maquettes et cas d'utilisation.
+
+</div><div class='flex'>
 
 **Objectifs**
 
 - Premier diagramme de classes à réaliser
-- Indépendant des fonctionnels de l’application
+- Indépendant des fonctionnalités de l’application
 - Représente le domaine métier
 
-</div><div class='flex'>
-
-![height:500px](assets/diagrams/class-domain-example.png)
-
 </div></div>
+
+![height:350px](assets/img/class-domain-ex-resto.png)
 
 ---
 
 ## **Diagramme de classes participantes**
 
 **Phase**
-Fin de conception générale. Intervient dans la dernière phase de la conception générale en même temps que les diagrammes de séquence et d'activité.
+Pendant la conception générale. Intervient au début de la conception générale en même temps que les premiers diagrammes de séquence et d'activité.
 
 **Objectifs**
 
 - Enrichissement du modèle de domaine
 - Modélisation guidée par les besoins
+
+---
+
+## **Diagramme de classes participantes**
+
+**Exemple**
+![height:510px](assets/img/class-domain-ex-resto-participante.png)

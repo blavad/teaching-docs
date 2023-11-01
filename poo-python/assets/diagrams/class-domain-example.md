@@ -83,22 +83,22 @@ font-size:10px;
 } }%%
 classDiagram
     direction TB
-    class Restaurant {
-    }
-
     class Client
-    class  Employee
+    class Staff
+    class Service
 
-    Restaurant *-- Service
-    Restaurant *-- Employee
+    Team o-- Staff
+    Person <|-- Staff
+    Person <|-- Client
 
-    Service -- Client
+    Team -- Manager
+    Staff <|-- Manager
+    Staff <|-- Dresser
+
+    Service *-- "*" Reservation
+    Client o-- Reservation
     Client <|-- FoodCritic
     Client -- Bill
-    Client o-- Reservation
-
-
-    Employee <|-- Dresser
-    Employee <|-- Chef
+    Service "0..1" -- "0.1" Service : précède >
 
 </div>

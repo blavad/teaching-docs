@@ -35,8 +35,11 @@ Définition et explications.
 <b><span class="important">02 </span> Design patterns</b>
 Quelques exemples.
 
-<b><span class="important">03 </span> Mieux coder en python</b>
-Documentation. Gestion des erreurs. Tests unitaires.
+<b><span class="important">03 </span> Annexes</b>
+Design patterns détaillés.
+
+<!-- <b><span class="important">03 </span> Mieux coder en python</b>
+Documentation. Gestion des erreurs. Tests unitaires. -->
 
 ---
 
@@ -574,39 +577,11 @@ context.do_some_business_logic() # e,d,c,b,a
 
 ---
 
-<!-- PARTIE 03 : Documentation, Gestion erreurs,  -->
-
-<div class='main'>
-
-# 03
-
-## Mieux développer
-
-</div>
-
----
-
-## Documentation
-
----
-
-## Gestion des erreurs
-
----
-
-## Gestion des logs
-
----
-
-## Tests unitaires
-
----
-
 <!-- PARTIE 04 : Annexes -->
 
 <div class='main'>
 
-# 04
+# 03
 
 ## Annexes
 
