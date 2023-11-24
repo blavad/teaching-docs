@@ -8,7 +8,6 @@
 
 ### 23 nov
 
-- Terminer les exercices sur les ensembles (en particulier les démonstrations)
 - Commencer par CM "Introduction aux suites"
 - Faire les exercices sur les suites
 
@@ -34,6 +33,6 @@
 
 - Enlever exemples des points d'un cercle ou alors donner la formule de l'équation du cercle
 
-# CM 2 : Artihmétique
+# CM 2 : Arithmétique
 
 - Enlever la partie entière

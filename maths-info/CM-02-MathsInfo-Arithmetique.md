@@ -87,7 +87,7 @@ Définition et propriétés.
 
 Soient $a \in \mathbb{Z}$ et $b \in \mathbb{Z^*}$. Alors $a$ se décompose de façon unique sous la forme:
 
-$$a = bq + r,\ avec\ q \in \mathbb{Z}\ et\ r \in \left\{0, ..., |d| -1 \right\}$$
+$$a = bq + r,\ avec\ q \in \mathbb{Z}\ et\ 0 \leq r <  |b|\ , r \in \mathbb{N}$$
 
 Les entiers $q$ et $r$ sont appelés respectivement **quotient** et **reste** de la **division euclidienne** de $a$ par $b$.
 
@@ -327,29 +327,16 @@ $a$ et $b$ possèdent un plus petit multiple commun positif, on l'appelle le **p
 
 ### **Propriétés**
 
-1. Si $d = PGCD(a, b)$, alors $n$ divise $a$ et $b$ si et seulement si $n$ divise $d$.
-1. Si $m = PPCM (a, b)$, alors $n$ est un multiple $a$ et de $b$ si et seulement si $n$ est un multiple de $m$.
-1. Si $a$, $b$ et $n$ sont des entiers non nuls et $n > 0$, alors $PGCD(na, nb) = nPGCD (a, b)$.
+1. Si $d = PGCD(a, b)$, alors $n | a\ et\ n | b \Leftrightarrow n | d$.
+<!-- 1. Si $m = PPCM (a, b)$, alors $n$ est un multiple $a$ et de $b$ si et seulement si $n$ est un multiple de $m$. -->
+2. Si $a$, $b$ et $n$ sont des entiers non nuls et $n > 0$, alors $PGCD(na, nb) = nPGCD (a, b)$.
 
    Si de plus $n$ divise $a$ et $b$, alors $PGCD(\frac{a}{n}, \frac{b}{n}) = \frac{1}{n} PGCD(a, b)$.
 
-1. Si $d = PGCD(a, b)$, on peut écrire $a = da'$ et $b = db'$ pour $a'$ et $b'$ des nombres premiers entre eux.
-1. Si $a$ et $b$ sont des entiers, l'égalité $PGCD(a, b) = PGCD(a, a + b)$ est toujours vérifiée lorsqu'elle a un sens.
+3. Si $d = PGCD(a, b)$, on peut écrire $a = da'$ et $b = db'$ pour $a'$ et $b'$ des nombres premiers entre eux.
 
-   En particulier, le $PGCD$ de deux nombres consécutifs est $1$
-
-   ↳ En effet $\forall n\in \mathbb{Z}$ on a $PGCD(n, 1) = 1 = PGCD(n, n+1)$
-
-   <!-- , et plus généralement, le $PGCD$ de $a$ et de $a + n$ est un diviseur positif de $n$. -->
-
-<!-- 1. Plus généralement, si $x$, $y$, $a$, $b$, $a'$ et $b'$ sont des entiers alors :
-
-   $$
-   PGCD(x, y) \times \mid PGCD(ax + by, a'x + b'y) \mid \times (ab' − ba'
-   ) PGCD(x, y)
-   $$
-
-   En particulier si $|ab' − ba'| = 1$, alors $PGCD(x, y) = PGCD(ax + by, a'x + b'y)$. -->
+4. Si $a$, $b$ sont des entiers alors $\forall k \in \mathbb{Z}$, on a :
+   $$PGCD(a, b) = PGCD(a, b + ka)$$
 
 ---
 
@@ -368,7 +355,7 @@ Le plus grand commun diviseur de 20 et 36 est donc 4. On notera $PGCD(20, 36) = 
 
 D'autre part, on remarque que $60 = 6 \times 10$ et $36 = 6 \times 6$.
 
-Donc au lieu de cherche tous les diviseurs de 60, on utilise la propriété _(3)_ et on écrit:
+Donc au lieu de chercher tous les diviseurs de 60, on utilise la propriété _(3)_ et on écrit:
 
 $PCGD(36, 60) = PCGD(6 \times 6, 6 \times 10) = 6 \times \underbrace{PGCD(6, 10)}_{=2} = 6 \times 2 = 12$
 
@@ -432,17 +419,11 @@ Donc $PGCD(255,141) = 3$
 
 ![height:300px](assets/img/algo-euclide.png) -->
 
-<!--
+---
+
 ## Théorème de Bézout
 
-A chaque étape de l’algorithme d’Euclide, on a une égalité de la forme :
-$$r_{i−2} = r_{i−1}q_i + r_i$$
-où par convention $r_{−2} = a$ et $r_{−1} = b$. A l’avant-dernière étape, on a $r_k = d = PGCD (a, b)$ et donc une égalité de la forme :
-$$r_{k−2} = r_{k−1}q_k + d \Rightarrow d = r_{k−2} − r_{k−1}q$$
-A l’étape précédente, on a de même : $r_{k−1} = r_{k−3} − r_{k−2}q_{k−1}$
-Et donc en réinjectant, on obtient une expression de $d$ comme une combinaison linéaire de $r_{k−3}$ et $r_{k−2}$. En continuant à remonter, on trouve finalement une égalité de la forme :
-$$d = ur−2 + vr−1 = au + bv$$
-pour des entiers $u$ et $v$.
+### **(pour aller plus loin)**
 
 <div class='block note'>
 <div class='block-icon'>
@@ -455,9 +436,20 @@ Il existe deux entiers relatifs $u$ et $v$ tels que $au+bv=d$.
 
 </div>
 
+**Explication :** A chaque étape de l’algorithme d’Euclide, on a une égalité de la forme :
+$$r_{i−2} = r_{i−1}q_i + r_i$$
+où par convention $r_{−2} = a$ et $r_{−1} = b$. A l’avant-dernière étape, on a $r_k = d = PGCD (a, b)$ et donc une égalité de la forme :
+$$r_{k−2} = r_{k−1}q_k + d \Rightarrow d = r_{k−2} − r_{k−1}q$$
+A l’étape précédente, on a de même : $r_{k−1} = r_{k−3} − r_{k−2}q_{k−1}$
+Et donc en réinjectant, on obtient une expression de $d$ comme une combinaison linéaire de $r_{k−3}$ et $r_{k−2}$. En continuant à remonter, on trouve finalement une égalité de la forme :
+$$d = ur−2 + vr−1 = au + bv$$
+pour des entiers $u$ et $v$.
+
 ---
 
 ## Théorème de Bézout
+
+### **(pour aller plus loin)**
 
 <div class='block note'>
 <div class='block-icon'>
@@ -469,10 +461,17 @@ Soit $a, b \in \mathbb{Z}$. $a$ et $b$ sont premiers entre eux si, et seulement 
 
 </div>
 
-Le théorème précédent n'est pas spécifique aux entiers. Il peut être appliqué avec des polynômes : -->
+<div class='block warning'>
+<div class='block-icon'>
+<i class='fas fa-exclamation' style='padding-right:1rem;'></i>
+<b>Remarque</b>
+</div>
 
-<!--
-<div class='block note'>
+Le théorème précédent n'est pas spécifique aux entiers. Il peut être appliqué avec des polynômes.
+
+</div>
+
+<!-- <div class='block note'>
 <div class='block-icon'>
 <i class='far fa-heart' style='padding-right:1rem;'></i>
 <b>Théorème de Bézout (appliqué aux polynômes)</b>
@@ -481,15 +480,16 @@ Le théorème précédent n'est pas spécifique aux entiers. Il peut être appli
 Soit $A$ et $B$ deux polynômes de $\mathbb{R}[X]$. Alors $A$ et $B$ sont premiers entre eux si et seulement s'il existe deux polynômes $U$ et $V$ tels que $AU+BV=1$.
 
 </div> -->
-<!--
+
 **Exemple :**
 
-$59$ et $123$ sont premiers entre eux car $12 \times 123 + (- 25) \times 59 =1$ -->
+$59$ et $123$ sont premiers entre eux car $12 \times 123 + (- 25) \times 59 =1$
 
-<!-- $X-1$ et $X^2 +2X +1$ sont premiers entre eux car $(2X -2) \times (X-1)$ -->
-<!--
+---
 
 ## Lemme de Gauss
+
+### **(pour aller plus loin)**
 
 <div class='block note'>
 <div class='block-icon'>
@@ -499,15 +499,15 @@ $59$ et $123$ sont premiers entre eux car $12 \times 123 + (- 25) \times 59 =1$ 
 
 Si des entiers $a$, $b$ et $c$ sont tels que $a$ divise $bc$ et $a$ est premier avec $b$, alors $a$ divise $c$.
 
-</div> --> -->
-<!--
+</div>
+
 **Démonstration**
-Comme $a$ est premier avec $b$, on peut écrire $au + bv = 1$ pour des entiers $u$ et $v$. Ainsi $auc + bvc = c$ et comme $a$ divise $auc$ (car il divise $a$) et $bvc$ (car il divise $bc$), il divise la somme qui vaut $c$. -->
-<!--
+Comme $a$ est premier avec $b$, on peut écrire $au + bv = 1$ pour des entiers $u$ et $v$. Ainsi $auc + bvc = c$ et comme $a$ divise $auc$ (car il divise $a$) et $bvc$ (car il divise $bc$), il divise la somme qui vaut $c$.
+
 **Conséquences du lemme:**
 
 - Si un nombre premier $p$ divise le produit $a_1a_2 ...  a_n$, alors il divise l’un des $a_i$.
-- Si deux entiers premiers entre eux $a$ et $b$ divisent $n$, alors le produit $ab$ divise également $n$. -->
+- Si deux entiers premiers entre eux $a$ et $b$ divisent $n$, alors le produit $ab$ divise également $n$.
 
 ---
 
@@ -825,7 +825,7 @@ $$
 **Exemples :**
 $25 \equiv 3[11]$ car $25-3 = 22$ et $22$ est divisible par $11$
 
-$23 \equiv 2[7]$ car en choisissant $k=3$ on a $2 + 3 \times 7 = 24$
+$23 \equiv 2[7]$ car en choisissant $k=3$ on a $2 + 3 \times 7 = 23$
 
 ---
 

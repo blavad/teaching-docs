@@ -154,7 +154,7 @@ Montrons que $A \cap (B \cup C)= (A \cap B) \cup (A\cap C)$
 
 <b class='info'>(Démonstration que l'on réalisera au prochain cours)</b>
 
-<!-- Pour cela on montre qu'il y a double inclusion.
+Pour cela on montre qu'il y a double inclusion.
 
 **_i)_ Montrons que $A \cap (B \cup C) \subset (A \cap B) \cup (A\cap C)$**
 
@@ -162,8 +162,8 @@ $x\in A \cap (B \cup C) \Rightarrow x \in A\text{ et }(x \in B\text{ ou }x \in C
 
 On réalise une disjonction de cas (par rapport au **"ou"**).
 
-<u>1er cas:</u> $x \in B \Rightarrow x \in A \cap B\text{ et }x \in A \cap C$
-<u>2eme cas:</u> $x \in C  \text{ et } x \in C \Rightarrow x \in A \cap B\text{ et }x \in A\cap C$
+<u>1er cas:</u> $x \in A\ et\ x \in B \Rightarrow x \in A \cap B\text{ ou }x \in A \cap C$
+<u>2eme cas:</u> $x \in A  \text{ et } x \in C \Rightarrow x \in A \cap B\text{ ou }x \in A\cap C$
 
 Ainsi, $x \in A \cap (B \cap C) \Rightarrow x \in (A \cap B) \cap (A\cap C)$
 
@@ -177,7 +177,7 @@ On réalise une disjonction de cas (par rapport aux **"ou"**).
 
 <u>1er cas:</u> $x \in A \text{ et }(x \in A\text{ ou }x \in C)$
 
-- <u>1er sous cas:</u> $x \in A \text{ et }x \in A \Rightarrow x \in A \Rightarrow x \in A \cap (B \cap C)$
+- <u>1er sous cas:</u> $x \in A \text{ et }x \in A \Rightarrow x \in A \Rightarrow x \in A \cap (B \cup C)$
 - <u>2eme sous cas:</u> $x \in A\text{ et }x \in C \Rightarrow x \in A \Rightarrow x \in A \cap (B \cap C)$
 
 <u>2eme cas:</u> $x \in B \text{ et }(x \in A\text{ ou }x \in C)$
@@ -189,7 +189,7 @@ Ainsi, $x \in (A \cap B) \cap (A\cap C) \Rightarrow x \in A \cap (B \cap C)$
 
 On a vérifié la seconde inclusion $(A \cap B) \cap (A\cap C) \subset A \cap (B \cap C)$
 
-La double inclusion est donc bien vérfiée et donc $A \cap (B \cap C)= (A \cap B) \cap (A\cap C)$. -->
+La double inclusion est donc bien vérfiée et donc $A \cap (B \cap C)= (A \cap B) \cap (A\cap C)$.
 
 </div></div>
 

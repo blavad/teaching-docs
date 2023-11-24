@@ -18,6 +18,10 @@ math: mathjax
 
 https://maths.ac-creteil.fr/IMG/pdf/3.nombrespremiers.cours-2.pdf
 
+http://www.jaicompris.com/lycee/math/arithmetique/pgcd.php
+
+https://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/arithm/congruence&type=fexo
+
 <div class='flex-horizontal'><div class='flex'>
 
 **Exercice I.1**

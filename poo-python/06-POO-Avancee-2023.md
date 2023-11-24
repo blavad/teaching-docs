@@ -75,7 +75,7 @@ class Animal:
     def __init__(self, name: str):
             self.name = name
 
-    def get_name(self):
+    def get_name(self) -> str:
         pass
 
 
@@ -83,7 +83,7 @@ class AnimalDB:
     def get_animal(self) -> Animal:
         pass
 
-    def save(self, animal: Animal):
+    def save(self, animal: Animal) -> None:
         pass
 ```
 
@@ -101,7 +101,7 @@ class Animal:
     def get_name(self) -> str:
         pass
 
-    def save(self, animal: Animal):
+    def save(self, animal: Animal) -> None:
         pass
 ```
 
@@ -149,7 +149,7 @@ class Discount:
         self.customer = customer
         self.price = price
 
-    def give_discount(self):
+    def get_discount(self):
             if self.customer == 'fav':
                 return self.price * 0.2
             if self.customer == 'vip':
@@ -172,7 +172,7 @@ GOOD
 </h2>
 
 ```python
-def animal_leg_count(animals: list):
+def animal_leg_count(animals: list[Animal]):
     for animal in animals:
         print(animal.leg_count())
 
@@ -186,7 +186,7 @@ BAD
 </h2>
 
 ```python
-def animal_leg_count(animals: list):
+def animal_leg_count(animals: list[Animal]):
     for animal in animals:
         if isinstance(animal, Lion):
             print(lion_leg_count(animal))
@@ -303,7 +303,7 @@ class Http:
     def get(self, url: str, options: dict):
         self.xml_http_service.request(url, 'GET')
 
-    def post(self, url, options: dict):
+    def post(self, url: str, options: dict):
         self.xml_http_service.request(url, 'POST')
 
 ```
@@ -400,7 +400,7 @@ def TranslateFactory(language ="English"):
 ```
 
 ```python
-f = Factory("French")
+f = TranslateFactory("French")
 print(f.localize("car")) # voiture
 ```
 

@@ -199,7 +199,7 @@ Les **diagrammes de cas d’utilisation** modélisent à **QUOI** sert le systè
 
 Les **diagrammes de classes** permettent de spécifier la structure et les liens entre les objets dont le système est composé : ils spécifient **QUI** sera à l’oeuvre dans le système pour réaliser les fonctionnalités décrites par les diagrammes de cas d’utilisation.
 
-Les **diagrammes de séquencess** permettent de décrire **COMMENT** les éléments du système interagissent entre eux et avec les acteurs :
+Les **diagrammes de séquences** permettent de décrire **COMMENT** les éléments du système interagissent entre eux et avec les acteurs :
 
 - Les objets au coeur d’un système interagissent en s’échangent des messages.
 - Les acteurs interagissent avec le système au moyen d’IHM (Interfaces Homme-Machine).
