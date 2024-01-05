@@ -1,219 +1,228 @@
 {
-	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	"Emphase text": {
-		"prefix": "emph",
-		"body": [
-			"<b class='important'>$1</b>$2",
-		],
-		"description": "Emphase the content"
-	},
-	"Emphase text italic": {
-		"prefix": "emphi",
-		"body": [
-			"<i class='important'>$1</i>$2",
-		],
-		"description": "Emphase the content and set italic"
-	},
-	"Standard block": {
-		"prefix": "bstd",
-		"body": [
-			"<div class='block'>\n\n<i class='block-icon fas fa-$1'></i>\n\n$2\n</div>$3",
-		],
-		"description": "Standard block"
-	},
-	"Information block": {
-		"prefix": "binfo",
-		"body": [
-			"<div class='block note'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2",
-		],
-		"description": "Information block"
-	},
-	"Warning block": {
-		"prefix": "bwarn",
-		"body": [
-			"<div class='block warning'>\n\n<i class='block-icon fas fa-exclamation'></i>\n\n$1\n\n</div>$2",
-		],
-		"description": "Information block"
-	},
-	"Horizontal layout 2": {
-		"prefix": "lay-h2",
-		"body": [
-			"<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div></div>$3",
-		],
-		"description": "Layout horizontal 2 blocks"
-	},
-	"Horizontal layout 3": {
-		"prefix": "lay-h3",
-		"body": [
-			"<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div><div class='flex'>\n\n$3\n\n</div></div>$4",
-		],
-		"description": "Layout horizontal 3 blocks"
-	},
-	"Horizontal layout 4": {
-		"prefix": "lay-h4",
-		"body": [
-			"<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div><div class='flex'>\n\n$3\n\n</div><div class='flex'>\n\n$4\n\n</div></div>$5",
-		],
-		"description": "Layout horizontal 4 blocks"
-	},
-	"Horizontal layout 2 inequal": {
-		"prefix": "lay-h2-custom",
-		"body": [
-			"<div class='flex-horizontal'><div class='flex' style='flex:$1'>\n\n$3\n\n</div><div class='flex' style='flex:$2'>\n\n$4\n\n</div></div>$3",
-		],
-		"description": "Layout horizontal 2 blocks inequal"
-	},
-	"Horizontal layout 3 inequal": {
-		"prefix": "lay-h3-custom",
-		"body": [
-			"<div class='flex-horizontal'><div class='flex' style='flex:$1'>\n\n$4\n\n</div><div class='flex' style='flex:$2'>\n\n$5\n\n</div><div class='flex' style='flex:$3'>\n\n$6\n\n</div></div>$4",
-		],
-		"description": "Layout horizontal 3 blocks inequal"
-	},
-	"Presentation": {
-		"prefix": ["presentation"],
-		"body": [
-			"---",
-			"marp: true",
-			"paginate: true",
-			"",
-			"theme: $1",
-			"title: $2",
-			"",
-			"footer: '$3'",
-			"_footer: ''",
-			"---\n\n$4",
-			"\n\n<script type='module'>",
-			"import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';",
-			"mermaid.initialize({ startOnLoad: true });",
-			"window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });",
-			"</script>"
-		],
-		"description": "Première couverture  pour les diapos de cours (thème par défaut)"
-	},
-	"Cover page": {
-		"prefix": "cover",
-		"body": [
-			"<!-- PAGE DE COUVERTURE -->",
-			"<!-- _paginate: skip -->",
-			"<!-- _class: cover -->",
-			"<div class='coverBlockCenter'><div class='coverModuleName'>${1:Nom du cours}</div><div class='coverCourseName'><span class='important'>#${2:1} </span>${3:Nom de la leçon}</div><div class='coverAuthor'>par <span class='important'>David Albert</span></div></div><img class='coverFooterLeft' height='60px' src='$4' /><div class='coverYear coverFooterRight'>${5:Date}</div>\n\n$6",
-		],
-		"description": "Première couverture  pour les diapos de cours (thème par défaut)"
-	},
-	"New section": {
-		"prefix": "section",
-		"body": [
-			"---",
-			"",
-			"<!-- PARTIE ${1|01,02,03,04,05|} : ${2:Nom section} -->\n\n<div class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n$3",
-		],
-		"description": "Crée une nouvelle page de section (thème par défaut)"
-	},
-	"Table of content": {
-		"prefix": [
-			"tcontent",
-			"table-of-content"
-		],
-		"body": [
-			"---",
-			"",
-			"<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->\n\n$7",
-		],
-		"description": "Crée une nouvelle table des matières (thème par défaut)"
-	},
-	"Table of content with sections": {
-		"prefix": [
-			"tcontent-auto",
-			"table-of-content-auto"
-		],
-		"body": [
-			"---",
-			"",
-			"<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->",
-			"---\n\n<!-- PARTIE 01 : $1 -->\n\n<div class='main'>\n\n# 01\n\n## $1\n\n</div>\n\n---\n\n ## ${7:Slides come here}\n\n",
-			"---\n\n<!-- PARTIE 02 : $3 -->\n\n<div class='main'>\n\n# 02\n\n## $3\n\n</div>\n\n---\n\n ## Slides come here\n\n",
-			"---\n\n<!-- PARTIE 03 : $5 -->\n\n<div class='main'>\n\n# 03\n\n## $5\n\n</div>\n\n---\n\n ## Slides come here\n\n",
-		],
-		"description": "Crée une nouvelle table des matières avec les sections associées (thème par défaut)"
-	},
-	"Slide": {
-		"prefix": [
-			"slide"
-		],
-		"body": [
-			"---\n\n## ${1:Title}\n\n"
-		],
-		"description": "Crée une nouvelle slide"
-	},
-	"Background Cover": {
-		"prefix": ["bg-cover"],
-		"body": "<!-- _class: bg-cover -->\n\n",
-		"description": "Définir l'arrière plan de la slide."
-	},
-	"Background 1": {
-		"prefix": ["bg1"],
-		"body": "<!-- _class: bg1 -->\n\n",
-		"description": "Définir l'arrière plan de la slide."
-	},
-	"Background 2": {
-		"prefix": ["bg2"],
-		"body": "<!-- _class: bg2 -->\n\n",
-		"description": "Définir l'arrière plan de la slide."
-	},
-	"Background 3": {
-		"prefix": ["bg3"],
-		"body": "<!-- _class: bg3 -->\n\n",
-		"description": "Définir l'arrière plan de la slide."
-	},
-	"Font awesome icon": {
-		"prefix": [
-			"icon",
-			"fa-icon"
-		],
-		"body": [
-			"<i class='fas fa-$1'></i>$2"
-		],
-		"description": "Ajoute un icône."
-	},
-	"Mermaid page": {
-		"prefix": ["mermaid-page"],
-		"body": [
-			"---",
-			"marp: true",
-			"theme: dav-default",
-			"---",
-			"",
-			"<style>",
-			":root {",
-			"background-color:#FFF;",
-			"font-size: 10px;",
-			"}",
-			"</style>",
-			"",
-			"<div class='mermaid'>",
-			"%%{init: {'theme': 'base',",
-			"'themeVariables': {",
-			"'primaryColor': '#fff',",
-			"'primaryTextColor': '#1f1b30',",
-			"'primaryBorderColor': '#FF2453',",
-			"'lineColor': '#1f1b30',",
-			"'secondaryColor': '#006100',",
-			"'tertiaryColor': '#fff',",
-			"'fontFamily':'verdana',",
-			"'fontSize':'300%'",
-			"}, ",
-			"'flowchart' : { 'curve' : 'basis' } ",
-			"} }%%",
-			"classDiagram",
-			"\tclass ClassName",
-			"",
-			"</div>"
-		],
-		"description": "Crée une page configuré pour mermaid."
-	}
+  // Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  "Emphase text": {
+    "prefix": "emph",
+    "body": ["<b class='important'>$1</b>$2"],
+    "description": "Emphase the content"
+  },
+  "Emphase text italic": {
+    "prefix": "emphi",
+    "body": ["<i class='important'>$1</i>$2"],
+    "description": "Emphase the content and set italic"
+  },
+  "Standard block": {
+    "prefix": "bstd",
+    "body": [
+      "<div class='block'>\n\n<i class='block-icon fas fa-$1'></i>\n\n$2\n</div>$3"
+    ],
+    "description": "Standard block"
+  },
+  "Information block": {
+    "prefix": "binfo",
+    "body": [
+      "<div class='block note'>\n\n<i class='block-icon fas fa-info'></i>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Information block"
+  },
+  "Warning block": {
+    "prefix": "bwarn",
+    "body": [
+      "<div class='block warning'>\n\n<i class='block-icon fas fa-exclamation'></i>\n\n$1\n\n</div>$2"
+    ],
+    "description": "Information block"
+  },
+  "Block with title": {
+    "prefix": "bstd-title",
+    "body": [
+      "<div class='block ${1:block-type}'>",
+      "<div class='block-icon'>",
+      "<i class='far fa-${2:icon}' style='padding-right:1rem;'></i>",
+      "<b>${3:Title}</b>",
+      "</div>",
+      "",
+      "$4",
+      "",
+      "</div>"
+    ],
+    "description": "Block with title"
+  },
+  "Definition block with title": {
+    "prefix": "bdef-title",
+    "body": [
+      "<div class='block note'>",
+      "<div class='block-icon'>",
+      "<i class='far fa-heart' style='padding-right:1rem;'></i>",
+      "<b>${1:Definition}</b>",
+      "</div>",
+      "",
+      "$2",
+      "",
+      "</div>"
+    ],
+    "description": "Definition block with title"
+  },
+  "Horizontal layout 2": {
+    "prefix": "lay-h2",
+    "body": [
+      "<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div></div>$3"
+    ],
+    "description": "Layout horizontal 2 blocks"
+  },
+  "Horizontal layout 3": {
+    "prefix": "lay-h3",
+    "body": [
+      "<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div><div class='flex'>\n\n$3\n\n</div></div>$4"
+    ],
+    "description": "Layout horizontal 3 blocks"
+  },
+  "Horizontal layout 4": {
+    "prefix": "lay-h4",
+    "body": [
+      "<div class='flex-horizontal'><div class='flex'>\n\n$1\n\n</div><div class='flex'>\n\n$2\n\n</div><div class='flex'>\n\n$3\n\n</div><div class='flex'>\n\n$4\n\n</div></div>$5"
+    ],
+    "description": "Layout horizontal 4 blocks"
+  },
+  "Horizontal layout 2 inequal": {
+    "prefix": "lay-h2-custom",
+    "body": [
+      "<div class='flex-horizontal'><div class='flex' style='flex:$1'>\n\n$3\n\n</div><div class='flex' style='flex:$2'>\n\n$4\n\n</div></div>$3"
+    ],
+    "description": "Layout horizontal 2 blocks inequal"
+  },
+  "Horizontal layout 3 inequal": {
+    "prefix": "lay-h3-custom",
+    "body": [
+      "<div class='flex-horizontal'><div class='flex' style='flex:$1'>\n\n$4\n\n</div><div class='flex' style='flex:$2'>\n\n$5\n\n</div><div class='flex' style='flex:$3'>\n\n$6\n\n</div></div>$4"
+    ],
+    "description": "Layout horizontal 3 blocks inequal"
+  },
+  "Presentation": {
+    "prefix": ["presentation"],
+    "body": [
+      "---",
+      "marp: true",
+      "paginate: true",
+      "",
+      "theme: $1",
+      "title: $2",
+      "",
+      "footer: '$3'",
+      "_footer: ''",
+      "---\n\n$4",
+      "\n\n<script type='module'>",
+      "import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';",
+      "mermaid.initialize({ startOnLoad: true });",
+      "window.addEventListener('vscode.markdown.updateContent', function() { mermaid.init() });",
+      "</script>"
+    ],
+    "description": "Première couverture  pour les diapos de cours (thème par défaut)"
+  },
+  "Cover page": {
+    "prefix": "cover",
+    "body": [
+      "<!-- PAGE DE COUVERTURE -->",
+      "<!-- _paginate: skip -->",
+      "<!-- _class: cover -->",
+      "<div class='coverBlockCenter'><div class='coverModuleName'>${1:Nom du cours}</div><div class='coverCourseName'><span class='important'>#${2:1} </span>${3:Nom de la leçon}</div><div class='coverAuthor'>par <span class='important'>David Albert</span></div></div><img class='coverFooterLeft' height='60px' src='$4' /><div class='coverYear coverFooterRight'>${5:Date}</div>\n\n$6"
+    ],
+    "description": "Première couverture  pour les diapos de cours (thème par défaut)"
+  },
+  "New section": {
+    "prefix": "section",
+    "body": [
+      "---",
+      "",
+      "<!-- PARTIE ${1|01,02,03,04,05|} : ${2:Nom section} -->\n\n<div class='main'>\n\n# $1\n\n## ${2:Nom Section}\n\n</div>\n\n$3"
+    ],
+    "description": "Crée une nouvelle page de section (thème par défaut)"
+  },
+  "Table of content": {
+    "prefix": ["tcontent", "table-of-content"],
+    "body": [
+      "---",
+      "",
+      "<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->\n\n$7"
+    ],
+    "description": "Crée une nouvelle table des matières (thème par défaut)"
+  },
+  "Table of content with sections": {
+    "prefix": ["tcontent-auto", "table-of-content-auto"],
+    "body": [
+      "---",
+      "",
+      "<!-- TABLE DES MATIERES -->\n\n## Table des matières\n\n<b><span class='important'>01 </span>${1:Section 1}</b>\n${2:Explications}\n\n<b><span class='important'>02 </span> ${3:Section 2}</b>\n${4:Explications}\n\n<b><span class='important'>03 </span> ${5:Section 3}</b>\n${6:Explications}\n\n<!-- FIN TABLE DES MATIERES -->",
+      "---\n\n<!-- PARTIE 01 : $1 -->\n\n<div class='main'>\n\n# 01\n\n## $1\n\n</div>\n\n---\n\n ## ${7:Slides come here}\n\n",
+      "---\n\n<!-- PARTIE 02 : $3 -->\n\n<div class='main'>\n\n# 02\n\n## $3\n\n</div>\n\n---\n\n ## Slides come here\n\n",
+      "---\n\n<!-- PARTIE 03 : $5 -->\n\n<div class='main'>\n\n# 03\n\n## $5\n\n</div>\n\n---\n\n ## Slides come here\n\n"
+    ],
+    "description": "Crée une nouvelle table des matières avec les sections associées (thème par défaut)"
+  },
+  "Slide": {
+    "prefix": ["slide"],
+    "body": ["---\n\n## ${1:Title}\n\n"],
+    "description": "Crée une nouvelle slide"
+  },
+  "Background Cover": {
+    "prefix": ["bg-cover"],
+    "body": "<!-- _class: bg-cover -->\n\n",
+    "description": "Définir l'arrière plan de la slide."
+  },
+  "Background 1": {
+    "prefix": ["bg1"],
+    "body": "<!-- _class: bg1 -->\n\n",
+    "description": "Définir l'arrière plan de la slide."
+  },
+  "Background 2": {
+    "prefix": ["bg2"],
+    "body": "<!-- _class: bg2 -->\n\n",
+    "description": "Définir l'arrière plan de la slide."
+  },
+  "Background 3": {
+    "prefix": ["bg3"],
+    "body": "<!-- _class: bg3 -->\n\n",
+    "description": "Définir l'arrière plan de la slide."
+  },
+  "Font awesome icon": {
+    "prefix": ["icon", "fa-icon"],
+    "body": ["<i class='fas fa-$1'></i>$2"],
+    "description": "Ajoute un icône."
+  },
+  "Mermaid page": {
+    "prefix": ["mermaid-page"],
+    "body": [
+      "---",
+      "marp: true",
+      "theme: dav-default",
+      "---",
+      "",
+      "<style>",
+      ":root {",
+      "background-color:#FFF;",
+      "}",
+      "</style>",
+      "",
+      "<div class='mermaid'>",
+      "%%{init: {'theme': 'base',",
+      "'themeVariables': {",
+      "'primaryColor': '#fff',",
+      "'primaryTextColor': '#1f1b30',",
+      "'primaryBorderColor': '#FF2453',",
+      "'lineColor': '#1f1b30',",
+      "'secondaryColor': '#006100',",
+      "'tertiaryColor': '#fff',",
+      "'fontFamily':'verdana',",
+      "}, ",
+      "'flowchart' : { 'curve' : 'basis' } ",
+      "} }%%",
+      "classDiagram",
+      "\tclass ClassName",
+      "",
+      "</div>"
+    ],
+    "description": "Crée une page configuré pour mermaid."
+  }
 }
