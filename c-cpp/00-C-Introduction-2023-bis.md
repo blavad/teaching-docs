@@ -38,8 +38,14 @@ contact : david.albert.int@groupe-gema.com
 
 **Expertises**
 Apprentissage par renforcement
+Apprentissage profond
 Conception et développement logiciel
 Développement web
+
+**Intérêts**
+Electronique
+Informatique embarquée
+Internet des objets
 
 <!--
 **Langages**
@@ -54,8 +60,7 @@ Français, Anglais, Python, C++, Javascript -->
 <!-- _class: huge -->
 
 **Approche orientée objet**
-◦ Incontournable pour le développement de
-systèmes complexes
+◦ Incontournable pour le développement de systèmes complexes
 ◦ Mieux comprendre et maintenir le système
 ◦ Suivre les évolutions du système et les comparer
 
@@ -71,21 +76,13 @@ systèmes complexes
 
 <!-- _class: huge -->
 
+**C/C++ (1 journée)**
+◦ TP n°1 Compilation
+
+**C/C++ (1 journée)**
+◦ TP n°2 Compilation
+
 <div class="flex-horizontal">
-<div class="flex-sm">
-
-**Comprendre python (1 séance)**
-
-**POO (3 séances)**
-◦ Classe, objet, Encapsulation
-
-**UML (2 séances)**
-◦ Diagramme de classes
-◦ Diagramme de séquence
-
-**Projet (1 séance)**
-
-</div>
 <div class="flex-sm">
 
 <div class="block warning">
@@ -99,12 +96,13 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 
 </div>
 
-<br/>
+</div>
+<div class="flex-sm">
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>
 
-Le dernier cours est un **projet** individuel. Il permettra de se préparer à l'examen final.
+Les TPs seront à terminer (chez soit) et à rendre.
 
 </div>
 
@@ -128,29 +126,14 @@ Le dernier cours est un **projet** individuel. Il permettra de se préparer à l
 
 ## Partiel
 
-Le partiel portera sur tout ce qui a été vu pendant les 7 séances de cours.
+Le partiel portera sur tout ce qui a été vu pendant les 4 séances de cours.
 
 </div>
 </div>
 <div class="flex-sm">
 <div class="block"style="height:80%;">
 
-# **30%**
-
-## Etude de cas
-
-Le projet est réalisé lors de la dernière séance de cours.
-
-Tous les supports seront autorisés.
-
-Le but est de réaliser une étude cas informatique.
-
-</div>
-</div>
-<div class="flex-sm">
-<div class="block"style="height:80%;">
-
-# **20%**
+# **50%**
 
 ## Travaux Pratiques
 

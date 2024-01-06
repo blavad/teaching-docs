@@ -5,8 +5,8 @@ paginate: true
 theme: dav-default
 title: POO
 
-footer: 'POO Avancée'
-_footer: ''
+footer: "POO Avancée"
+_footer: ""
 ---
 
 <!-- PAGE DE COUVERTURE -->
@@ -29,8 +29,7 @@ Explications
 <b><span class='important'>03 </span> Section 3</b>
 Explications
 
-<!-- FIN TABLE DES MATIERES -->
----
+## <!-- FIN TABLE DES MATIERES -->
 
 <!-- PARTIE 01 : Section 1 -->
 
@@ -44,7 +43,7 @@ Explications
 
 ---
 
- ## Slides come here
+## Slides come here
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .
 
@@ -57,7 +56,7 @@ Excepteur sint occaecat cupidatat non proident, **sunt in** culpa qui officia de
 
 <i class='block-icon fas fa-info'></i>
 
-# Note 
+# Note
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -84,7 +83,6 @@ Duis aute irure dolor in reprehenderit.
 
 </div>
 
-
 </div></div>
 
 ---
@@ -101,8 +99,9 @@ Duis aute irure dolor in reprehenderit.
 
 ---
 
- ## Slides come here
+## Slides come here
 
+### **subtitle**
 
 ---
 
@@ -112,17 +111,27 @@ Duis aute irure dolor in reprehenderit.
 
 # 03
 
-## Section 3
+## Snippets
 
 </div>
 
 ---
 
- ## Slides come here
+## Snippets
 
-
-
-
+- **emph** et **emphi** : Texte en couleur (bold ou italic)
+- **binfo** : block d'information
+- **bwarn** : block de warning
+- **bstd** : block standard
+- **bdef-title** : block de définition
+- **slide** : nouvelle slide vierge
+- **section** : nouvelle section
+- **cover** : nouvelle page de couverture
+- **table-of-content** : table des matières
+- **lay-h2** : 2 colonnes
+- **lay-h2-custom** : 2 colonnes de taille inégales
+- **lay-h3** : 3 colonnes
+- **lay-h4** : 4 colonnes
 
 <script type='module'>
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.0/dist/mermaid.esm.min.mjs';
