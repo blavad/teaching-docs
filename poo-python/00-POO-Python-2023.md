@@ -473,7 +473,7 @@ def display_user_data(user: User) -> None:
 
 <i class='block-icon fas fa-info'></i>
 
-Une fonction qui ne retourne aucune valeur est généralement appelée **méthode**.
+Une fonction qui ne retourne aucune valeur est généralement appelée **procédure**.
 
 </div>
 
