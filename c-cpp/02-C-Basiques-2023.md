@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -15,12 +15,12 @@ _footer: ""
 <!-- _class: cover -->
 
 <div class="coverBlockCenter">
-<div class="coverModuleName">Programmation Orientée Objet en Python</div>
+<div class="coverModuleName">Programmation C / C++</div>
 <div class="coverCourseName"><span class="important">#2 </span>Basiques (1)</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
-<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
 <div class="coverYear coverFooterRight">2023</div>
 
 <!-- TABLE DES MATIERES -->
@@ -30,10 +30,10 @@ _footer: ""
 ## Table des matières
 
 <b><span class="important">01 </span> Entrées / Sorties</b>
-cin. cout. scanf. printf.
+std::cin. std::cout. scanf(). printf().
 
 <b><span class="important">02 </span> Types de variable</b>
-Entiers. Nombres à virgule flottante.
+Entiers. Nombres à virgule flottante. Cast.
 
 <b><span class="important">03 </span> Déclaration de variables</b>
 Affectation de base. Convention de nommage.
@@ -43,6 +43,9 @@ Portée d'une variable. Espace de noms.
 
 <b><span class="important">05 </span> Opérateurs de base</b>
 Opérateurs arithmétiques. Opérateurs logiques. Priorité.
+
+<b><span class="important">06 </span> Instructions de contrôle</b>
+Conditions. Boucles.
 
 ---
 
@@ -202,6 +205,65 @@ Exemple : `MAX_PLAYERS`, `HEIGHT`, `WIDTH`, etc..
 
 ---
 
+## Conversion de type (cast)
+
+### **Implicite / explicite**
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Le compilateur ne peut appliquer des opérateurs qu’à des opérandes de même type.
+
+**Exemple :** il n’existe pas d’addition pour : 2 + 1.5 car 2 est un entier et 1.5 est un flottant.
+
+</div>
+
+Il existe deux types de conversions :
+
+1. **sans perte** : int → float (2 devient 2.0)
+   ces conversions sont automatiquement réalisées par le compilateur
+1. **avec perte** : float → int (1.5 devient 1)
+   ces conversions doivent être explicitées par le programmeur
+
+---
+
+## Conversion explicite
+
+### **Conversion explicite**
+
+<div class='flex-horizontal'><div class='flex'>
+
+**Ancien opérateur (C/C++)**
+On utilise l’opérateur de **cast** en précisant le type entre parenthèses devant la variable à convertir (C/C++).
+
+</div><div class='flex'>
+
+_Exemple :_
+
+```cpp
+float a = 2.5;
+int b = (int)a;  // force la variable a en int
+```
+
+</div></div>
+
+**Nouveaux opérateurs (C++ uniquement)**
+
+- **static_cast** : opérateur de transtypage à tout faire.
+- **const_cast** : opérateur spécialisé et limité au traitement des caractères const et volatile.
+- **dynamic_cast** : opérateur spécialisé et limité au traitement des downcast (transtypage descendant dans le cas d’héritage en POO).
+- **reinterpret_cast** : opérateur spécialisé dans le traitement des conversions de pointeurs.
+
+_Exemple :_
+
+```cpp
+float a = 2.5;
+int b = static_cast<int>(a);  // force la variable a en int
+```
+
+---
+
 <!-- PARTIE 03 : Convention de nommage -->
 
 <div class='main'>
@@ -217,12 +279,12 @@ Exemple : `MAX_PLAYERS`, `HEIGHT`, `WIDTH`, etc..
 ## Qu'est-ce qu'une variable ?
 
 <div class='block note'>
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Définition - Variable</b>
+</div>
 
-<i class='block-icon fas fa-info'></i>
-
-## Définition
-
-En informatique, les variables sont des symboles qui associent un nom (**l'identifiant**) à une **valeur**. Dans la plupart des langages, **les variables peuvent changer de valeur au cours du temps**.
+En informatique, les **variables** sont des symboles qui associent un nom (**l'identifiant**) à une **valeur**. Dans la plupart des langages, **les variables peuvent changer de valeur au cours du temps**.
 
 De plus, les variables ont un **type** de valeur (int, bool, double, ...).
 
@@ -410,3 +472,198 @@ On peut dans tous les cas forcer une évaluation allant contre les priorités d�
 </div>
 
 </div></div>
+
+---
+
+<!-- PARTIE 01 : Instructions de contrôle -->
+
+<div class='main'>
+
+# 06
+
+## Instructions de contrôle
+
+</div>
+
+---
+
+## Instructions de contrôle
+
+### **Conditions (if / else)**
+
+<div class='flex-horizontal'><div class='flex'>
+
+**1. if / else**
+
+```cpp
+if (cond) {
+    // code si vrai
+} else {
+    // code si faux
+}
+```
+
+**2. if / else if / else**
+
+```cpp
+if (cond) {
+    // code si vrai
+} else if (cond2) {
+    // code si vrai
+} else if (cond3) {
+    // code si vrai
+} else {
+    // code si faux
+}
+```
+
+</div><div class='flex'>
+
+**_Exemple_**
+
+```cpp
+int temperature;
+scanf("%d", &temperature);
+if (temperature >= 100)
+{
+  printf("L'eau bout !");
+}
+```
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+La notation **cond** dans les exemples ci-contre représente une expression quelconque qui renvoit un booléen.
+
+_Exemples :_
+
+- `if (true)`
+- `if (is_winner)`
+- `if (age < 30)`
+- `if (age < 20 && name == "Mathéo")`
+
+</div>
+
+</div></div>
+
+---
+
+## Instructions de contrôle
+
+### **Conditions (switch)**
+
+**_Exemple_**
+
+```cpp
+  switch (unite)
+  {
+    case 'i':
+      cout << longueur << " in == " << conversion * longueur << " cm\n";
+      break;
+    case 'c':
+      cout << longueur << " cm == " << longueur / conversion << " in\n";
+      break;
+    default:
+      cout << "Désolé, je ne connais pas cette unité " << unite << endl;
+      break;
+  }
+```
+
+_Notes_
+
+- la valeur utilisée par le **_switch()_** doit être un entier, un char ou une énumération.
+- on peut utiliser plusieurs **_case_** menant à la même instruction
+- !!! Ne pas oublier les **_break_**
+
+---
+
+## Instructions de contrôle
+
+### **Boucles (do / while)**
+
+<div class='flex-horizontal'><div class='flex'>
+
+**1. while ... do ...**
+
+```cpp
+while (cond) {
+    // ...
+    // code ici
+    // ...
+}
+```
+
+**2. do ... while ...**
+
+```cpp
+do {
+    // ...
+    // code ici
+    // ...
+} while (cond);
+```
+
+</div><div class='flex'>
+
+**_Exemple_**
+
+```cpp
+while (motDePasse != secret || agePersonne <= 3)
+{
+  printf("Accès refusé\n");
+  scanf("%d %d", &agePersonne, &motDePasse);
+}
+```
+
+</div></div>
+
+---
+
+## Instructions de contrôle
+
+### **Boucles (for)**
+
+**_for (expression1 ; expression2 ; expression3 ) instructions_**
+
+avec
+
+- `expression1` est la condition de départ (initialisations).
+- `expression2` est la condition de fin.
+- `expression3` est l’ incrément de boucle.
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Les 5 étapes du déroulement d’une boucle for sont :
+
+1. `expression1` est évaluée avant d'entrer dans le for
+2. `expression2` est évaluée
+3. si `expression2` est vrai, instructions est exécuté, sinon, on passe après la fin de la boucle et l’exécution de la boucle est finie
+4. `expression3` est évaluée après l’exécution de instructions
+5. on revient en 2
+
+</div>
+
+---
+
+## Instructions de contrôle
+
+### **Boucles (for)**
+
+**_Exemple 1_**
+
+```cpp
+for (int i = 0; i < 100; i++) {
+  cout << i << '\n';
+}
+```
+
+**_Exemple 2_**
+
+```cpp
+for (int i = 100; i >= 0; i--) {
+  cout << i << '\n';
+}
+```

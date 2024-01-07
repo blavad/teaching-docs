@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -15,12 +15,12 @@ _footer: ""
 <!-- _class: cover -->
 
 <div class="coverBlockCenter">
-<div class="coverModuleName">Programmation Orientée Objet en Python</div>
+<div class="coverModuleName">Programmation C / C++</div>
 <div class="coverCourseName"><span class="important">#3 </span>Basiques (2)</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
-<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
 <div class="coverYear coverFooterRight">2023</div>
 
 <!-- TABLE DES MATIERES -->
@@ -29,297 +29,28 @@ _footer: ""
 
 ## Table des matières
 
-<b><span class="important">00 </span> Les 5 concepts de la POO</b>
-Classes. Objets. Encapsulation. Héritage. Polymorphisme.
+<b><span class="important">01 </span> Les pointeurs</b>
+Définition. Manipulation.
 
-<b><span class="important">01 </span> Classes et objets</b>
-Classes. Objets. Attributs et méthodes. Instances.
+<b><span class="important">02 </span> Les tableaux</b>
+Initialisation. Modification.
 
-<b><span class="important">02 </span> Constructeur</b>
-Constructeur. Constructeur par défaut.
+<b><span class="important">03 </span> Les chaînes de caractères</b>
+Initialisation. Modification. char. string.
 
-<b><span class="important">03 </span> Encapsulation</b>
-Données privées, publiques. Getter / Setter. Mot-clé self.
+<b><span class="important">04 </span> Les fonctions</b>
+Déclaration. Paramètres.
 
-<b><span class="important">04 </span> Héritage</b>
-Héritage. Classe abstraites. Interfaces.
-
-<b><span class="important">05 </span> Built-in functions</b>
-Fonctions intégrées : \_\_init\_\_, \_\_str\_\_, \_\_eq\_\_, ...
+<b><span class="important">05 </span> Les types composés</b>
+struct. union.
 
 ---
 
-<!-- PARTIE 01 : Instructions de contrôle -->
+<!-- PARTIE 01 : Pointeurs -->
 
 <div class='main'>
 
 # 01
-
-## Instructions de contrôle
-
-</div>
-
----
-
-## Instructions de contrôle
-
-### **Conditions (if / else)**
-
-<div class='flex-horizontal'><div class='flex'>
-
-**1. if / else**
-
-```cpp
-if (cond) {
-    // code si vrai
-} else {
-    // code si faux
-}
-```
-
-**2. if / else if / else**
-
-```cpp
-if (cond) {
-    // code si vrai
-} else if (cond2) {
-    // code si vrai
-} else if (cond3) {
-    // code si vrai
-} else {
-    // code si faux
-}
-```
-
-</div><div class='flex'>
-
-**_Exemple_**
-
-```cpp
-int temperature;
-scanf("%d", &temperature);
-if (temperature >= 100)
-{
-  printf("L'eau bout !");
-}
-```
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-La notation **cond** dans les exemples ci-contre représente une expression quelconque qui renvoit un booléen.
-
-_Exemples :_
-
-- `if (true)`
-- `if (is_winner)`
-- `if (age < 30)`
-- `if (age < 20 && name == "Mathéo")`
-
-</div>
-
-</div></div>
-
----
-
-## Instructions de contrôle
-
-### **Conditions (switch)**
-
-**_Exemple_**
-
-```cpp
-  switch (unite)
-  {
-    case 'i':
-      cout << longueur << " in == " << conversion * longueur << " cm\n";
-      break;
-    case 'c':
-      cout << longueur << " cm == " << longueur / conversion << " in\n";
-      break;
-    default:
-      cout << "Désolé, je ne connais pas cette unité " << unite << endl;
-      break;
-  }
-```
-
-_Notes_
-
-- la valeur utilisée par le **_switch()_** doit être un entier, un char ou une énumération.
-- on peut utiliser plusieurs **_case_** menant à la même instruction
-- !!! Ne pas oublier les **_break_**
-
----
-
-## Instructions de contrôle
-
-### **Boucles (do / while)**
-
-<div class='flex-horizontal'><div class='flex'>
-
-**1. while ... do ...**
-
-```cpp
-while (cond) {
-    // ...
-    // code ici
-    // ...
-}
-```
-
-**2. do ... while ...**
-
-```cpp
-do {
-    // ...
-    // code ici
-    // ...
-} while (cond);
-```
-
-</div><div class='flex'>
-
-**_Exemple_**
-
-```cpp
-while (motDePasse != secret || agePersonne <= 3)
-{
-  printf("Accès refusé\n");
-  scanf("%d %d", &agePersonne, &motDePasse);
-}
-```
-
-</div></div>
-
----
-
-## Instructions de contrôle
-
-### **Boucles (for)**
-
-**_for (expression1 ; expression2 ; expression3 ) instructions_**
-
-avec
-
-- `expression1` est la condition de départ (initialisations).
-- `expression2` est la condition de fin.
-- `expression3` est l’ incrément de boucle.
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-Les 5 étapes du déroulement d’une boucle for sont :
-
-1. `expression1` est évaluée avant d'entrer dans le for
-2. `expression2` est évaluée
-3. si `expression2` est vrai, instructions est exécuté, sinon, on passe après la fin de la boucle et l’exécution de la boucle est finie
-4. `expression3` est évaluée après l’exécution de instructions
-5. on revient en 2
-
-</div>
-
----
-
-## Instructions de contrôle
-
-### **Boucles (for)**
-
-**_Exemple 1_**
-
-```cpp
-for (int i = 0; i < 100; i++) {
-  cout << i << '\n';
-}
-```
-
-**_Exemple 2_**
-
-```cpp
-for (int i = 100; i >= 0; i--) {
-  cout << i << '\n';
-}
-```
-
----
-
-<!-- PARTIE 02 : Conversion de type -->
-
-<div class='main'>
-
-# 02
-
-## Conversion de type
-
-</div>
-
----
-
-## Conversion de type (cast)
-
-### **Implicite / explicite**
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-Le compilateur ne peut appliquer des opérateurs qu’à des opérandes de même type.
-
-**Exemple :** il n’existe pas d’addition pour : 2 + 1.5 car 2 est un entier et 1.5 est un flottant.
-
-</div>
-
-Il existe deux types de conversions :
-
-1. **sans perte** : int → float (2 devient 2.0)
-   ces conversions sont automatiquement réalisées par le compilateur
-1. **avec perte** : float → int (1.5 devient 1)
-   ces conversions doivent être explicitées par le programmeur
-
----
-
-## Conversion explicite
-
-### **Conversion explicite**
-
-<div class='flex-horizontal'><div class='flex'>
-
-**Ancien opérateur (C/C++)**
-On utilise l’opérateur de **cast** en précisant le type entre parenthèses devant la variable à convertir (C/C++).
-
-</div><div class='flex'>
-
-_Exemple :_
-
-```cpp
-float a = 2.5;
-int b = (int)a;  // force la variable a en int
-```
-
-</div></div>
-
-**Nouveaux opérateurs (C++ uniquement)**
-
-- **static_cast** : opérateur de transtypage à tout faire.
-- **const_cast** : opérateur spécialisé et limité au traitement des caractères const et volatile.
-- **dynamic_cast** : opérateur spécialisé et limité au traitement des downcast (transtypage descendant dans le cas d’héritage en POO).
-- **reinterpret_cast** : opérateur spécialisé dans le traitement des conversions de pointeurs.
-
-_Exemple :_
-
-```cpp
-float a = 2.5;
-int b = static_cast<int>(a);  // force la variable a en int
-```
-
----
-
-<!-- PARTIE 03 : Pointeurs -->
-
-<div class='main'>
-
-# 03
 
 ## Pointeurs
 
@@ -327,23 +58,339 @@ int b = static_cast<int>(a);  // force la variable a en int
 
 ---
 
-<!-- PARTIE 03 : Tableaux et containers -->
+## Pointeurs
+
+<div class='flex-horizontal'><div class='flex'>
+
+<b class=''>Définition</b>
+Un pointeur est une variable dont la valeur est une adresse mémoire.
+
+<b class=''>Déclaration</b>
+La déclaration d’une variable de type pointeur se fait comme suit :
+
+```cpp
+Type *nomVar;
+```
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+On peut définir des pointeurs sur n’importe quel type.
+
+- types de base : int, char, float, …
+- types composés : tableaux, structures, …
+- fonctions
+
+</div>
+
+</div><div class='flex'>
+
+<b class=''>Opérateurs</b>
+
+- l'opérateur d'indirection **\*p** qui retourne le contenu (valeur de la variable pointée)
+- l'opérateur d’adressage **&p** qui donne l'adresse d'une variable
+
+<b class=''>Exemple</b>
+
+```cpp
+/* définit un pointeur sur un entier */
+int *ptr;
+int i=10;
+
+/* initialisation du pointeur */
+ptr=&i;
+
+/* accès au contenu par l’opérateur
+d’indirection (équivaut à i=i+1) */
+(*ptr)++;
+```
+
+</div></div>
+
+---
+
+## Pointeurs
+
+### **Exercice**
+
+Que donne le programme suivant ?
+
+```cpp
+
+
+
+
+```
+
+---
+
+<!-- PARTIE 02 : Tableaux et containers -->
 
 <div class='main'>
 
-# 03
+# 02
 
-## Tableaux et containers
+## Les tableaux
 
 </div>
 
 ---
 
-<!-- PARTIE 04 : Packages  -->
+## Tableaux
+
+**Definition :**
+Un <b class='important'>tableau</b> est **un ensemble d'éléments de même type** désignés par un identificateur unique. Chaque élément est repéré par une valeur entière appelée **indice** (ou index) indiquant sa position dans l'ensemble.
+
+<div class='flex-horizontal'><div class='flex'>
+
+![height:400](assets/img/tableaux.png)
+
+</div><div class='flex'>
+
+<div class='block warning'>
+
+<i class='block-icon fas fa-exclamation'></i>
+
+L'indiçage démarre toujours à partir de 0.
+
+</div>
+
+</div></div>
+
+---
+
+## Tableaux
+
+**Déclaration de tableaux**
+La forme habituelle de déclaration d'un tableau est la suivante :
+`type identificateur[dimension1]... [dimensionn]`
+
+**_Exemples_**
+
+```cpp
+int notes[1000]; // un tableau de 1000 int non initialisé
+
+float notes[1000]; // un tableau de 1000 float non initialisé
+
+int notes[1000] = {0}; // un tableau de 1000 int initialisé à 0
+
+float f[1000] = {0.}; // un tableau de 1000 float initialisé à 0
+
+int coefficients[4] = { '1', '2', '2', '4' }; // un tableau de 4 entiers
+
+// La dimension d'un tableau peut être omise si le compilateur peut en définir la valeur
+float t[] = {2., 7.5, 4.1}; // tableau de 3 éléments
+
+```
+
+---
+
+## Tableaux à plusieurs dimensions
+
+**Déclaration de tableaux à plusieurs dimensions**
+
+```cpp
+// tableau à 2 dimensions de 2 lignes et 5 colonnes :
+int m[2][5] = { 2, 6, -4, 8, 11, 3, -1, 0, 9, 2 }; // initialise avec des valeurs
+
+
+// tableau à 2 dimensions pour stocker plusieurs chaînes de caractères
+char noms[][16] = { {"robert"}, {"roger"}, {"raymond"}, {"alphonse"} };
+
+int x[5][12][7]; // tableau a 3 dimensions, rarement au-delà de cette dimension
+```
+
+<div class='block warning'>
+
+<i class='block-icon fas fa-exclamation'></i>
+
+## Segmentation fault
+
+Le plus grand danger dans la manipulation des tableaux est d'accéder en écriture en dehors du tableau. Cela provoque un accès mémoire interdit qui provoquera une exception de violation mémoire (**segmentation fault**).
+
+</div>
+
+---
+
+## Tableaux et pointeurs
+
+**⚠️ Note Importante**
+L'identificateur du tableau ne désigne pas le tableau dans son ensemble, mais l'adresse en mémoire du début du tableau (l'adresse de la première case).
+
+<div class='flex-horizontal'><div class='flex' style="flex:1.3">
+
+**Conséquence 1**
+
+Soit un tableau `tab` :
+
+```cpp
+int tab[] = {1, 2, 3};
+```
+
+Modification de la **première** valeur du tableau :
+
+<div class='flex-horizontal'><div class='flex'>
+
+```cpp
+tab[0] = 5;
+```
+
+</div><div class='flex'>
+
+$$\Longleftrightarrow$$
+
+</div><div class='flex'>
+
+```cpp
+*tab = 5;
+```
+
+</div></div>
+
+Modification de la **deuxième** valeur du tableau :
+
+<div class='flex-horizontal'><div class='flex'>
+
+```cpp
+tab[1] = 3;
+```
+
+</div><div class='flex'>
+
+$$\Longleftrightarrow$$
+
+</div><div class='flex'>
+
+```cpp
+*(tab + 1) = 3;
+```
+
+</div></div>
+
+Modification de la **troisième** valeur du tableau :
+
+<div class='flex-horizontal'><div class='flex'>
+
+```cpp
+tab[2] = 1;
+```
+
+</div><div class='flex'>
+
+$$\Longleftrightarrow$$
+
+</div><div class='flex'>
+
+```cpp
+*(tab + 2) = 1;
+```
+
+</div></div>
+</div><div class='flex'>
+
+**Conséquence 2**
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Lorsque l'on passe un tableau en paramètre d'une fonction, il n'est pas possible de connaître sa taille et il faudra donc lui passer aussi sa taille.
+
+</div>
+
+</div></div>
+
+---
+
+<!-- PARTIE 03 : Chaînes de caractères -->
 
 <div class='main'>
 
-# 05
+# 03
+
+## Chaînes de caractères
+
+</div>
+
+---
+
+## Les caractères
+
+<div class='flex-horizontal'><div class='flex'>
+
+**Type** `char`
+
+**Exemples valeurs**
+`'A'`, `'C'`, `'\n'`, `';'`, `'!'`, `'0'`, `'1'`, ...
+
+**Déclaration**
+
+```cpp
+char a = 'A';
+char newLine = '\n';
+```
+
+**Représentation en machine**
+
+- [**Code ASCII**](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
+- [**unicode**](https://fr.wikipedia.org/wiki/Unicode)
+
+</div><div class='flex'>
+
+**Table ASCII**
+
+![height:500px](./assets/img/ascii.jpg)
+
+</div></div>
+
+---
+
+## Les chaînes de caractères
+
+**Définition :** Un tableau de caractères.
+
+**Exemples :**
+`"Brice"`, `"la vie est belle !"`, `"#0$£ù%&-"`, `""`, `"\n\t\t\t\n"`
+
+<br/>
+
+<div class='flex-horizontal'><div class='flex'>
+
+**En C**
+Il n'existe pas de type spécifique pour traiter les chaînes de caractères.
+
+**Déclaration**
+
+```cpp
+char chaine[100];
+char salut[10] = {'b', 'o', 'n', 'j', 'o', 'u', 'r', '\0' };
+char salut[10] = "bonjour";
+```
+
+</div><div class='flex'>
+
+**En C++**
+Il existe le type **string** pour manipuler des chaînes de caractères.
+
+**Type** `string`
+
+**Déclaration**
+
+```cpp
+string prenom = "Robert";
+string nom("Guillon");
+```
+
+</div></div>
+
+---
+
+<!-- PARTIE 05 : Packages  -->
+
+<div class='main'>
+
+# 04
 
 ## Fonctions
 
@@ -351,44 +398,256 @@ int b = static_cast<int>(a);  // force la variable a en int
 
 ---
 
-## Déclarer une fonction
+## Les fonctions
 
-Une fonction est définit grâce :
+**Définition**
+Une fonction est une suite d'instructions qui peuvent être réutilisées à différents endroits dans notre programme.
 
-- au mot-clé `def` en python
-- à un identifiant
-- à des paramètres (optionnels)
-- à un type de retour et une valeur de retour
+**Déclaration**
+Une fonction se caractérise par :
 
-_Exemple 1: Calcul de l'aire d'un rectangle_
-
-```python
-def aire_rectangle(longueur: int, largeur: int) -> int:
-    return longueur * largeur
-```
+- un **nom**
+- une **liste de paramètre(s)** et leurs types
+- un **type de retour**
 
 <div class='flex-horizontal'><div class='flex'>
 
-_Exemple 2: Affichage des données d'une classe_
+**Exemple**
 
-```python
-def display_user_data(user: User) -> None:
-    print("--- User Data ---")
-    print("name=", user.name)
-    print("age=", user.age)
+```cpp
+// Le prototype de la fonction calculeNombreDeSecondes :
+int calculeNombreDeSecondes(int heures, int minutes, int secondes);
+
+// Soit :
+// - son nom : calculeNombreDeSecondes
+// - sa liste de paramètre(s) : elle reçoit 3 int
+// - son type de retour : int
 ```
 
 </div><div class='flex'>
-
-<br/>
-<br/>
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-Une fonction qui ne retourne aucune valeur est généralement appelée **méthode**.
+Si une fonction ne retourne aucune valeur. Alors le type de retour est **void**
+
+```cpp
+void showMessage(string msg);
+```
+
+$\Rightarrow$ Ce type de fonction est appelée **procédure**
+
+</div>
+</div></div>
+
+---
+
+## Les fonctions
+
+En C/C++, il faut distinguer :
+
+- la **déclaration** qui est une instruction fournissant au compilateur un certain nombre d’informations concernant une fonction
+
+  ```cpp
+  int plus(int, int); // fichier en-tête (.h)
+  ```
+
+- la **définition** qui revient à écrire le corps de la fonction
+  ```cpp
+  int plus(int a, int b) { return a + b; } // fichier source (.c ou .cpp)
+  ```
+- l'**appel** qui est son utilisation
+  ```cpp
+  int res = plus(2, 2); // fichier source (.c ou .cpp)
+  ```
+
+<div class='block warning'>
+
+<i class='block-icon fas fa-exclamation'></i>
+
+Pour être utilisée, une fonction doit être définit avec son utilisation. Sinon, le compilateur génèrera une erreur : **_’...’ was not declared in this scope._**
+
+</div>
+
+---
+
+## Exemple
+
+<div class='flex-horizontal'><div class='flex'>
+
+Dans le fichier **_temps.h_**
+
+```cpp
+#ifndef __TEMPS_H__ // si l’étiquette __TEMPS_H__ n’est pas défini
+#define __TEMPS_H__  // alors on définit l’étiquette __TEMPS_H__
+
+int calculNbrSecondes(int heures, int minutes, int secondes);
+
+#endif /* finsi __TEMPS_H__ */
+```
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+La définition d'une macro `__TEMPS_H__` est très importante. Elle évite les déclarations multiples de la fonction `calculNbrSecondes`.
+
+</div>
+
+Dans le fichier **_temps.c_**
+
+```cpp
+#include "temps.h"
+
+// La définition de la fonction calculeNombreDeSecondes :
+int calculNbrSecondes(int heures, int minutes, int secondes)
+{
+    return ((heures*3600) + (minutes*60) + secondes);
+}
+```
+
+</div><div class='flex'>
+
+Dans le fichier **_main.c_**
+
+```cpp
+#include "temps.h"
+
+int main(){
+    // Vous pouvez maintenant utiliser (appeler)
+    // la fonction calculNbrSecondes :
+    int s = calculNbrSecondes(1, 0, 0);
+    return 0;
+}
+```
+
+</div></div>
+
+---
+
+<!-- PARTIE 06 : Types composés -->
+
+<div class='main'>
+
+# 05
+
+## Types composés
+
+</div>
+
+---
+
+## Types composés
+
+Les **types composés** permettent de regrouper des variables au sein d'une même entité.
+
+- variables de même types : <b class='important'>tableaux</b>
+- variables de types différents : <b class='important'>structures de données</b>
+
+**En C**, il existe 3 types de structures de données :
+
+- les structures (**struct**)
+- les unions (**union**)
+- les champs de bits
+
+**En C++**, la notion de type **classe** est ajoutée. Elle permet de réaliser des programmes orientés objet (POO).
+
+---
+
+## Structures
+
+Une **structure** permet de grouper un certain nombre de variables de types différents au sein d'une même entité.
+
+**_Exemple :_**
+
+<div class='flex-horizontal'><div class='flex'>
+
+```c
+typedef struct
+{
+    int id;
+    int age;
+    float salary;
+} Personne;
+```
+
+</div><div class='flex'>
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+En C++, le **typedef** est inutile.
 
 </div>
 
 </div></div>
+
+**Accès aux membres**
+Pour accéder aux membres d’une structure, on utilise :
+
+<div class='flex-horizontal'><div class='flex'>
+
+- l’opérateur d’accès **.** (point)
+  pour une variable de type structuré
+
+  ```cpp
+  Personne jean = {9467, 37, 1140.6};
+
+  float salary = jean.salary;
+  ```
+
+</div><div class='flex'>
+
+- l’opérateur d’accès **->** (flèche)
+  pour un pointeur sur un type structuré
+
+  ```cpp
+  Personne jean = {9467, 37, 1140.6};
+  Personne *p_jean = &jean;
+
+  float salary = jean->salary;
+  ```
+
+</div></div>
+
+---
+
+## Union
+
+Une **union** est conceptuellement identique à une structure mais peut, à tout moment, contenir
+n'importe lequel des différents champs.
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Une union définit en fait plusieurs manières de regarder le même emplacement mémoire.
+
+</div>
+
+**_Exemple :_**
+
+```cpp
+typedef union mesureCapteur
+{
+    int iVal;
+    float fVal;
+    char cVal;
+} Capteur;
+
+int main()
+{
+    Capteur vitesseVent, temperatureMoteur;
+    pressionAtmospherique.iVal = 1013; /* un int */
+    temperatureMoteur.fVal = 50.5; /* un float */
+    return 0;
+}
+```
+
+---
+
+## Références
+
+http://tvaira.free.fr/bts-sn/poo-c++/cours-poo-c++/cours-c-c++.pdf

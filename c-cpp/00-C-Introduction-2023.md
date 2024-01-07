@@ -15,12 +15,12 @@ _footer: ""
 <!-- _class: cover -->
 
 <div class="coverBlockCenter">
-<div class="coverModuleName">Programmation Orientée Objet en Python</div>
+<div class="coverModuleName">Programmation C / C++</div>
 <div class="coverCourseName"><span class="important">#0 </span>Introduction </div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
-<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
 <div class="coverYear coverFooterRight">2023</div>
 
 ---
@@ -59,14 +59,11 @@ Français, Anglais, Python, C++, Javascript -->
 
 <!-- _class: huge -->
 
-**Approche orientée objet**
-◦ Incontournable pour le développement de systèmes complexes
-◦ Mieux comprendre et maintenir le système
-◦ Suivre les évolutions du système et les comparer
-
-**Pour bien mener la conception**
-◦ Besoin d'un outil de modélisation unifié - **UML**
-◦ Besoin d'un langage de programmation objet - **python**
+**Langage C / C++**
+◦ Efficace et bas niveau
+◦ Le langage le plus utilisé par les OS
+◦ Le langage de l'informatique embarquée
+◦ Le langage des jeux vidéos complexes
 
 ---
 
@@ -76,13 +73,25 @@ Français, Anglais, Python, C++, Javascript -->
 
 <!-- _class: huge -->
 
-**C/C++ (1 journée)**
+<div class="flex-horizontal">
+<div class="flex-sm">
+
+**Compilation (0.5 journées)**
 ◦ TP n°1 Compilation
 
-**C/C++ (1 journée)**
-◦ TP n°2 Compilation
+**C/C++ basiques (2.5 journées)**
+◦ TP n°2 : Conditions / Boucles
+◦ TP n°3 : Pointeurs
+◦ TP n°4 : Tableaux / Fonctions
+◦ TP n°5 : Containers
 
-<div class="flex-horizontal">
+**Fichiers (1 journée)**
+◦ TP n°6 : Fichiers et UNIX
+
+**POO en C++ (1 journée)**
+◦ TP n°7 : POO en C++
+
+</div>
 <div class="flex-sm">
 
 <div class="block warning">
@@ -95,9 +104,6 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 [Lien des TP](https://github.com/blavad/POO)
 
 </div>
-
-</div>
-<div class="flex-sm">
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>
