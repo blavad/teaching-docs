@@ -82,8 +82,8 @@ Français, Anglais, Python, C++, Javascript -->
 **C/C++ basiques (2.5 journées)**
 ◦ TP n°2 : Conditions / Boucles
 ◦ TP n°3 : Pointeurs
-◦ TP n°4 : Tableaux / Fonctions
-◦ TP n°5 : Containers
+◦ TP n°4 : Tableaux / Containers
+◦ TP n°5 : Fonctions
 
 **Fichiers (1 journée)**
 ◦ TP n°6 : Fichiers et UNIX

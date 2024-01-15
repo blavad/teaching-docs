@@ -23,7 +23,7 @@ _footer: ""
 
 <!-- <img  height="60px" src="assets/img/logoUnboared.png" /> -->
 <div class="coverFooterLeft">
-<img  style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<img  style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
 </div>
 <div class="coverYear coverFooterRight">2023</div>
 

@@ -20,7 +20,7 @@ _footer: ""
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
-<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/ia-school-logo.svg" />
+<img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
 <div class="coverYear coverFooterRight">2023</div>
 
 ---

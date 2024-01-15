@@ -417,7 +417,7 @@ La plupart du temps, on vérifie que $P(0)$, $P(1)$ ou $P(2)$ est vraie.
 
 </div>
 
-1. <b class='important'>Hérédité :</b> On suppose que $P(n)$ est vraie pour **UN** entier $n \ge n_0$
+2. <b class='important'>Hérédité :</b> On suppose que $P(n)$ est vraie pour **UN** entier $n \ge n_0$
 
    On rédige toujours de la façon suivante:
    <b class='info'>Soit un entier $n \ge n_0$. Supposons $P(n)$ vraie et montrons que cela entraine que $P(n+1)$ est vraie.</b>
