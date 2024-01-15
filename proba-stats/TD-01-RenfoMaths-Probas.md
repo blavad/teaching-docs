@@ -131,7 +131,7 @@ Combien de mots peut-on former avec toutes les lettres de
 
 $a)\ \mathbb{P}(\bar{A}) = 1 - \mathbb{P}(A)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ b)\ \mathbb{P}(\emptyset) = 0$
 $c)\ \mathbb{P}(A \setminus B) = \mathbb{P}(A \cap \bar{B}) = \mathbb{P}(A) - \mathbb{P}(A \cap B)$
-$d)\ \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) + \mathbb{P}(A \cap B)$
+$d)\ \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B)$
 
 </div>
 
