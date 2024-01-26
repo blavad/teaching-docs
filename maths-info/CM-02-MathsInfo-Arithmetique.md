@@ -202,23 +202,23 @@ Ainsi, $\exists q'' \in \mathbb{Z};\ c = aq''$ donc $a \mid c$
 
 Donc $a^n = (bq)^n = \underbrace{bqbq...bq}_{\text{n fois}}=b^nq^n=b^nq'$ avec $q'=q^n \in \mathbb{Z}$ car $n > 1$. -->
 
----
+<!-- ---
 
-## Parties entières
+## Parties entières -->
 
 <!-- _class: bg2 -->
 
-### **Définitions**
+<!-- ### **Définitions**
 
 <div class='block note'>
 <div class='block-icon'>
     <i class='far fa-heart' style="padding-right:1rem;"></i>
     <b>Définition - Partie entière</b>
-</div>
+</div> -->
 
 <!-- # Définition II.1 : Partie entière -->
 
-Si $x$ est un réel, on appelle **partie entière** de $x$, et on note $\lfloor x \rfloor$, **le plus grand entier inférieur ou égal à $x$**.
+<!-- Si $x$ est un réel, on appelle **partie entière** de $x$, et on note $\lfloor x \rfloor$, **le plus grand entier inférieur ou égal à $x$**.
 
 Mathématiquement, on a $\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$.
 
@@ -232,7 +232,7 @@ Mathématiquement, on a $\lfloor x \rfloor \le x < \lfloor x \rfloor + 1$.
 
 On définit aussi la **partie décimale** de $x$, comme la différence $x − \lfloor x \rfloor$.
 
-<!-- On notera parfois $\{x\} = x − \lfloor x \rfloor$ -->
+On notera parfois $\{x\} = x − \lfloor x \rfloor$
 
 </div>
 
@@ -242,7 +242,7 @@ On définit aussi la **partie décimale** de $x$, comme la différence $x − \l
 - $\lfloor \pi \rfloor = 3$ car $\pi = 3.1415926...$
 - $\lfloor -1,632 \rfloor = -2$
 
----
+--- -->
 
 <!--
 ## Parties entières
@@ -257,9 +257,9 @@ On définit aussi la **partie décimale** de $x$, comme la différence $x − \l
 
 --- -->
 
-## Parties entières
+<!-- ## Parties entières
 
-### **Exercices**
+### **Exercices** -->
 
 <!-- **Exercice 1 :** Démontrez la propriétés (1). -->
 
@@ -268,7 +268,7 @@ On définit aussi la **partie décimale** de $x$, comme la différence $x − \l
 D'une part, $\lfloor x \rfloor \le x$ est vraie par application immédiate de la définition.
 D'autre part, on a (par définition) $x < \lfloor x \rfloor + 1 \Leftrightarrow x-1 < \lfloor x \rfloor$. -->
 
-**Exercice 1 :** Donnez les parties entières des nombres suivants: $0,53$ ; $123,2453927$ ; $-1,25$ ; $-4150,67$ ; $\frac{2}{3} - \frac{23}{9}$
+<!-- **Exercice 1 :** Donnez les parties entières des nombres suivants: $0,53$ ; $123,2453927$ ; $-1,25$ ; $-4150,67$ ; $\frac{2}{3} - \frac{23}{9}$
 
 **Solution :**
 
@@ -280,7 +280,7 @@ $\lfloor -4150,67 \rfloor = -4151$
 
 $\lfloor \frac{2}{3} - \frac{23}{9} \rfloor = -2$ car $\frac{2}{3} - \frac{23}{9} = \frac{6}{9} - \frac{23}{9} = -\frac{17}{9}$ et $-2< -\frac{17}{9}<-1$
 
-$\lfloor \sqrt{19} \rfloor = 4$ car $16 < 19 < 25 \Longrightarrow \underbrace{\sqrt{16}}_{=4} < \sqrt{19} < \underbrace{\sqrt{25}}_{=5}$ (la fonction $\sqrt{\ \ }$ étant strictement croissante)
+$\lfloor \sqrt{19} \rfloor = 4$ car $16 < 19 < 25 \Longrightarrow \underbrace{\sqrt{16}}_{=4} < \sqrt{19} < \underbrace{\sqrt{25}}_{=5}$ (la fonction $\sqrt{\ \ }$ étant strictement croissante) -->
 
 ---
 
