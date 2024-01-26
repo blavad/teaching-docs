@@ -46,7 +46,7 @@ Soient $A = [1, 3]$ et $B=[2,4]$. Déterminer les ensembles $A \cap B$ et $A\cup
 **Exercice II.4**
 Déterminer le complémentaire dans $\mathbb{R}$ des ensembles suivants $A_1 = ] −\infty, 0]$, $A_2 = ] −\infty, 0[$, $A_3 = ]0, +\infty[$, $A_4 = [0, +\infty[$, $A_5 =]1,2[$, $A_6 = [1,2[$
 
-**Exercice II.5** Soient $A = ] − \infty, 1[ \cup ]2, +\infty[$, $B =] − \infty, 1[$ et $B = [2, +\infty[$. Comparer les ensembles $\bar{A}$ et $\bar{B} \cap \bar{C}$
+**Exercice II.5** Soient $A = ] − \infty, 1[ \cup ]2, +\infty[$, $B =] − \infty, 1[$ et $C = [2, +\infty[$. Comparer les ensembles $\bar{A}$ et $\bar{B} \cap \bar{C}$
 
 **Exercice II.6**
 Soient $𝐴 =] −\infty, 3]$, $𝐵 =] − 2,7]$ et $𝐶 =] − 5, +\infty[$ trois parties de $\mathbb{R}$.

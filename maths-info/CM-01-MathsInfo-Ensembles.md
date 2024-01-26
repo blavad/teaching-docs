@@ -166,10 +166,10 @@ On démontre alors qu'un intervalle est forcément un ensemble du type suivant :
 
 </div><div class='flex'>
 
-- $\left\{x \in \mathbb{R} \mid x < a\right\} = ]-\infty, a[$ <i class='important' style="font-size:0.85rem">(non borné, fermé à gauche)</i>
+- $\left\{x \in \mathbb{R} \mid x < a\right\} = ]-\infty, a[$ <i class='important' style="font-size:0.85rem">(non borné, ouvert à droite)</i>
 - $\left\{x \in \mathbb{R} \mid x \leq a\right\} = ]-\infty, a]$ <i class='important' style="font-size:0.85rem">(non borné, fermé à droite)</i>
 - $\left\{x \in \mathbb{R} \mid x > a \right\} = ]a, +\infty[$ <i class='important' style="font-size:0.85rem">(non borné, ouvert à gauche)</i>
-- $\left\{x \in \mathbb{R} \mid x \geq a\right\} = [a, +\infty[$ <i class='important' style="font-size:0.85rem">(non borné, ouvert à droite)</i>
+- $\left\{x \in \mathbb{R} \mid x \geq a\right\} = [a, +\infty[$ <i class='important' style="font-size:0.85rem">(non borné, fermé à droite)</i>
 
 </div></div>
 
