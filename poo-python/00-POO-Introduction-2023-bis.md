@@ -9,6 +9,7 @@ footer: ""
 _footer: ""
 ---
 
+
 <!-- PARTIE 0 : Présentation du cours -->
 
 <!-- _paginate: skip -->
