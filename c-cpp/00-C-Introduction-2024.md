@@ -21,7 +21,7 @@ _footer: ""
 </div>
 
 <img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
-<div class="coverYear coverFooterRight">2023</div>
+<div class="coverYear coverFooterRight">2024</div>
 
 ---
 

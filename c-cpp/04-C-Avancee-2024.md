@@ -5,7 +5,7 @@ paginate: true
 theme: dav-maths
 title: Cours POO - IA School
 
-footer: "Programmation Orientée Objet 2023"
+footer: "Programmation Orientée Objet 2024"
 _footer: ""
 ---
 
@@ -21,7 +21,7 @@ _footer: ""
 </div>
 
 <img class="coverFooterLeft" style="background-color:#fff" height="60px" src="assets/img/logo-gema.png" />
-<div class="coverYear coverFooterRight">2023</div>
+<div class="coverYear coverFooterRight">2024</div>
 
 <!-- TABLE DES MATIERES -->
 
