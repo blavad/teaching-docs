@@ -33,12 +33,9 @@ _footer: ""
 vector. iterator. map.
 
 <b><span class="important">02 </span> Les fichiers</b>
+Lire et écrire dans un fichier.
 
-<b><span class="important">03 </span> C et Unix</b>
-
-<b><span class="important">04 </span> La programmation modulaire en C</b>
-
-<b><span class="important">05 </span> Les pointeurs intelligents</b>
+<!-- <b><span class="important">03 </span> C et Unix</b> -->
 
 ---
 
@@ -176,3 +173,212 @@ int main()
 ## Les fichiers
 
 </div>
+
+---
+
+## Manipuler des fichiers
+
+### **en C**
+
+Etapes à suivre pour manipuler des fichiers (en C) :
+
+1. inclure les fichiers les fichiers en-tête
+   ```cpp
+   #include <stdlib.h>
+   #include <stdio.h>
+   ```
+2. ouvrir un fichier (en lecture ou écriture)
+   ```cpp
+   FILE* rfile, wfile, rwfile;
+   rfile = fopen("file-read.txt", "r"); // en lecture
+   wfile = fopen("file-write.txt", "w"); // en écriture
+   rwfile = fopen("file-read-write.txt", "r+"); // en lecture et écriture
+   ```
+3. lire ou écrire dans le fichier
+   ```cpp
+   double note;
+   fscanf(rfile, "%d", &note); // lit depuis le fichier
+   fprintf(wfile, "Bonjour aux %d étudiants", 20); // écrit dans le fichier
+   ```
+4. Fermer le fichier
+   ```cpp
+   fclose(rfile);
+   ```
+
+---
+
+## Manipuler des fichiers
+
+### **en C**
+
+Principaux modes d'ouverture :
+
+| Syntaxe |                          Explication                           |
+| :-----: | :------------------------------------------------------------: |
+|   "r"   |                         lecture seule                          |
+|   "w"   |                         écriture seule                         |
+|   "a"   |                          mode d'ajout                          |
+|  "a+"   |              ajout en lecture / écriture à la fin              |
+|  "r+"   |                      lecture et écriture.                      |
+|  "w+"   | lecture et écriture, avec suppression du contenu au préalable  |
+
+---
+
+## Ecrire dans un fichier
+
+### **en C**
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    FILE* wfile = NULL;
+    int age = 0;
+
+    wfile = fopen("user.txt", "w");
+
+    if (wfile != NULL)
+    {
+        // On demande l'âge
+        printf("Quel age avez-vous ? ");
+        scanf("%d", &age);
+
+        // On l'écrit dans le fichier
+        fprintf(wfile, "Le Monsieur qui utilise le programme, il a %d ans", age);
+        fclose(wfile);
+    }
+
+    return 0;
+}
+```
+
+---
+
+## Lire dans un fichier
+
+### **en C**
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    FILE* rfile = NULL;
+    int score[3] = {0}; // Tableau des 3 meilleurs scores
+
+    rfile = fopen("scores.txt", "r");
+
+    if (rfile != NULL)
+    {
+        fscanf(rfile, "%d %d %d", &score[0], &score[1], &score[2]); // lit depuis le fichier
+        printf("Les meilleurs scores sont : %d, %d et %d", score[0], score[1], score[2]);
+
+        fclose(rfile);
+    }
+
+    return 0;
+}
+```
+
+---
+
+## Manipuler des fichiers
+
+### **en C++**
+
+Etapes à suivre pour manipuler des fichiers (en C++) :
+
+1. inclure les fichiers les fichiers en-tête
+   ```cpp
+   #include <iostream>
+   #include <fstream>
+   ```
+2. ouvrir un fichier (en lecture ou écriture)
+   ```cpp
+   ifstream rfile("data.txt");  // en lecture
+   ofstream wfile("scores.txt");  // en écriture
+   ```
+3. lire ou écrire dans le fichier (à la manière de `cin` et `cout`)
+   ```cpp
+   double note;
+   rfile >> note; // lire depuis un fichier
+   wfile << "Bonjour à tous" << endl; // écrire dans un fichier
+   ```
+4. Fermer le fichier
+   ```cpp
+   momFluxSortie.close()
+   ```
+
+---
+
+## Ecrire dans un fichier
+
+### **Exemple C++**
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string const nomFichier("scores.txt");
+    ofstream wfile(nomFichier.c_str()); // ouverture d'un fichier en écriture
+
+    if(wfile)
+    {
+        // l'ouverture s'est bien passée, on peut donc lire
+        wfile << "Bonjour, je suis une phrase écrite dans un fichier." << endl;
+        wfile << 42.1337 << endl;
+        int age(100);
+        wfile << "J'ai " << age << " ans." << endl;
+    }
+    else
+    {
+        cout << "ERREUR: Impossible d'ouvrir le fichier." << endl;
+    }
+    return 0;
+}
+```
+
+---
+
+## Lire un fichier
+
+### **Exemple C++**
+
+```cpp
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main()
+{
+   ifstream rfile("data.txt");  // ouverture d'un fichier en lecture
+
+   if(fichier)
+   {
+      // l'ouverture s'est bien passée, on peut donc lire
+      string mot;
+      rfile >> mot; // lecture d'un mot
+
+      rfile.ignore(); // on change de mode
+
+      string ligne;
+      getline(rfile, ligne); // lecture d'une ligne complète
+
+   }
+   else
+   {
+      cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
+   }
+
+   return 0;
+}
+```

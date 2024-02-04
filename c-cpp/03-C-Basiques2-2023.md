@@ -117,10 +117,20 @@ d’indirection (équivaut à i=i+1) */
 Que donne le programme suivant ?
 
 ```cpp
+#include <iostream>
 
+using namespace std;
 
+int main()
+{
+    int p1 = 10;
+    int *p2 = &p1;
 
+    cout << p1 << std::endl;
 
+    *p2 += 10;
+    cout << p1 << std::endl;
+}
 ```
 
 ---
@@ -303,6 +313,36 @@ Lorsque l'on passe un tableau en paramètre d'une fonction, il n'est pas possibl
 
 ---
 
+## Tableaux et pointeurs
+
+### **Exercice**
+
+Que donne le programme suivant ?
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int tab[3] = {1, 2, 3};
+    int *p3 = tab;
+
+    cout << tab[0] << tab[1] << tab[2] << std::endl;
+    cout << *p3 << std::endl;
+
+    *(p3 + 1) = 10;
+    cout << tab[0] << tab[1] << tab[2] << std::endl;
+    cout << tab[1] << std::endl;
+    cout << *(p3 + 2) << std::endl;
+
+    return 0;
+}
+```
+
+---
+
 <!-- PARTIE 03 : Chaînes de caractères -->
 
 <div class='main'>
@@ -466,7 +506,7 @@ En C/C++, il faut distinguer :
 
 <i class='block-icon fas fa-exclamation'></i>
 
-Pour être utilisée, une fonction doit être définit avec son utilisation. Sinon, le compilateur génèrera une erreur : **_’...’ was not declared in this scope._**
+Pour être utilisée, une fonction doit être définit avant son utilisation. Sinon, le compilateur génèrera une erreur : **_’...’ was not declared in this scope._**
 
 </div>
 
