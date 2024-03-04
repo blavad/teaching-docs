@@ -93,7 +93,7 @@ Tout programme C/C++ doit posséder une (et une seule) fonction nommée **_main_
 
 ## Equivalent en C
 
-Voici un exemple de programme écrit en C.
+Voici le même programme écrit en C.
 
 ```cpp
 // Ce programme affiche le message "Hello world !" à l’écran
@@ -237,7 +237,7 @@ Les différentes étapes de fabrication d’un programme sont :
 
 ---
 
-## Le compilateurs `g++`
+## Le compilateur `g++`
 
 <div class='block note'>
 <div class='block-icon'>
@@ -247,8 +247,8 @@ Les différentes étapes de fabrication d’un programme sont :
 
 Nous pouvons combiner en une seule ligne de commande toutes les étapes (préprocesseur, compilation, assemblage et édition des liens) :
 
-```
-g++ <fichier.cpp> -o <executable>**
+```bash
+g++ <fichier.cpp> -o <executable>
 ```
 
 </div>

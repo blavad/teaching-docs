@@ -67,6 +67,18 @@ Français, Anglais, Python, C++, Javascript -->
 
 ---
 
+<!-- PARTIE 2 : Motivation -->
+
+## **02** Motivation du cours
+
+<!-- _class: huge -->
+
+**Langage C / C++**
+
+![width:900](./assets/img/meme.png)
+
+---
+
 <!-- PARTIE 3 : Programme & organisation -->
 
 ## **03** Programme & Organisation
@@ -101,14 +113,14 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 
 <!-- [Lien des CM](https://github.com/blavad/POO)  -->
 
-[Lien des TP](https://github.com/blavad/POO)
+[Lien des TP](https://github.com/blavad/c-cpp)
 
 </div>
 
 <div class="block note">
 <i class="block-icon fas fa-info"></i>
 
-Les TPs seront à terminer (chez soit) et à rendre.
+Certains TPs seront à terminer (chez soit) et à rendre.
 
 </div>
 

@@ -112,7 +112,7 @@ int main (int argc, char **argv)
 **Exemple C**
 
 ```c
-#include <iostream>
+#include <stdio.h>
 
 int main (int argc, char **argv)
 {
@@ -184,7 +184,7 @@ Les constantes :
 - celles définies pour le préprocesseur. Il n’y a aucun typage de la constante.
 
 ```cpp
-#define PI 3.1415 /* en C traditionnel */
+#define PI 3.1415
 ```
 
 - celles définies pour le compilateur : c’est une variable typée en lecture seule.
@@ -349,12 +349,13 @@ int uneVariableGlobale; // initialisée par défaut à 0
 
 int main(int argc, char* argv[])
 {
-    int uneVariableLocale; // non initialisée par défaut
+    int uneVariableLocale;
     {
-        int uneAutreVariableLocale; // non initialisée par défaut
+        int uneAutreVariableLocale;
     }
-    // la variable i est locale bloc for :
-    for(int i=0;i<10;i++) cout << i;
+    for (int i = 0; i < 10; i++) {
+      cout << i; // la variable i est locale bloc for :
+    }
     return 0;
 }
 ```
@@ -366,10 +367,6 @@ int main(int argc, char* argv[])
 Des variables déclarées dans des blocs différents peuvent porter le même nom.
 
 </div>
-
----
-
-## Espace de noms
 
 ---
 
