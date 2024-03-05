@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -29,11 +29,11 @@ _footer: ""
 
 ## Table des matières
 
-<b><span class="important">01 </span> Types primitifs</b>
-Booléens. Entiers. Flottants. Chaîne de caractères.
+<b><span class="important">01 </span> Entrées / Sorties</b>
+input. print.
 
-<b><span class="important">02 </span> Types composites</b>
-Listes. Dictionnaire. Ensembles. Classes.
+<b><span class="important">02 </span> Types de données</b>
+Booléens. Entiers. Flottants. Chaîne de caractères. Listes.
 
 <b><span class="important">03 </span>Variables</b>
 Déclaration d'une variable. Portée des variables.
@@ -49,11 +49,65 @@ Réutiliser le code existant.
 
 ---
 
-<!-- PARTIE 01 : Type de données -->
+<!-- PARTIE 01 : Entrées / Sorties -->
 
 <div class='main'>
 
 # 01
+
+## Entrées / Sorties
+
+</div>
+
+---
+
+## Entrées et Sorties
+
+<div class='flex-horizontal'><div class='flex'>
+
+**input**
+Pour lire des entrées saisies par un utilisateur dans la console, on utilisera la fonction `input`.
+
+_Exemple_
+
+```python
+  name = input()
+  country = input("Quel est votre pays d'origine ?")
+  age = int(input("Quel est votre age ?"))
+```
+
+</div><div class='flex'>
+
+**output**
+Pour afficher n'importe quel objet Python dans la console, on utilisera la fonction `print`.
+
+_Exemple_
+
+```python
+  age = 35
+  print("Age")
+  print(age)
+```
+
+  </div></div>
+
+<br/>
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Il existe d’autres types d’entrées/sorties (fichier, réseau, base de données, ...). Nous les verrons plus tard.
+
+</div>
+
+---
+
+<!-- PARTIE 01 : Type de données -->
+
+<div class='main'>
+
+# 02
 
 ## Type de données
 
@@ -61,18 +115,17 @@ Réutiliser le code existant.
 
 ---
 
-## Les booléens
+## Types primitifs
+
+</br>
 
 <div class='flex-horizontal'><div class='flex'>
 
+### **Les booléens**
+
+**Nom :** `bool`
+
 **Valeurs :** `True`, `False`
-
-**PEP 483 :** `bool`
-
-**Représentation en machine**
-| False | True |
-|:---:|:---:|
-| 0 | 1 |
 
 **Opérateurs booléens**
 
@@ -80,23 +133,12 @@ Réutiliser le code existant.
 
 </div><div class='flex'>
 
-</div></div>
+### **Les entiers**
 
----
-
-## Les entiers
-
-<div class='flex-horizontal'><div class='flex'>
+**Nom :** `int`
 
 **Valeurs :** ..., -3, -2, -1, 0, 1, 2, 3, 4, ...
 
-**PEP 483 :** `int`
-
-**Représentation en machine**
-La représentation des entiers en machine correspond sur la représentation des nombres entiers en base 2.
-
-</div><div class='flex'>
-
 **Opérateurs de comparaison**
 
 - égalité : `==`
@@ -110,32 +152,24 @@ La représentation des entiers en machine correspond sur la représentation des 
 
 Les opérateurs de comparaisons retournent un booléen (`True` ou `False`).
 
-</div>
-
 </div></div>
 
 ---
 
-## Les flottants
+## Types primitifs
 
-<div class='flex-horizontal'><div class='flex'>
+### **Les flottants**
+
+**Nom :** `float`
 
 **Valeurs :** Permet de s'approcher d'une représentation des **nombres réels** (bien qu'incomplète).
 
-**PEP 483 :** `float`
-
-**Représentation en machine**
-https://fr.wikipedia.org/wiki/Virgule_flottante
-
-</div><div class='flex'>
-
 **Opérateurs de comparaison**
 
 - égalité : `==`
 - inégalité : `!=`
 - infériorité : `<`, `<=`
 - supériorité : `>`, `>=`
-
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
@@ -144,82 +178,105 @@ Les opérateurs de comparaisons retournent un booléen (`True` ou `False`).
 
 </div>
 
-</div></div>
+<!-- --- -->
+<!--  -->
+<!-- ## Les caractères -->
+<!--  -->
+<!-- <div class='flex-horizontal'><div class='flex'> -->
+<!--  -->
+<!-- **Valeurs :** `'A'`, `'B'`, `'C'`, `';'`, `'!'`, `'0'`, `'1'`, ... -->
+<!--  -->
+<!-- **Représentation en machine** -->
+<!--  -->
+<!-- - [**Code ASCII**](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange) -->
+<!-- - [**unicode**](https://fr.wikipedia.org/wiki/Unicode) -->
+<!--  -->
+<!-- <div class='block warning'> -->
+<!--  -->
+<!-- <i class='block-icon fas fa-exclamation'></i> -->
+<!--  -->
+<!-- Le type caractère unique n'existe pas en tant que tel en python. Chaque caractère déclaré est interpréter par python comme une chaîne de caractère (cf ci-dessous). -->
+<!--  -->
+<!-- </div> -->
+<!--  -->
+<!-- </div><div class='flex'> -->
+<!--  -->
+<!-- **Table ASCII** -->
+<!--  -->
+<!-- ![height:500px](./assets/img/ascii.jpg) -->
+<!--  -->
+<!-- </div></div> -->
+<!--  -->
 
 ---
 
-## Les caractères
+## Types primitifs
 
-<div class='flex-horizontal'><div class='flex'>
+### **Les chaînes de caractères**
 
-**Valeurs :** `'A'`, `'B'`, `'C'`, `';'`, `'!'`, `'0'`, `'1'`, ...
-
-**Représentation en machine**
-
-- [**Code ASCII**](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
-- [**unicode**](https://fr.wikipedia.org/wiki/Unicode)
-
-<div class='block warning'>
-
-<i class='block-icon fas fa-exclamation'></i>
-
-Le type caractère unique n'existe pas en tant que tel en python. Chaque caractère déclaré est interpréter par python comme une chaîne de caractère (cf ci-dessous).
-
-</div>
-
-</div><div class='flex'>
-
-**Table ASCII**
-
-![height:500px](./assets/img/ascii.jpg)
-
-</div></div>
-
----
-
-## Les chaînes de caractères
+**Nom :** `string`
 
 **Définition :** Une liste de caractères.
 
 **Exemples :**
 `"Brice"`, `"la vie est belle !"`, `"#0$£ù%&-"`
 
-**PEP 483 :** `string`
+**Caractères spéciaux**
 
-**Opérateurs de bases**
+- Saut de ligne : `\n`
+- Tabulation : `\t`
 
-- assigner une variable : `my_str = "bidule"`
-- accès au 3ème caractère : `my_str[2]`
-- accès au dernier caractère : `my_str[-1]`
-- sous-chaîne : `my_str[:2]`, `my_str[1:]`, `my_str[1:2]`, `my_str[::2]`
-- longueur de la chaîne : `len(my_str)`
-- changer la casse : `my_str.capitalize()`, `my_str.upper()`, `my_str.lower()`
-- vérifier la casse : `my_str.islower()`, `my_str.isupper()`
+**Formatage de texte**
+En Python, on peut simplement formater du texte en faisant précédé la chaîne de caractère par le caractère `f`
+
+<div class='flex-horizontal'><div class='flex'>
+
+```python
+age_min = 12
+warning_msg = f"interdit aux moins de {age_min} ans"
+```
+
+</div><div class='flex'>
+
+```python
+score = 0.33333333
+print(f"score à 2 décimal={age_min:.2}")
+```
+
+</div></div>
 
 ---
 
-<!-- PARTIE 02 : Types composites -->
+## Types primitifs
 
-<div class='main'>
+### **Les chaînes de caractères**
 
-# 02
+**Opérations classiques**
+| Opérations | Exemples |
+|:---: |:--- |
+| assigner une variable | `my_str = "bidule"`|
+| accès au 3ème caractère | `my_str[2]` |
+| sous-chaîne | `my_str[:2]`, `my_str[1:]`, `my_str[1:2]`, `my_str[::2]` |
+| longueur de la chaîne | `len(my_str)` |
+| changer la casse | `my_str.capitalize()`, `my_str.upper()`, `my_str.lower()` |
+| vérifier la casse | `my_str.islower()`, `my_str.isupper()`|
+| concaténation | `"Hello " + "World"` (donnera `"Hello World"`) |
+| répétition | `"la" * 5` (donnera `"lalalalala"`)|
+
+---
 
 ## Types composites
 
-</div>
+### **Les listes**
 
----
-
-## Les listes
+**Nom :** `list`
 
 **Définition :** Une liste ordonnée de données.
 
 **Exemples :**
 `[0, 21, 13, 7, 100]`, `[]`, `[True, True, False]`, ...
 
-**PEP 483 :** `list`
-
-**Opérateurs de bases**
+**Opérations classiques**
 
 - assigner une variable : `l = []`
 - accès au 3ème caractère : `l[2]`
@@ -231,14 +288,16 @@ Le type caractère unique n'existe pas en tant que tel en python. Chaque caract�
 
 ---
 
-## Les dictionnaires
+## Types composites
+
+### **Les dictionnaires**
+
+**Nom :** `dict`
 
 **Définition :** Un dictionnaire est une structure de données qui assimile des clés à des valeurs.
 
 **Exemples :**
 `{"nom" : "Fred", "age" : 20 }`, `{}`, `{True : "eat", False : [0, 1, 2]}`, ...
-
-**PEP 483 :** `dict`
 
 **Opérateurs de bases**
 
@@ -248,6 +307,7 @@ Le type caractère unique n'existe pas en tant que tel en python. Chaque caract�
 - supprimer du 3ème élément : `del d[key]`
 - accès aux clés : `d.keys()`
 - accès aux valeurs : `d.values()`
+- accès aux couples (clé, valeurs) : `d.items()`
 
 ---
 
@@ -267,9 +327,10 @@ Le type caractère unique n'existe pas en tant que tel en python. Chaque caract�
 
 <div class='block note'>
 
-<i class='block-icon fas fa-info'></i>
-
-## Définition
+<div class='block-icon'>
+<i class='far fa-heart' style='padding-right:1rem;'></i>
+<b>Définition - Variable</b>
+</div>
 
 En informatique, les variables sont des symboles qui associent un nom (**l'identifiant**) à une **valeur**. Dans la plupart des langages, **les variables peuvent changer de valeur au cours du temps**.
 
@@ -283,14 +344,41 @@ En python, la déclaration d'une variable se fait avec l'opérateur d'allocation
 
 ```python
 prenom = "Jonathan"          # variable de type chaîne de caractères (str)
+
 age = 23                     # variable de type entier (int)
+
 moyenne = 10.8               # variable de type flottant (float)
+
 notes = [16, 12, 13, 9]      # variable de type liste d'entiers (list[int])
 ```
 
 ---
 
+## Convention de nommage
+
+**Nommage des variables**
+Par convention en python, un nom de variable commence par une lettre minuscule puis les différents mots sont séparés par un tiret bas (tiret du 8).
+
+_Exemples :_ `distance`, `distance_max`, `consigne_courante`, `etat_bouton_gauche_souris`
+
+**Nommage des constantes**
+Par convention en python, un nom de constante est en majuscule.
+
+_Exemple :_ `MAX_PLAYERS`, `HEIGHT`, `WIDTH`, ...
+
+**Mots réservés**
+Les mots réservés sont les mots prédéfinis du langage python.
+Ils ne peuvent pas être réutilisés pour des identifiants.
+
+_Exemples :_ `for`, `while`,`if`, `return`, `None`, ...
+
+---
+
 ## Portée des variables
+
+La portée (scope) d’un identifiant (variables, fonctions, ...) est l’étendue au sein de laquelle cet identifiant est lié.
+
+En python, la portée peut être globale (en dehors de tout bloc d'indentation) ou locale (au bloc courant).
 
 **Portée des variables (globale / locale)**
 
@@ -309,32 +397,6 @@ foo(20)
 print(var1, var2, var3, var4) # 10, Erreur, Erreur, Erreur
 
 
-```
-
----
-
-## Portée des variables
-
-**Visibilité des variables**
-
-```python
-def foo():
-
-    level1 = 10
-
-    def bar():
-        level2 = 20
-
-        def tutu():
-            level3 = 30
-
-            print("from tutu:", level1, level2, level3)
-
-        print("from bar: ", level1, level2) # level3 NOT visible
-        tutu()
-
-    print("from foo: ", level1) # level2 or level3 NOT visible here
-    bar()
 ```
 
 ---
@@ -373,6 +435,16 @@ elif (cond2):
     # code si vrai
 else:
     # code si faux
+```
+
+**_Exemple_**
+
+```python
+temperature = input("Entrez une valeur : ")
+if (temperature >= 100)
+{
+  print("L'eau bout !")
+}
 ```
 
 </div><div class='flex'>
@@ -420,6 +492,18 @@ while (cond):
 ```
 
 </div><div class='flex'>
+
+**_Exemple_**
+
+```python
+secret = "azezesx"
+motDePasse = input("Entrez le mot de passe : ")
+while (motDePasse != secret or agePersonne <= 3)
+{
+  print("Accès refusé")
+  motDePasse = input("Réessayez : ")
+}
+```
 
 </div></div>
 
@@ -533,18 +617,19 @@ from math import sqrt
 print(sqrt(9))
 ```
 
----
-
-## Notes de fin
-
-Le cours actuel n'est pas un cours de programmation en python mais un cours de programmation orientée objet (POO avec python).
-
-Ce document est un bref récapitulatif de certaines notions qui doivent être maîtrisées pour la bonne compréhension du cours de POO.
-
-Pour revoir les bases du langage python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) :
-
-https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python
-
-Pour approfondir le cours actuel de programmation orientée objet avec python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) :
-
-https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python
+<!-- --- -->
+<!--  -->
+<!-- ## Notes de fin -->
+<!--  -->
+<!-- Le cours actuel n'est pas un cours de programmation en python mais un cours de programmation orientée objet (POO avec python). -->
+<!--  -->
+<!-- Ce document est un bref récapitulatif de certaines notions qui doivent être maîtrisées pour la bonne compréhension du cours de POO. -->
+<!--  -->
+<!-- Pour revoir les bases du langage python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) : -->
+<!--  -->
+<!-- https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python -->
+<!--  -->
+<!-- Pour approfondir le cours actuel de programmation orientée objet avec python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) : -->
+<!--  -->
+<!-- https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python -->
+<!--  -->

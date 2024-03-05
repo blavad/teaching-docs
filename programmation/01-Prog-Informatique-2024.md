@@ -16,7 +16,7 @@ _footer: ""
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Informatique & Programmation</div>
-<div class="coverCourseName"><span class="important">#2 </span>Programmation python</div>
+<div class="coverCourseName"><span class="important">#1 </span>Programmation python</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
