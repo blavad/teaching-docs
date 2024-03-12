@@ -187,7 +187,7 @@ int notes[1000] = {0}; // un tableau de 1000 int initialisé à 0
 
 float f[1000] = {0.}; // un tableau de 1000 float initialisé à 0
 
-int coefficients[4] = { '1', '2', '2', '4' }; // un tableau de 4 entiers
+char coefficients[4] = { '1', '2', '2', '4' }; // un tableau de 4 caractères
 
 // La dimension d'un tableau peut être omise si le compilateur peut en définir la valeur
 float t[] = {2., 7.5, 4.1}; // tableau de 3 éléments

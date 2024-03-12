@@ -15,7 +15,7 @@ _footer: ""
 <!-- _class: cover -->
 
 <div class="coverBlockCenter">
-<div class="coverModuleName">Programmation C / C++</div>
+<div class="coverModuleName">Introduction à l'apprentissage par renforcement</div>
 <div class="coverCourseName"><span class="important">#1 </span>Compilation</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>

@@ -295,7 +295,7 @@ En C / C++, la déclaration d'une variable se fait avec l'opérateur d'allocatio
 **Exemples :**
 
 ```cpp
-char letter = 'A';                  # variable de type entier (char)
+char letter = 'A';                  # variable de type caractère (char)
 
 int age = 23;                       # variable de type entier (int)
 
