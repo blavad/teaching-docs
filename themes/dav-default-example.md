@@ -29,6 +29,8 @@ Explications
 <b><span class='important'>03 </span> Section 3</b>
 Explications
 
+---
+
 ## <!-- FIN TABLE DES MATIERES -->
 
 <!-- PARTIE 01 : Section 1 -->
