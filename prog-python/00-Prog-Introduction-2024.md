@@ -104,7 +104,7 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 
 <!-- [Lien des CM](https://github.com/blavad/POO)  -->
 
-[Lien des TPs](https://github.com/blavad/POO)
+[Lien des TPs](https://github.com/blavad/prog-python)
 
 </div>
 

@@ -190,3 +190,9 @@ Quelques commandes UNIX utiles
 Une commande n'est autre qu'un fichier exécutable. Sous Linux, les commandes les plus courantes sont placés dans le dossier `/bin`
 
 </div>
+
+---
+
+## **Références**
+
+Tristan Troussil, Passeport Informatique Télécoms (PIT), 2021, https://github.com/troussil
