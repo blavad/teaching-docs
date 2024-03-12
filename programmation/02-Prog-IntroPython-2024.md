@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -15,8 +15,8 @@ _footer: ""
 <!-- _class: cover -->
 
 <div class="coverBlockCenter">
-<div class="coverModuleName">Outils et bonnes pratiques</div>
-<div class="coverCourseName"><span class="important">#1 </span>Fondamentaux Python</div>
+<div class="coverModuleName">Informatique & Programmation</div>
+<div class="coverCourseName"><span class="important">#2 </span>Python & Outils</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -26,6 +26,8 @@ _footer: ""
 <!-- TABLE DES MATIERES -->
 
 ---
+
+<!-- _class: bg2 -->
 
 ## Table des matières
 
@@ -39,11 +41,10 @@ Typage dynamique. Bibliothèque _typing_. PEP 8.
 Description et utilisation du gestionnaire de paquet pip.
 
 <b><span class="important">04 </span> Les environnements virtuels</b>
-A quoi ça sert ? Quelques outils utiles.
+A quoi ça sert ?
 
-<b><span class="important">05 </span>Le paradigme de la POO</b>
-Principales caractéristiques du paradigme orienté objet.
-Comparaison avec les autres paradigmes de programmation.
+<b><span class="important">05 </span> Les notebooks</b>
+Utiliser un notebook python.
 
 ---
 
@@ -339,14 +340,15 @@ PEP 8 contient des informations sur le style à emprunter quand on code en pytho
 - Afficher l'aide d’une commande : `pip <command> -h`
 - Affiher la version de pip : `pip -V`
 - Afficher les paquets installés : `pip list`
-- Créer un fichier d’installation : `pip freeze > requirements.txt`
+- Créer un fichier de dépendances : `pip freeze > requirements.txt`
+- Puis installer de fichier de dépendances : `pip install -r requirements.txt`
 - Afficher les détails d’un paquet : `pip show nomPaquet`
 
 ---
 
 <div class="main">
 
-# 03
+# 04
 
 ## Environnements virtuels
 
@@ -439,3 +441,41 @@ Aujourd’hui, je me lance dans un nouveau projet qui utilise une nouvelle fonct
 Quelques jours plus tard, je retourne sur mon ancien projet “PredictNBA” et, catastrophe, plus rien ne fonctionne. C’est étrange, je n’ai rien changé à mon code. Je me rend rapidement compte que certaines fonctionnalités que j’utilisais dans la version 1.4 de pytorch ne sont plus disponibles dans la version 2.0.
 
 Pour maintenir mon ancien projet, je crée donc un environnement virtuel dans lequel je réinstalle la version 1.4 de pytorch. C’est bon, tout fonctionne à nouveau."
+
+---
+
+<div class="main">
+
+# 05
+
+## Notebooks
+
+</div>
+
+---
+
+## Notebooks
+
+Un **notebook** est un fichier particulier qui intègre le code et ses résultats dans un seul document pouvant combiner du code, du texte narratif, des visualisations et d'autres médias.
+
+L'extension d'un fichier notebook python est **.ipynb**.
+
+Les notebooks Jupyter contiennent un mélange :
+
+- de code en direct (Python, R, Julia, JavaScript, etc.)
+- de visualisations
+- de texte narratif (écrit en Markdown).
+
+<div class='block note'>
+
+<i class='block-icon fas fa-info'></i>
+
+Ce type de fichier est souvent utilisé pour la Data Science car il permet de présenter des résultats et visualiser des données simplement et proprement.
+
+</div>
+
+---
+
+## Exemple Notebooks
+
+![height:550](assets/img/notebook.png)

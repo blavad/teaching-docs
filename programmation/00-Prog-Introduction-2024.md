@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: ""
@@ -59,14 +59,15 @@ Français, Anglais, Python, C++, Javascript -->
 
 <!-- _class: huge -->
 
-**Approche orientée objet**
-◦ Incontournable pour le développement de systèmes complexes
-◦ Mieux comprendre et maintenir le système
-◦ Suivre les évolutions du système et les comparer
+**Intro à l'informatique**
+◦ Comprendre le fonctionnement d'un ordinateur
+◦ Comprendre l'utilité d'un système d'exploitation
+◦ Comprendre la représentation des données en machine
 
-**Pour bien mener la conception**
-◦ Besoin d'un outil de modélisation unifié - **UML**
-◦ Besoin d'un langage de programmation objet - **python**
+**Programmation Python**
+◦ Automatiser des tâches pour gagner en productivité
+◦ Analyser des données
+◦ Développer des logiciels
 
 ---
 
@@ -79,16 +80,19 @@ Français, Anglais, Python, C++, Javascript -->
 <div class="flex-horizontal">
 <div class="flex-sm">
 
-**Algorithmie en python (3 séance)**
-◦
-
-**Python (1 séance)**
-◦
-
-**Informatique (1 séance)**
+**Intro à l'informatique (1 séance)**
 ◦ Architecture des ordinateurs
 ◦ Système d'exploitation
-◦ Terminal
+◦ Représentation en machine
+
+**Ecosystème Python (1 séance)**
+◦ Interpréteur.
+◦ Gestionnaire de paquets.
+◦ Environnements virtuels.
+
+**Algorithmie en python (3 séances)**
+◦ Syntaxe python
+◦ Algorithmie
 
 </div>
 <div class="flex-sm">
@@ -100,7 +104,7 @@ Chaque cours est divisé en une partie **CM** puis une partie **TP**.
 
 <!-- [Lien des CM](https://github.com/blavad/POO)  -->
 
-[Lien des TP](https://github.com/blavad/POO)
+[Lien des TPs](https://github.com/blavad/POO)
 
 </div>
 

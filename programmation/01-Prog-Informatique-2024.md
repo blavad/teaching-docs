@@ -2,7 +2,7 @@
 marp: true
 paginate: true
 
-theme: dav-default
+theme: dav-maths
 title: Cours POO - IA School
 
 footer: "Programmation Orientée Objet 2023"
@@ -16,7 +16,7 @@ _footer: ""
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Informatique & Programmation</div>
-<div class="coverCourseName"><span class="important">#1 </span>Programmation python</div>
+<div class="coverCourseName"><span class="important">#1 </span>Intro à l'informatique</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -29,118 +29,142 @@ _footer: ""
 
 ## Table des matières
 
-<b><span class="important">01 </span> Types primitifs</b>
-Booléens. Entiers. Flottants. Chaîne de caractères.
+<b><span class="important">01 </span> Ordinateur</b>
+Périphériques. Processeur. RAM. Disque dure.
 
-<b><span class="important">02 </span> Types composites</b>
-Listes. Dictionnaire. Ensembles. Classes.
+<b><span class="important">02 </span>Système d'exploitation</b>
+Pourquoi ? Comment ?
 
-<b><span class="important">03 </span>Variables</b>
-Déclaration d'une variable. Portée des variables.
+<b><span class="important">03 </span>Représentation de l'information </b>
+Représentation des nombres, des caractères et des images.
 
-<b><span class="important">04 </span> Conditions et boucles</b>
-Conditions. Boucles.
+<b><span class="important">04 </span> Système de fichiers </b>
+Arborescence Linux. Chemin absolu. Chemin relatif.
 
-<b><span class="important">05 </span> Les fonctions</b>
-Définition de fonctions. Paramètres et valeur de retour.
-
-<b><span class="important">06 </span> Packages</b>
-Réutiliser le code existant.
+<b><span class="important">05 </span> Interpréteur de commandes</b>
+Utiliser un interpréteur de commandes.
 
 ---
 
-<!-- PARTIE 01 : Type de données -->
+## **01** Ordinateur
 
-<div class='main'>
-
-# 01
-
-## Type de données
-
-</div>
-
----
-
-## Les booléens
-
-<div class='flex-horizontal'><div class='flex'>
-
-**Valeurs :** `True`, `False`
-
-**PEP 483 :** `bool`
-
-**Représentation en machine**
-| False | True |
-|:---:|:---:|
-| 0 | 1 |
-
-**Opérateurs booléens**
-
-`and`, `or`, `not`
-
-</div><div class='flex'>
-
-</div></div>
-
----
-
-## Les entiers
-
-<div class='flex-horizontal'><div class='flex'>
-
-**Valeurs :** ..., -3, -2, -1, 0, 1, 2, 3, 4, ...
-
-**PEP 483 :** `int`
-
-**Représentation en machine**
-La représentation des entiers en machine correspond sur la représentation des nombres entiers en base 2.
-
-</div><div class='flex'>
-
-**Opérateurs de comparaison**
-
-- égalité : `==`
-- inégalité : `!=`
-- infériorité : `<`, `<=`
-- supériorité : `>`, `>=`
+L'ordinateur est une machine de prédilection en informatique.
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-Les opérateurs de comparaisons retournent un booléen (`True` ou `False`).
+Vous allez utiliser un ordinateur pendant de longues heures. Cela vaut donc le coup de savoir, au moins sommairement, de quoi est fait un ordinateur.
+
+</div>
+
+</br>
+</hr>
+</br>
+
+**Visualisons le démontage d'un ordinateur**
+https://www.lemonde.fr/blog/binaire/2017/05/31/podcast-le-ventre-de-mon-ordi/
+
+---
+
+## **02** Système d'exploitation
+
+**C'est quoi ?**
+Le système d’exploitation se situe à l'interface entre deux mondes : le logiciel et le matériel
+
+<div class='flex-horizontal'><div class='flex'>
+
+<div class='block'>
+<div class='block-icon'>
+<b>Le logiciel</b>
+</div>
+
+Des applications tels que :
+
+- Chrome, Word, GTA 4, Discord
+- Des utilitaires Linux tels que **cd**, **ls**, **ip**
+
+</div>
+
+</div><div class='flex'>
+
+<div class='block'>
+<div class='block-icon'>
+<b>Le matériel</b>
+</div>
+
+Des composants matériel tels que :
+
+- mémoire vive, processeur, disque dur
+- carte graphique, carte réseau, clavier
 
 </div>
 
 </div></div>
 
+<b class='important'><i class='fas fa-warning'></i> Le rôle du système d'exploitation est d'assurer que les éléments matériels, requis par les logiciels en cours d'exécution, soient utilisés de manière partagée, équilibrée et sûre.</b>
+
+</hr>
+
+**Visualisons la vidéo suivante qui explique :**
+
+- la gestion virtualisée de la mémoire
+- le contrôle de l'exécution via l'ordonnanceur
+
+https://www.lemonde.fr/blog/binaire/2017/06/14/podcast-systeme-dexploitation/
+
 ---
 
-## Les flottants
+## **03** Représentation de l'information
+
+Toutes les informations que l'ordinateur manipule sont codées en binaire (une suite de 0 et 1) :
+
+- les entiers naturels et relatifs
+- les nombres décimaux dits à virgule flottante,
+- les caractères (ASCII, unicode)
+- les données multimédias (son, image, vidéo, page web...)
+- les programmes...
+
+</br>
+</hr>
+</br>
+
+**Lisons le billet ci-dessous sur le codage binaire**
+https://interstices.info/nom-de-code-binaire/
+
+---
+
+## **04** Système de fichiers
+
+**Définition**
+Un **système de fichiers** est une structure utilisée par un système d'exploitation pour organiser et gérer les fichiers sur un appareil de stockage tel qu'un disque dur, un SSD ou une clé USB.
+
+**Explications**
+Le terme système de fichiers désigne à la fois l'organisation des informations mémorisées sur les périphériques de stockage de l'ordinateur et la vue logique hiérarchique présentée à l'utilisateur. Les informations sont stockées dans des paquets appelées fichiers, écrits dans un certain format, c'est-à-dire selon une certaine manière d'encoder les informations en binaire. Ces fichiers peuvent être aussi bien du texte, une page web, un morceau de musique, une photo de vacance, un script, un logiciel, etc. Un répertoire regroupe des fichiers ou d'autres répertoires, ce qui aboutit à une hiérarchie de fichiers. C'est le chemin d'accès qui permet de localiser un fichier de la hiérarchie.
+
+Vous maîtrisez ce qu'est un fichier, un répertoire (= dossier), un chemin d'accès, un lien symbolique, le répertoire courant ? Si oui, passez à la suite. Si non, jouez à Find your path pour vous familiariser avec la représentation des chemins dans les environnements de type unix. Si vous avez joué déjà 20 minutes et que vous ne voyez pas le rapport avec ce qui précède, contactez l'enseignant.
+
+---
+
+## **05** Interpréteur de commandes
+
+La **console** est une interface textuelle qui permet à un utilisateur de demander à l'ordinateur de réaliser certaines tâches, uniquement à l'aide d'un écran et d'un clavier.
 
 <div class='flex-horizontal'><div class='flex'>
 
-**Valeurs :** Permet de s'approcher d'une représentation des **nombres réels** (bien qu'incomplète).
-
-**PEP 483 :** `float`
-
-**Représentation en machine**
-https://fr.wikipedia.org/wiki/Virgule_flottante
+**Sur un serveur sans interface graphique**
+La console est généralement directement accessible au démarrage.
 
 </div><div class='flex'>
 
-**Opérateurs de comparaison**
-
-- égalité : `==`
-- inégalité : `!=`
-- infériorité : `<`, `<=`
-- supériorité : `>`, `>=`
+**Sur une machine grand public**
+On utilise un émulateur de terminal
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-Les opérateurs de comparaisons retournent un booléen (`True` ou `False`).
+Dans Windows, l'émulateur de terminal s'appelle **Powershell** et est disponible sur toutes les machines.
 
 </div>
 
@@ -148,403 +172,21 @@ Les opérateurs de comparaisons retournent un booléen (`True` ou `False`).
 
 ---
 
-## Les caractères
+## **05** Interpréteur de commandes
 
-<div class='flex-horizontal'><div class='flex'>
+Une fois dans le terminal, l'utilisateur n'a qu'à écrire au clavier la commande qu'il souhaite que le système d'exploitation exécute.
 
-**Valeurs :** `'A'`, `'B'`, `'C'`, `';'`, `'!'`, `'0'`, `'1'`, ...
+Quelques commandes UNIX utiles
 
-**Représentation en machine**
-
-- [**Code ASCII**](https://fr.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange)
-- [**unicode**](https://fr.wikipedia.org/wiki/Unicode)
-
-<div class='block warning'>
-
-<i class='block-icon fas fa-exclamation'></i>
-
-Le type caractère unique n'existe pas en tant que tel en python. Chaque caractère déclaré est interpréter par python comme une chaîne de caractère (cf ci-dessous).
-
-</div>
-
-</div><div class='flex'>
-
-**Table ASCII**
-
-![height:500px](./assets/img/ascii.jpg)
-
-</div></div>
-
----
-
-## Les chaînes de caractères
-
-**Définition :** Une liste de caractères.
-
-**Exemples :**
-`"Brice"`, `"la vie est belle !"`, `"#0$£ù%&-"`
-
-**PEP 483 :** `string`
-
-**Opérateurs de bases**
-
-- assigner une variable : `my_str = "bidule"`
-- accès au 3ème caractère : `my_str[2]`
-- accès au dernier caractère : `my_str[-1]`
-- sous-chaîne : `my_str[:2]`, `my_str[1:]`, `my_str[1:2]`, `my_str[::2]`
-- longueur de la chaîne : `len(my_str)`
-- changer la casse : `my_str.capitalize()`, `my_str.upper()`, `my_str.lower()`
-- vérifier la casse : `my_str.islower()`, `my_str.isupper()`
-
----
-
-<!-- PARTIE 02 : Types composites -->
-
-<div class='main'>
-
-# 02
-
-## Types composites
-
-</div>
-
----
-
-## Les listes
-
-**Définition :** Une liste ordonnée de données.
-
-**Exemples :**
-`[0, 21, 13, 7, 100]`, `[]`, `[True, True, False]`, ...
-
-**PEP 483 :** `list`
-
-**Opérateurs de bases**
-
-- assigner une variable : `l = []`
-- accès au 3ème caractère : `l[2]`
-- accès au dernier caractère : `l[-1]`
-- sous-listes : `l[:2]`, `l[1:]`, `l[1:2]`, `l[::2]`
-- ajout d'un élément à la fin : `l.append(3)`
-- supprimer du 3ème élément : `l.remove(2)`
-- tri d'une liste : `sorted(l)`
-
----
-
-## Les dictionnaires
-
-**Définition :** Un dictionnaire est une structure de données qui assimile des clés à des valeurs.
-
-**Exemples :**
-`{"nom" : "Fred", "age" : 20 }`, `{}`, `{True : "eat", False : [0, 1, 2]}`, ...
-
-**PEP 483 :** `dict`
-
-**Opérateurs de bases**
-
-- assigner une variable : `d = {}`
-- accès à une valeur (depuis sa clé) : `d[key]`
-- ajout d'un élément à la fin : `d[key] = value`
-- supprimer du 3ème élément : `del d[key]`
-- accès aux clés : `d.keys()`
-- accès aux valeurs : `d.values()`
-
----
-
-<!-- PARTIE 01 : Nom section -->
-
-<div class='main'>
-
-# 03
-
-## Variables
-
-</div>
-
----
-
-## Qu'est-ce qu'une variable ?
+- **cd** (change directory) : changer d'emplacement dans le système de fichier
+- **ls** (list) : affiche les éléments d'un dossier
+- **cp** (copy) : copie un fichier
+- **rm** (remove) : supprimer un fichier ou un dossier
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-## Définition
-
-En informatique, les variables sont des symboles qui associent un nom (**l'identifiant**) à une **valeur**. Dans la plupart des langages, **les variables peuvent changer de valeur au cours du temps**.
-
-De plus, **les variables ont un type** de valeur.
+Une commande n'est autre qu'un fichier exécutable. Sous Linux, les commandes les plus courantes sont placés dans le dossier `/bin`
 
 </div>
-
-En python, la déclaration d'une variable se fait avec l'opérateur d'allocation `=`
-
-**Exemples :**
-
-```python
-prenom = "Jonathan"          # variable de type chaîne de caractères (str)
-age = 23                     # variable de type entier (int)
-moyenne = 10.8               # variable de type flottant (float)
-notes = [16, 12, 13, 9]      # variable de type liste d'entiers (list[int])
-```
-
----
-
-## Portée des variables
-
-**Portée des variables (globale / locale)**
-
-```python
-var1 = 10 # var1 est globale
-
-def foo(var2): # var2 est locale
-    var3 = 30 # var3 est locale
-    if (var3 > 0):
-        var4 = 40
-        print(var1, var2, var3, var4) # 10, 20, 30, 40
-
-    print(var1, var2, var3, var4) # 10, 20, 30, Erreur
-
-foo(20)
-print(var1, var2, var3, var4) # 10, Erreur, Erreur, Erreur
-
-
-```
-
----
-
-## Portée des variables
-
-**Visibilité des variables**
-
-```python
-def foo():
-
-    level1 = 10
-
-    def bar():
-        level2 = 20
-
-        def tutu():
-            level3 = 30
-
-            print("from tutu:", level1, level2, level3)
-
-        print("from bar: ", level1, level2) # level3 NOT visible
-        tutu()
-
-    print("from foo: ", level1) # level2 or level3 NOT visible here
-    bar()
-```
-
----
-
-<!-- PARTIE 03 : Boucle et conditions -->
-
-<div class='main'>
-
-# 04
-
-## Boucle et conditions
-
-</div>
-
----
-
-## Conditions
-
-<div class='flex-horizontal'><div class='flex'>
-
-**1. if / else**
-
-```python
-if (cond):
-    # code si vrai
-else:
-    # code si faux
-```
-
-**2. if / else if / else**
-
-```python
-if (cond):
-    # code si vrai
-elif (cond2):
-    # code si vrai
-else:
-    # code si faux
-```
-
-</div><div class='flex'>
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-La notation **cond** dans les exemples ci-contre représente une expression quelconque qui renvoit un booléen.
-
-_Exemples :_
-
-- `if True:`
-- `if is_winner:`
-- `if (age < 30):`
-- `if (age < 20 and name == "Mathéo"):`
-- `if "John" in names:`
-
-</div>
-
-</div></div>
-
----
-
-## Boucles
-
-<div class='flex-horizontal'><div class='flex'>
-
-**1. for**
-
-```python
-for i in range(10):
-    # ...
-    # code ici
-    # ...
-```
-
-**2. while**
-
-```python
-while (cond):
-    # ...
-    # code ici
-    # ...
-```
-
-</div><div class='flex'>
-
-</div></div>
-
----
-
-<!-- PARTIE 04 : Packages  -->
-
-<div class='main'>
-
-# 05
-
-## Fonctions
-
-</div>
-
----
-
-## Déclarer une fonction
-
-Une fonction est définit grâce :
-
-- au mot-clé `def` en python
-- à un identifiant
-- à des paramètres (optionnels)
-- à un type de retour et une valeur de retour
-
-_Exemple 1: Calcul de l'aire d'un rectangle_
-
-```python
-def aire_rectangle(longueur: int, largeur: int) -> int:
-    return longueur * largeur
-```
-
-<div class='flex-horizontal'><div class='flex'>
-
-_Exemple 2: Affichage des données d'une classe_
-
-```python
-def display_user_data(user: User) -> None:
-    print("--- User Data ---")
-    print("name=", user.name)
-    print("age=", user.age)
-```
-
-</div><div class='flex'>
-
-<br/>
-<br/>
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-Une fonction qui ne retourne aucune valeur est généralement appelée **procédure**.
-
-</div>
-
-</div></div>
-
----
-
-<!-- PARTIE 04 : Packages  -->
-
-<div class='main'>
-
-# 06
-
-## Packages & modules
-
-</div>
-
----
-
-## Réutiliser du code
-
-En plus d'être simple et intuitif, le langage de programmation Python possède l'avantage d'avoir une très large communauté.
-
-Ainsi, pas besoin de tout réimplémenter. Si vous avez besoin d'une fonctionnalité, quelqu'un l'aura probablement déjà implémenté et partagé avant vous.
-
-<div class='block note'>
-
-Un **module** est une collection de fonctions et méthodes qui peuvent être réutilisés dans une autre partie du code.
-
-Un **package** est un ensemble de modules munis d'une documentation et conçus pour des besoins spécifiques.
-
-_Exemples de package python :_ numpy, pandas, plotly, Django, Flask, PyTorch, Scikit Learn, ...
-
-</div>
-
----
-
-## Importer des fonctions & méthodes
-
-**Importer tout un module**
-
-```python
-# Importer la library math
-import math
-
-# Retourne la racine carré de 9
-print(math.sqrt(9))
-```
-
-**Importer une fonction spécifique d'un module**
-
-```python
-# Importer une fonction de la library math
-from math import sqrt
-
-# Retourne la racine carré de 9
-print(sqrt(9))
-```
-
----
-
-## Notes de fin
-
-Le cours actuel n'est pas un cours de programmation en python mais un cours de programmation orientée objet (POO avec python).
-
-Ce document est un bref récapitulatif de certaines notions qui doivent être maîtrisées pour la bonne compréhension du cours de POO.
-
-Pour revoir les bases du langage python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) :
-
-https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python
-
-Pour approfondir le cours actuel de programmation orientée objet avec python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) :
-
-https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python

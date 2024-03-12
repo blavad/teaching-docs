@@ -16,7 +16,7 @@ _footer: ""
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Informatique & Programmation</div>
-<div class="coverCourseName"><span class="important">#2 </span>Programmation python</div>
+<div class="coverCourseName"><span class="important">#3 </span>Programmation python</div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -26,6 +26,8 @@ _footer: ""
 <!-- TABLE DES MATIERES -->
 
 ---
+
+<!-- _class: bg2 -->
 
 ## Table des matières
 
@@ -38,14 +40,8 @@ Booléens. Entiers. Flottants. Chaîne de caractères. Listes.
 <b><span class="important">03 </span>Variables</b>
 Déclaration d'une variable. Portée des variables.
 
-<b><span class="important">04 </span> Conditions et boucles</b>
-Conditions. Boucles.
-
-<b><span class="important">05 </span> Les fonctions</b>
-Définition de fonctions. Paramètres et valeur de retour.
-
-<b><span class="important">06 </span> Packages</b>
-Réutiliser le code existant.
+<b><span class="important">04 </span> Commentaires</b>
+Commenter son code.
 
 ---
 
@@ -247,6 +243,8 @@ print(f"score à 2 décimal={age_min:.2}")
 
 ---
 
+<!-- _class: bg2 -->
+
 ## Types primitifs
 
 ### **Les chaînes de caractères**
@@ -322,6 +320,8 @@ print(f"score à 2 décimal={age_min:.2}")
 </div>
 
 ---
+
+<!-- _class: bg2 -->
 
 ## Qu'est-ce qu'une variable ?
 
@@ -401,235 +401,61 @@ print(var1, var2, var3, var4) # 10, Erreur, Erreur, Erreur
 
 ---
 
-<!-- PARTIE 03 : Boucle et conditions -->
+<!-- PARTIE 04 : Packages  -->
 
 <div class='main'>
 
 # 04
 
-## Boucle et conditions
+## Commentaires
 
 </div>
 
 ---
 
-## Conditions
+<!-- _class: bg2 -->
 
-<div class='flex-horizontal'><div class='flex'>
+## Commenter son code
 
-**1. if / else**
+**Pourquoi ?**
+Les commentaires permettent d'expliquer succinctement certains portions de notre code.
 
-```python
-if (cond):
-    # code si vrai
-else:
-    # code si faux
-```
+**Comment ?**
+Pour commenter une ligne ou une fin de ligne en python, on utilise le symbole **#**
 
-**2. if / else if / else**
+_Exemple_
 
 ```python
-if (cond):
-    # code si vrai
-elif (cond2):
-    # code si vrai
-else:
-    # code si faux
+# Cette ligne est un commentaire
+nom = "Franc" # ici aussi c'est un commentaire
 ```
-
-**_Exemple_**
-
-```python
-temperature = input("Entrez une valeur : ")
-if (temperature >= 100)
-{
-  print("L'eau bout !")
-}
-```
-
-</div><div class='flex'>
 
 <div class='block note'>
 
 <i class='block-icon fas fa-info'></i>
 
-La notation **cond** dans les exemples ci-contre représente une expression quelconque qui renvoit un booléen.
-
-_Exemples :_
-
-- `if True:`
-- `if is_winner:`
-- `if (age < 30):`
-- `if (age < 20 and name == "Mathéo"):`
-- `if "John" in names:`
-
-</div>
-
-</div></div>
-
----
-
-## Boucles
+Les commentaires doivent aider à comprendre le code. On ne répète pas simplement une ligne.
 
 <div class='flex-horizontal'><div class='flex'>
 
-**1. for**
+**✅ Bon commentaire**
 
 ```python
-for i in range(10):
-    # ...
-    # code ici
-    # ...
+x = x + 4 # increase the border width
 ```
 
-**2. while**
-
-```python
-while (cond):
-    # ...
-    # code ici
-    # ...
-```
+⬆️ Ce commentaire aide à la compréhension du code.
 
 </div><div class='flex'>
 
-**_Exemple_**
+**:x: Mauvais commentaire**
 
 ```python
-secret = "azezesx"
-motDePasse = input("Entrez le mot de passe : ")
-while (motDePasse != secret or agePersonne <= 3)
-{
-  print("Accès refusé")
-  motDePasse = input("Réessayez : ")
-}
+x = x + 4 # increase x by 4
 ```
+
+⬆️ Ce commentaire est inutile.
 
 </div></div>
 
----
-
-<!-- PARTIE 04 : Packages  -->
-
-<div class='main'>
-
-# 05
-
-## Fonctions
-
 </div>
-
----
-
-## Déclarer une fonction
-
-Une fonction est définit grâce :
-
-- au mot-clé `def` en python
-- à un identifiant
-- à des paramètres (optionnels)
-- à un type de retour et une valeur de retour
-
-_Exemple 1: Calcul de l'aire d'un rectangle_
-
-```python
-def aire_rectangle(longueur: int, largeur: int) -> int:
-    return longueur * largeur
-```
-
-<div class='flex-horizontal'><div class='flex'>
-
-_Exemple 2: Affichage des données d'une classe_
-
-```python
-def display_user_data(user: User) -> None:
-    print("--- User Data ---")
-    print("name=", user.name)
-    print("age=", user.age)
-```
-
-</div><div class='flex'>
-
-<br/>
-<br/>
-
-<div class='block note'>
-
-<i class='block-icon fas fa-info'></i>
-
-Une fonction qui ne retourne aucune valeur est généralement appelée **procédure**.
-
-</div>
-
-</div></div>
-
----
-
-<!-- PARTIE 04 : Packages  -->
-
-<div class='main'>
-
-# 06
-
-## Packages & modules
-
-</div>
-
----
-
-## Réutiliser du code
-
-En plus d'être simple et intuitif, le langage de programmation Python possède l'avantage d'avoir une très large communauté.
-
-Ainsi, pas besoin de tout réimplémenter. Si vous avez besoin d'une fonctionnalité, quelqu'un l'aura probablement déjà implémenté et partagé avant vous.
-
-<div class='block note'>
-
-Un **module** est une collection de fonctions et méthodes qui peuvent être réutilisés dans une autre partie du code.
-
-Un **package** est un ensemble de modules munis d'une documentation et conçus pour des besoins spécifiques.
-
-_Exemples de package python :_ numpy, pandas, plotly, Django, Flask, PyTorch, Scikit Learn, ...
-
-</div>
-
----
-
-## Importer des fonctions & méthodes
-
-**Importer tout un module**
-
-```python
-# Importer la library math
-import math
-
-# Retourne la racine carré de 9
-print(math.sqrt(9))
-```
-
-**Importer une fonction spécifique d'un module**
-
-```python
-# Importer une fonction de la library math
-from math import sqrt
-
-# Retourne la racine carré de 9
-print(sqrt(9))
-```
-
-<!-- --- -->
-<!--  -->
-<!-- ## Notes de fin -->
-<!--  -->
-<!-- Le cours actuel n'est pas un cours de programmation en python mais un cours de programmation orientée objet (POO avec python). -->
-<!--  -->
-<!-- Ce document est un bref récapitulatif de certaines notions qui doivent être maîtrisées pour la bonne compréhension du cours de POO. -->
-<!--  -->
-<!-- Pour revoir les bases du langage python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) : -->
-<!--  -->
-<!-- https://openclassrooms.com/fr/courses/7168871-apprenez-les-bases-du-langage-python -->
-<!--  -->
-<!-- Pour approfondir le cours actuel de programmation orientée objet avec python, vous pouvez suivre le cours OpenClassroom ci-dessous (gratuit) : -->
-<!--  -->
-<!-- https://openclassrooms.com/fr/courses/7150616-apprenez-la-programmation-orientee-objet-avec-python -->
-<!--  -->
