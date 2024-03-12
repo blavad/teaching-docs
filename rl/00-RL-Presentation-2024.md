@@ -16,7 +16,7 @@ _footer: ""
 
 <div class="coverBlockCenter">
 <div class="coverModuleName">Introduction à l'apprentissage par renforcement</div>
-<div class="coverCourseName"><span class="important">#0 </span>Introduction </div>
+<div class="coverCourseName"><span class="important">#0 </span>Présentation du cours </div>
 <div class="coverAuthor">par <span class="important">David Albert</span></div>
 </div>
 
@@ -60,10 +60,6 @@ Français, Anglais, Python, C++, Javascript -->
 <!-- _class: huge -->
 
 **Apprentissage par renforcement**
-◦ Efficace et bas niveau
-◦ Le langage le plus utilisé par les OS
-◦ Le langage de l'informatique embarquée
-◦ Le langage des jeux vidéos complexes
 
 ---
 
@@ -76,20 +72,17 @@ Français, Anglais, Python, C++, Javascript -->
 <div class="flex-horizontal">
 <div class="flex-sm">
 
-**Compilation (0.5 journées)**
-◦ TP n°1 Compilation
+**Introduction à l'Apprentissage par Renforcement**
+◦ Architecture des ordinateurs
 
-**C/C++ basiques (2.5 journées)**
-◦ TP n°2 : Conditions / Boucles
-◦ TP n°3 : Pointeurs
-◦ TP n°4 : Tableaux / Containers
-◦ TP n°5 : Fonctions
+**Processus de Décision Markovien**
+◦ Interpréteur.
 
-**Fichiers (1 journée)**
-◦ TP n°6 : Fichiers et UNIX
+**Programmation dynamique**
+◦ Syntaxe python
 
-**POO en C++ (1 journée)**
-◦ TP n°7 : POO en C++
+**Méthodes basées sur les Valeurs**
+◦ Syntaxe python
 
 </div>
 <div class="flex-sm">
@@ -148,3 +141,9 @@ Une note de rendu des travaux pratiques sera également attribuée.
 </div>
 
 </div>
+
+---
+
+## **05** Références
+
+_Reinforcement Learning: An Introduction_, Richard S. Sutton and Andrew G. Barto.

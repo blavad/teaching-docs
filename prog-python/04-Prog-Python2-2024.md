@@ -163,6 +163,12 @@ while (motDePasse != secret or agePersonne <= 3)
 
 ---
 
+## `break` et `continue`
+
+Utilisation des instructions break et continue.
+
+---
+
 <!-- PARTIE 04 : Packages  -->
 
 <div class='main'>
